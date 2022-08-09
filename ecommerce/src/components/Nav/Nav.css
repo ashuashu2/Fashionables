@@ -1,0 +1,55 @@
+.Nav-logo{
+    height: 13vh;
+    width: 100px;
+    border-radius: 50%;
+}
+.f-text{
+    font-size: 3rem;
+    color: #F6C33C;
+}
+.heading{
+ margin-bottom: 50%;
+   
+}
+#women-text{
+    margin: 2.4rem;
+}
+#men-text{
+    margin: 2.4rem;
+}
+.Nav-container{
+    display: flex;
+  
+    box-shadow: 1px 1px 1px 1px;
+    border-bottom:black;
+}
+.Nav-left-side{
+
+  
+display: flex;
+}
+.Nav-left-side-content{
+    margin: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+.Nav-right-side{
+    
+ margin: 1rem;
+margin-left: auto;
+margin-bottom: -0.5rem;
+  
+    display: flex;
+    }
+.Nav-right-side-content{
+        margin: 2.3rem;
+        margin-top: 1rem;
+    }
+.icon-text{
+        margin-top: -2.5rem;
+    }
+.icon{
+        font-size: 2rem;
+    }
+    

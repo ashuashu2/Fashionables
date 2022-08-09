@@ -2,11 +2,13 @@ import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Cart } from "./components/Cart/Cart";
 import {Home} from "./components/Home/Home"
+import { Navbar } from "./components/Nav/Nav";
 
 function App() {
   return (
     <div className="App">
-      <Link to="./Cart" >cart</Link>
+      <Navbar />
+      
      
       <Routes>
         <Route  path="/" element={<Home />} />
