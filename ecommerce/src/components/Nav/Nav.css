@@ -11,6 +11,9 @@
  margin-bottom: 50%;
    
 }
+.heading-text{
+    color: black;
+}
 #women-text{
     margin: 2.4rem;
 }
@@ -51,5 +54,11 @@ margin-bottom: -0.5rem;
     }
 .icon{
         font-size: 2rem;
+    }
+    .text{
+      /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+      font-size: 1.3rem;
+      font-weight: 500;        
+      color: white;
     }
     

@@ -4,6 +4,11 @@ import "../Nav/Nav.css"
 import { IoMdCart } from "react-icons/io";
 import {AiFillHeart  } from "react-icons/ai";
 import {CgProfile } from "react-icons/cg";
+import { Link} from "react-router-dom";
+import { useCart } from "../../context/cartContext";
+import { useWishlist } from "../../context/wishlistContext";
+
+
 
 
 
@@ -13,23 +18,34 @@ import {CgProfile } from "react-icons/cg";
 
 
  function Navbar (){
+  const {cartState: { cart }}  = useCart()
+  const {WishlistState: { Wishlist }}  = useWishlist()
+
+
     return (
         <div className="Nav-container">
             <div className="Nav-left-side">
                 <img  className="Nav-logo Nav-left-side-content" src={logo} alt="" />
-                <h1 className="Nav-left-side-content heading"> <span className="f-text" >F</span>ashionables.com</h1>
+                <h1 className="Nav-left-side-content heading"> <Link to="./" > <span className="f-text" >F</span><span className="heading-text">ashionables.com</span> </Link>  </h1>
                 <h2 className="Nav-left-side-content "  id="women-text">Women</h2>
                 <h2 className="Nav-left-side-content  "   id="men-text">Men</h2>
             </div>
             
 
             <div className="Nav-right-side" >
-              <div>
-                <h4 className="Nav-right-side-content" ><IoMdCart size="3rem" /> </h4>
+            <Link to="./Cart" >
+            <div>
+                <h4 className="Nav-right-side-content" ><IoMdCart size="3rem" />{cart.length} </h4>
                 <h4 className=" icon-text" >Cart</h4>
+             
+               
+
               </div>
+            </Link>
+
+              
               <div>
-                <h4 className="Nav-right-side-content icon "> <AiFillHeart /> </h4>
+                <h4 className="Nav-right-side-content icon "> <AiFillHeart /> {Wishlist.length}</h4>
                 <h4 className=" icon-text"> Wishlist </h4>
               </div>
               <div>

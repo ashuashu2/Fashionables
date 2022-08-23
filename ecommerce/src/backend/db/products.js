@@ -12,16 +12,21 @@ export const products = [
   // ********    1       **********
   {
     _id: uuid(),
+    rating: "3",
     name: "U TURN ",
+    newArrival :true,
     description:"Men Slim Fit Striped Spread Collar Casual Shirt",
     price: "4099",
     qty: "1",
-    category:"Male",
+
+    count: "5",
+
+    idealFor:"Men",
     color:"Black",
     originalPrice:"5999",
     discount:"31%",
     img: 'https://rukminim1.flixcart.com/image/800/960/xif0q/shirt/7/g/q/m-sh-black-line-u-turn-original-imagfsgdhhrkfh95-bb.jpeg?q=50',
-    category:"shirts",
+    category:"Shirts",
         
   },
   // ********    2     **********
@@ -29,48 +34,62 @@ export const products = [
   
     {
       _id: uuid(),
+      rating: "5",
       name: "Calvin Klein ",
       description:"Men Regular Fit Solid Slim Collar Casual Shirt",
       price: "5394",
       qty: "1",
-      category:"Male",
+
+      count: "5",
+   
+
+      idealFor:"Men",
       color:"Black",
       originalPrice:"6499",
       discount:"17%",
       img: '	https://assets.ajio.com/medias/sys_master/root/20210403/ZuMQ/6068643df997dd7b645d4c3d/-473Wx593H-461118551-black-MODEL.jpg',
-      category:"shirts",
+      category:"Shirts",
           
     },
   // ********    3       **********
   
   {
     _id: uuid(),
+    rating: "2",
     name: "Onnstyle",
+    newArrival :true,
     description:"Men Regular Fit Printed Spread Collar Casual Shirt",
     price: "2299",
     qty: "1",
-    category:"Male",
+
+    count: "5",
+
+    idealFor:"Men",
     color:"Black",
     originalPrice:"5000",
     discount:"54%",
     img: '	https://api.powerlook.in/pub/media/catalog/product//d/p/dp_371_1.jpg',
-    category:"shirts",
+    category:"Shirts",
         
   },
   // ********    4       **********
   
   {
     _id: uuid(),
+    rating: "1",
     name: "Allen Solly",
     description:"Men Regular Fit Printed Spread Collar Casual Shirt",
     price: "2474",
     qty: "1",
-    category:"Male",
+
+    count: "5",
+
+    idealFor:"Men",
     color:"White",
     originalPrice:"3299",
     discount:"25%",
     img: '	https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTFKJB_6-fv0xQC6lNERlApW7oDWLljlT0N3BX8mOg1upy2-Dp1SMX1hILlNe9KmkLVh57F5mkUTN2qfSgsWR_mJ5QVmgkqYHOOI02kOTY&usqp=CAE',
-    category:"shirts",
+    category:"Shirts",
         
   },
   // ********    5       **********
@@ -78,16 +97,20 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "4",
     name: "LOUIS PHILIPPE",
     description:"Men Regular Fit Self Design Casual Shirt",
     price: "4901",
     qty: "1",
-    category:"Male",
+
+    count: "5",
+
+    idealFor:"Men",
     color:"White",
     originalPrice:"8599",
     discount:"43%",
     img: 'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR85TWiuPqsQE0nem9_g5RQfpT0b2qvMe7rwtyGLyS0-UJda4eDaMj-SoPJbfKbspxTDmBmOY84frkTvpMgYbVg-aop716_0E4npPucwpndwlM5h53ta03_sw&usqp=CAE',
-    category:"shirts",
+    category:"Shirts",
         
   },
   
@@ -97,11 +120,16 @@ export const products = [
 { 
 
   _id: uuid(),
-  name: "NIKE ",
+  rating: "3",
+  name: "NIKE",
+  newArrival :true,
   description:"Printed Men Round Neck Black T-Shirt",
   price: "2,621",
   qty: "1",
-  category:"Male",
+
+  count: "5",
+
+  idealFor:"Men",
   color:"Black",
   originalPrice:"3,495",
   discount:"25%",
@@ -121,11 +149,15 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "5",
     name: "Marvel",
     description:"Men Black Marvel Printed Round Neck Pure Cotton T-shirt",
     price: "4099",
     qty: "1",
-    category:"Male",
+
+    count: "5",
+
+    idealFor:"Men",
     color:"Black",
     originalPrice:"5999",
     discount:"31%",
@@ -141,14 +173,19 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "2",
     name: "Wrogn",
+    newArrival :true,
     description:"Black Printed Round Neck T Shirt ",
     price: "5394",
     qty: "1",
-    category:"Male",
+
+    count: "5",
+
+    idealFor:"Men",
     color:"Black",
     originalPrice:"6499",
-    discount:"17%",
+    discount:"05%",
     img: 'https://i.pinimg.com/originals/1f/23/74/1f2374c4d07aa8bfee15827f52bfe85a.jpg',
     category:"Tshirt",
         
@@ -162,11 +199,16 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "1",
     name: "Puma",
+    newArrival :true,
     description:"Plane Round Neck White T Shirt",
     price: "2299",
     qty: "1",
-    category:"Male",
+
+    count: "5",
+
+    idealFor:"Men",
     color:"White",
     originalPrice:"5000",
     discount:"54%",
@@ -187,11 +229,16 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "4",
     name: "Kook N Keech",
     description:" Kook N Keech Men Black White Printed Oversized Cotton Pure Cotton T-shirt ",
     price: "4901",
     qty: "1",
-    category:"Male",
+    newArrival :true,
+
+    count: "5",
+
+    idealFor:"Men",
     color:"White",
     originalPrice:"8599",
     discount:"43%",
@@ -207,11 +254,15 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "3",
     name: "Hancock ",
     description:"Casual Regular Sleeves Printed Women Black Top",
     price: "4901",
     qty: "1",
-    category:"Female",
+
+    count: "5",
+
+    idealFor:"Women",
     color:"Black",
     originalPrice:"8599",
     discount:"43%",
@@ -227,11 +278,16 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "5",
     name: "Globus ",
     description:"Casual Slit Sleeves Printed Women Black Top",
     price: "2299",
     qty: "1",
-    category:"Female",
+
+    newArrival :true,
+    count: "5",
+
+    idealFor:"Women",
     color:"Black",
     originalPrice:"5000",
     discount:"54%",
@@ -248,11 +304,16 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "2",
     name: "JYOSHOP ",
     description:"Casual Flared Sleeves Solid Women Black Top",
     price: "5394",
     qty: "1",
-    category:"Female",
+
+    count: "5",
+    newArrival :true,
+
+    idealFor:"Women",
     color:"Black",
     originalPrice:"6499",
     discount:"17%",
@@ -269,11 +330,17 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "1",
     name: "LY2",
     description:"Casual Puff Sleeves Floral Print Women White Top",
     price: "4099",
     qty: "1",
-    category:"Female",
+
+    count: "5",
+    newArrival :true,
+
+    idealFor:"Women",
+    newArrival :true,
     color:"White",
     originalPrice:"5999",
     discount:"31%",
@@ -291,11 +358,16 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "4",
     name: "Andical",
+    newArrival :true,
     description:"Casual Sleeveless Striped Women White Top",
     price: "4901",
     qty: "1",
-    category:"Female",
+
+    count: "5",
+
+    idealFor:"Women",
     color:"White",
     originalPrice:"8599",
     discount:"43%",
@@ -312,11 +384,15 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "3",
     name: "FANCY",
     description:"Women Maxi Black Dress",
     price: "5000",
     qty: "1",
-    category:"Female",
+
+    count: "5",
+
+    idealFor:"Women",
     color:"Black",
     originalPrice:"3299",
     discount:"38%",
@@ -333,11 +409,15 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "5",
     name: "Urbanic ",
     description:"Women A-line Black Dress",
     price: "2621",
     qty: "1",
-    category:"Female",
+
+    count: "5",
+
+    idealFor:"Women",
     color:"Black",
     originalPrice:"3495",
     discount:"25%",
@@ -356,11 +436,16 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "2",
     name: "BLANCORA ",
     description:"Women Maxi Black, White Dress",
     price: "2299",
     qty: "1",
-    category:"Female",
+
+    count: "5",
+    newArrival :true,
+
+    idealFor:"Women",
     color:"Black",
     originalPrice:"5099",
     discount:"54%",
@@ -375,11 +460,16 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "1",
     name: "AAYU ",
+    newArrival :true,
     description:"Women Maxi White Dress",
     price: "4099",
     qty: "1",
-    category:"Female",
+
+    count: "5",
+
+    idealFor:"Women",
     color:"White",
     originalPrice:"5999",
     discount:"31%",
@@ -400,11 +490,16 @@ export const products = [
   
   {
     _id: uuid(),
+    rating: "4",
     name: "FASHION DREAM",
     description:"Women Fit and Flare White Dress",
     price: "5394",
     qty: "1",
-    category:"Female",
+
+    count: "5",
+    
+
+    idealFor:"Women",
     color:"White",
     originalPrice:"6499",
     discount:"17%",

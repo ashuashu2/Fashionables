@@ -1,0 +1,10 @@
+.bigger-div{
+
+    display: flex;
+}
+.filter-div{
+    width: 25%;
+}
+.store-div{
+    width: 100%;
+}

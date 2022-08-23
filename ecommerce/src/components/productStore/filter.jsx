@@ -1,0 +1,264 @@
+import React from "react";
+import { useFilter } from "../../context/filterContext";
+
+
+
+
+
+function Filter(){
+  const { state,dispatch} = useFilter()
+ 
+
+
+    return(
+        <div >
+
+
+            <h1>Filters</h1>
+            <fieldset>
+        
+         <button onClick={()=>dispatch({type:"CLEAR"})} > Clear All Filters </button>
+        </fieldset>
+
+
+        <hr />
+
+        <fieldset>
+        <legend>
+         Search
+          </legend>
+         <input value={state.Search} placeholder="Search your Products" onChange={(ev)=>dispatch({type:"SEARCH",payload:ev.target.value})} ></input>
+          
+            
+         
+             <div>
+               
+               
+               
+             </div>
+         
+
+      </fieldset>
+      <hr />
+
+
+
+
+
+      <div className="Price-div">
+        <h1>Price</h1>
+        <datalist>
+          <option value="1000" label="1k"></option>
+          <option value="2000" label="2k"></option>
+          <option value="3000" label="3k"></option>
+          <option value="4000" label="4k"></option>
+          <option value="5000" label="5k"></option>
+        </datalist>
+        <input
+          type="range"
+          name=""
+          class="slider-container"
+          step="1000"
+          min="1000"
+          max="5000"
+          value={state.Price}
+          onChange={(e) =>
+            dispatch({ type: "PRICE", price_value: e.target.value })
+          }
+        />
+      </div>
+
+<hr />
+
+
+<fieldset>
+    <legend>CATEGORY</legend>
+
+    <lable>
+          
+          <input type="radio"
+           onChange={()=>dispatch({type:"CATEGORY",payload:"Shirts"})}
+           checked={state.Category==="Shirts"}
+            ></input>
+          Shirts</lable>
+        <lable>
+            <input type="radio"
+             onChange={()=>dispatch({type:"CATEGORY",payload:"Tshirt"})}
+           checked={state.Category==="Tshirt"}
+           ></input>Tshirts</lable>
+             <lable>
+          
+          <input type="radio"
+           onChange={()=>dispatch({type:"CATEGORY",payload:"Top"})}
+           checked={state.Category==="Top"}
+            ></input>
+          Top</lable>
+        <lable>
+            <input type="radio"
+             onChange={()=>dispatch({type:"CATEGORY",payload:"Dresses"})}
+           checked={state.Category==="Dresses"}
+           ></input>Dresses</lable>
+
+</fieldset>
+
+
+<hr />
+
+
+<fieldset>
+
+    <legend>Ideal For</legend>
+
+    <lable>
+        <input type="checkbox"
+         onChange={() => {dispatch({ type:"MEN" })}}
+                />
+            Men
+        </lable>
+        <lable>
+            <input type="checkBox"
+             onChange={()=>dispatch({type:"WOMEN"})}
+             ></input>Women</lable>
+
+
+</fieldset>
+
+
+<hr />
+
+<fieldset>
+
+<legend>COLOR</legend>
+
+<lable>
+    <input type="radio"
+     onChange={() => {dispatch({ type:"COLOR" , payload :"Black" })}}
+     checked={state.color==="Black"}
+            />
+        BLACK
+    </lable>
+    <lable>
+        <input type="radio"
+         onChange={()=>dispatch({type:"COLOR" , payload :"White"})}
+     checked={state.color==="White"}
+
+         ></input>WHITE</lable>
+
+
+</fieldset>
+
+<hr />
+
+
+
+
+
+<fieldset>
+        <legend>DISCOUNT</legend>
+          <lable>
+          
+            
+              <input
+                  
+                  type="checkbox"
+                  
+                  onChange={() => {
+                    dispatch({ type: "TEN" });
+                  }}
+                />
+           above 10%</lable>
+
+
+
+          <lable><input type="checkBox" onChange={()=>dispatch({type:"TWENTY"})}
+        
+             ></input>above 20%</lable>
+             <lable>
+          
+            
+          <input
+              
+              type="checkbox"
+           
+              onChange={() => {
+                dispatch({ type: "THIRTY" });
+              }}
+            />
+        above 30%</lable>
+
+
+      <lable>
+        <input type="checkBox"
+         onChange={()=>dispatch({type:"FOURTY"})}></input>above 40%</lable>
+
+<lable>
+    <input type="checkBox"
+ onChange={()=>dispatch({type:"FIFTY"})}
+     
+         ></input>above 50%</lable>
+            
+         
+
+      </fieldset>
+
+
+      <hr />
+
+
+
+      <fieldset>
+        <legend>RATINGS</legend>
+          <lable>
+          
+            
+              <input
+                  
+                  type="checkbox"
+                  
+                  onChange={() => {
+                    dispatch({ type: "FIVE" });
+                  }}
+                />
+           5★ & above</lable>
+
+
+
+          <lable><input type="checkBox" onChange={()=>dispatch({type:"FOUR"})}
+        
+             ></input>4★ & above</lable>
+             <lable>
+          
+            
+          <input
+              
+              type="checkbox"
+           
+              onChange={() => {
+                dispatch({ type: "THREE" });
+              }}
+            />
+        3★ & above</lable>
+
+
+      <lable>
+        <input type="checkBox"
+         onChange={()=>dispatch({type:"TWO"})}></input>2★ & above</lable>
+
+<lable>
+    <input type="checkBox"
+ onChange={()=>dispatch({type:"ONE"})}
+     
+         ></input>1★ & above</lable>
+            
+         
+
+      </fieldset>
+
+
+      <hr />
+
+
+        </div>
+    )
+}
+export {Filter }
