@@ -18,8 +18,7 @@ function App() {
    
       <Navbar />
      
-      <Link to="./ProductDetail" >ashu</Link>
-      
+<h1>ashu</h1>      
 
 
       
