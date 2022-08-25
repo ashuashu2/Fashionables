@@ -3,7 +3,7 @@ import "./App.css";
 import { Cart } from "./components/Cart/Cart";
 import { Footer } from "./components/footer/footer";
 import { Header } from "./components/headerText";
-import {Home} from "./components/Home/Home"
+import { Home} from "./components/Home/Home"
 import { Navbar } from "./components/Nav/Nav";
 import { ProductDetail } from "./components/productDetail";
 import { Filter } from "./components/productStore/filter";
@@ -17,7 +17,7 @@ function App() {
      <Header />
    
       <Navbar />
-     <h1>ashuuuaaa</h1>
+    
       
 
 
