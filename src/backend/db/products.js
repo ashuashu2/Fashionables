@@ -14,12 +14,16 @@ export const products = [
     _id: uuid(),
     rating: "3",
     name: "U TURN ",
+    description1:"Black cotton lines  Shirt",
+
     newArrival :true,
     description:"Men Slim Fit Striped Spread Collar Casual Shirt",
     price: "4099",
     qty: "1",
 
     count: "5",
+
+    Date : " Thu oct 1st ",
 
     idealFor:"Men",
     color:"Black",
@@ -36,11 +40,16 @@ export const products = [
       _id: uuid(),
       rating: "5",
       name: "Calvin Klein ",
+
       description:"Men Regular Fit Solid Slim Collar Casual Shirt",
+    description1:"Black silk plane  Shirt",
+
       price: "5394",
       qty: "1",
 
       count: "5",
+
+      Date : " Sat oct 7th ",
    
 
       idealFor:"Men",
@@ -56,6 +65,8 @@ export const products = [
   {
     _id: uuid(),
     rating: "2",
+    description1:"Black New printed Shirt",
+
     name: "Onnstyle",
     newArrival :true,
     description:"Men Regular Fit Printed Spread Collar Casual Shirt",
@@ -63,6 +74,8 @@ export const products = [
     qty: "1",
 
     count: "5",
+
+    Date : " Mon oct 11th ",
 
     idealFor:"Men",
     color:"Black",
@@ -78,17 +91,22 @@ export const products = [
     _id: uuid(),
     rating: "1",
     name: "Allen Solly",
+    description1:"White Printed cotton Shirt",
+
+    newArrival:true,
     description:"Men Regular Fit Printed Spread Collar Casual Shirt",
     price: "2474",
     qty: "1",
 
     count: "5",
 
+    Date : " Sun oct 9th ",
+
     idealFor:"Men",
     color:"White",
     originalPrice:"3299",
     discount:"25%",
-    img: '	https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTFKJB_6-fv0xQC6lNERlApW7oDWLljlT0N3BX8mOg1upy2-Dp1SMX1hILlNe9KmkLVh57F5mkUTN2qfSgsWR_mJ5QVmgkqYHOOI02kOTY&usqp=CAE',
+    img: 'https://imagescdn.allensolly.com/img/app/product/7/702952-7596888.jpg?auto=format',
     category:"Shirts",
         
   },
@@ -99,11 +117,15 @@ export const products = [
     _id: uuid(),
     rating: "4",
     name: "LOUIS PHILIPPE",
+    description1:"White Plane Silk Shirt",
+
     description:"Men Regular Fit Self Design Casual Shirt",
     price: "4901",
     qty: "1",
 
     count: "5",
+
+    Date : " Fri Sep 12th ",
 
     idealFor:"Men",
     color:"White",
@@ -117,27 +139,32 @@ export const products = [
   // ********    6       **********
   
 
-{ 
 
+{
   _id: uuid(),
   rating: "3",
-  name: "NIKE",
+  name: "Nike",
   newArrival :true,
+  description1:"Black Printed cotton T-Shirt",
+
+
   description:"Printed Men Round Neck Black T-Shirt",
-  price: "2,621",
+  price: "2621",
   qty: "1",
 
   count: "5",
 
+  Date : " Sun Dec 2nd ",
+
   idealFor:"Men",
   color:"Black",
-  originalPrice:"3,495",
+  originalPrice:"3495",
   discount:"25%",
-  img: 'https://rukminim1.flixcart.com/image/800/960/l572ufk0/t-shirt/3/q/n/l-16869544-nike-original-imagfxpq4unuapnc.jpeg?q=50',
+  img: 'https://rukminim1.flixcart.com/image/332/398/k65d18w0/t-shirt/9/u/5/m-ar5005-010-nike-original-imafzhfkzshakbhg.jpeg?q=50',
   category:"Tshirt",
-    
+      
 },
-  
+
   
   
  
@@ -152,10 +179,14 @@ export const products = [
     rating: "5",
     name: "Marvel",
     description:"Men Black Marvel Printed Round Neck Pure Cotton T-shirt",
+  description1:"Black Printed cotton T-Shirt",
+
     price: "4099",
     qty: "1",
 
     count: "5",
+
+    Date : " Fri oct 2nd ",
 
     idealFor:"Men",
     color:"Black",
@@ -178,9 +209,13 @@ export const products = [
     newArrival :true,
     description:"Black Printed Round Neck T Shirt ",
     price: "5394",
+  description1:"Black Printed cotton T-Shirt",
+
     qty: "1",
 
     count: "5",
+
+    Date : " Wed Sep 25Th ",
 
     idealFor:"Men",
     color:"Black",
@@ -200,13 +235,16 @@ export const products = [
   {
     _id: uuid(),
     rating: "1",
-    name: "Puma",
-    newArrival :true,
+    name:"Puma",
     description:"Plane Round Neck White T Shirt",
+  description1:"White Plane cotton T-Shirt",
+
     price: "2299",
     qty: "1",
 
     count: "5",
+
+    Date : " Mon April 5Th ",
 
     idealFor:"Men",
     color:"White",
@@ -232,11 +270,15 @@ export const products = [
     rating: "4",
     name: "Kook N Keech",
     description:" Kook N Keech Men Black White Printed Oversized Cotton Pure Cotton T-shirt ",
+  description1:"White Printed cotton T-Shirt",
+
     price: "4901",
     qty: "1",
     newArrival :true,
 
     count: "5",
+
+    Date : " Thu Sep 8th ",
 
     idealFor:"Men",
     color:"White",
@@ -257,10 +299,14 @@ export const products = [
     rating: "3",
     name: "Hancock ",
     description:"Casual Regular Sleeves Printed Women Black Top",
+  description1:"Black casual  cotton Top",
+
     price: "4901",
     qty: "1",
 
     count: "5",
+
+    Date : " Thru Nov 22nd ",
 
     idealFor:"Women",
     color:"Black",
@@ -281,11 +327,15 @@ export const products = [
     rating: "5",
     name: "Globus ",
     description:"Casual Slit Sleeves Printed Women Black Top",
+  description1:"Black slit sleeves Top",
+
     price: "2299",
     qty: "1",
 
     newArrival :true,
     count: "5",
+
+    Date : " Sun Jan 7th ",
 
     idealFor:"Women",
     color:"Black",
@@ -307,10 +357,15 @@ export const products = [
     rating: "2",
     name: "JYOSHOP ",
     description:"Casual Flared Sleeves Solid Women Black Top",
+  description1:"Black Flared sleeves Top",
+
+
     price: "5394",
     qty: "1",
 
     count: "5",
+
+    Date : " Mon Sep 17th ",
     newArrival :true,
 
     idealFor:"Women",
@@ -333,10 +388,14 @@ export const products = [
     rating: "1",
     name: "LY2",
     description:"Casual Puff Sleeves Floral Print Women White Top",
+  description1:"Print Women White Top",
+
     price: "4099",
     qty: "1",
 
     count: "5",
+
+    Date : " Sat Aug 11th ",
     newArrival :true,
 
     idealFor:"Women",
@@ -360,12 +419,17 @@ export const products = [
     _id: uuid(),
     rating: "4",
     name: "Andical",
+  description1:"Striped Women White Top",
+
     newArrival :true,
     description:"Casual Sleeveless Striped Women White Top",
+    
     price: "4901",
     qty: "1",
 
     count: "5",
+
+    Date : " Fri oct 2nd ",
 
     idealFor:"Women",
     color:"White",
@@ -387,10 +451,14 @@ export const products = [
     rating: "3",
     name: "FANCY",
     description:"Women Maxi Black Dress",
+  description1:"Women Maxi Black Dress",
+
     price: "5000",
     qty: "1",
 
     count: "5",
+
+    Date : " Sat Sep 3rd ",
 
     idealFor:"Women",
     color:"Black",
@@ -412,10 +480,14 @@ export const products = [
     rating: "5",
     name: "Urbanic ",
     description:"Women A-line Black Dress",
+    description1:"Women A-line Black Dress",
+
     price: "2621",
     qty: "1",
 
     count: "5",
+
+    Date : " Wed Dec 6th ",
 
     idealFor:"Women",
     color:"Black",
@@ -438,11 +510,15 @@ export const products = [
     _id: uuid(),
     rating: "2",
     name: "BLANCORA ",
+    description1:"Women Black-White Dress",
+
     description:"Women Maxi Black, White Dress",
     price: "2299",
     qty: "1",
 
     count: "5",
+
+    Date : " Wed March 16th ",
     newArrival :true,
 
     idealFor:"Women",
@@ -462,12 +538,15 @@ export const products = [
     _id: uuid(),
     rating: "1",
     name: "AAYU ",
-    newArrival :true,
     description:"Women Maxi White Dress",
+    description1:"Women Maxi White Dress",
+
     price: "4099",
     qty: "1",
 
     count: "5",
+
+    Date : " Thru Dec 4th ",
 
     idealFor:"Women",
     color:"White",
@@ -493,10 +572,14 @@ export const products = [
     rating: "4",
     name: "FASHION DREAM",
     description:"Women Fit and Flare White Dress",
+    description1:"Women Fit Flare  Dress",
+
     price: "5394",
     qty: "1",
 
     count: "5",
+
+    Date : " Tue March 29th ",
     
 
     idealFor:"Women",

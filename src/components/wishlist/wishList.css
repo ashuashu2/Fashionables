@@ -1,0 +1,38 @@
+.Price-container{
+    display: inline;
+}
+.Price-content{
+   
+    margin: 1rem;
+   
+}
+.wishlist-container{
+    border: 1 px solid black;
+    
+display: flex;
+margin: 2rem;
+}
+
+.small-container{
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 2rem;
+
+    width: 30%;
+    gap: 30px;
+    position: relative;
+
+}
+
+.big-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.x-buttons{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: white;
+    color: black;
+}

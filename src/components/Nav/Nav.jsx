@@ -27,8 +27,8 @@ import { useWishlist } from "../../context/wishlistContext";
             <div className="Nav-left-side">
                 <img  className="Nav-logo Nav-left-side-content" src={logo} alt="" />
                 <h1 className="Nav-left-side-content heading"> <Link to="./" > <span className="f-text" >F</span><span className="heading-text">ashionables.com</span> </Link>  </h1>
-                <h2 className="Nav-left-side-content "  id="women-text">Women</h2>
-                <h2 className="Nav-left-side-content  "   id="men-text">Men</h2>
+                <h2 className="Nav-left-side-content "  id="women-text">  <Link to="./Women"><span className="heading-text">Women</span> </Link></h2>
+                <h2 className="Nav-left-side-content  "   id="men-text"> <Link to="./Men"><span className="heading-text">Men</span></Link></h2>
             </div>
             
 
@@ -43,11 +43,13 @@ import { useWishlist } from "../../context/wishlistContext";
               </div>
             </Link>
 
-              
-              <div>
+            <Link to="./WishList" > <div>
                 <h4 className="Nav-right-side-content icon "> <AiFillHeart /> {Wishlist.length}</h4>
                 <h4 className=" icon-text"> Wishlist </h4>
-              </div>
+              </div> </Link>
+
+              
+              
               <div>
                 <h4 className="Nav-right-side-content icon"> <CgProfile /> </h4>
                 <h4 className=" icon-text"> Profile </h4>

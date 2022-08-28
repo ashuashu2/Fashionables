@@ -1,10 +1,21 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import {cartReducer} from "../ultils/cartReducer"
 
 const CartContext = createContext()
 
 const CartProvider = ({children}) =>{
-    const [cartState,cartDispatch] = useReducer(cartReducer,{cart:[]})
+    const cartFromLocalStorage= JSON.parse(localStorage.getItem('cart') || '[]' )
+    
+    
+    const [cartState,cartDispatch] = useReducer(cartReducer,{cart:[cartFromLocalStorage]})
+    useEffect(() => {
+        localStorage.setItem("cart",JSON.stringify(cartState))
+        
+      
+       
+      
+    }, [cartState])
+    console.log(JSON.parse(localStorage.getItem( "cart")))
     return (
         <CartContext.Provider value={{cartState,cartDispatch}}>
             {children}

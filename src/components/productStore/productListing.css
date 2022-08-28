@@ -3,8 +3,48 @@
     display: flex;
 }
 .filter-div{
-    width: 25%;
+    width: 20%;
 }
 .store-div{
     width: 100%;
+}
+.category-div{
+    display: grid;
+    margin: 2rem;
+}
+.category-options{
+    font-size: 1.3rem;
+}
+.idealFor-div{
+    display: grid;
+}
+.idealFor-options{
+    font-size: 1.3rem;
+}
+.color-options{
+    font-size: 1.3rem;
+}
+
+
+.color-div{
+    display: grid;
+}
+
+.discount-options{
+    font-size: 1.3rem;
+}
+
+
+.discount-div{
+    display: grid;
+}
+
+
+.ratings-options{
+    font-size: 1.3rem;
+}
+
+
+.ratings-div{
+    display: grid;
 }

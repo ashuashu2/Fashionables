@@ -1,5 +1,6 @@
 import React from "react";
 import { useFilter } from "../../context/filterContext";
+import "../productStore/productListing.css"
 
 
 
@@ -71,30 +72,30 @@ function Filter(){
 <hr />
 
 
-<fieldset>
+<fieldset className="category-div">
     <legend>CATEGORY</legend>
 
-    <lable>
+    <lable className="category-options">
           
-          <input type="radio"
+          <input   type="radio"
            onChange={()=>dispatch({type:"CATEGORY",payload:"Shirts"})}
            checked={state.Category==="Shirts"}
             ></input>
           Shirts</lable>
-        <lable>
-            <input type="radio"
+        <lable className="category-options">
+            <input  type="radio"
              onChange={()=>dispatch({type:"CATEGORY",payload:"Tshirt"})}
            checked={state.Category==="Tshirt"}
            ></input>Tshirts</lable>
-             <lable>
+             <lable  className="category-options">
           
           <input type="radio"
            onChange={()=>dispatch({type:"CATEGORY",payload:"Top"})}
            checked={state.Category==="Top"}
             ></input>
           Top</lable>
-        <lable>
-            <input type="radio"
+        <lable className="category-options">
+            <input  type="radio"
              onChange={()=>dispatch({type:"CATEGORY",payload:"Dresses"})}
            checked={state.Category==="Dresses"}
            ></input>Dresses</lable>
@@ -105,17 +106,17 @@ function Filter(){
 <hr />
 
 
-<fieldset>
+<fieldset className="idealFor-div">
 
     <legend>Ideal For</legend>
 
-    <lable>
+    <lable className="idealFor-options">
         <input type="checkbox"
          onChange={() => {dispatch({ type:"MEN" })}}
                 />
             Men
         </lable>
-        <lable>
+        <lable className="idealFor-options">
             <input type="checkBox"
              onChange={()=>dispatch({type:"WOMEN"})}
              ></input>Women</lable>
@@ -126,18 +127,18 @@ function Filter(){
 
 <hr />
 
-<fieldset>
+<fieldset className="color-div">
 
 <legend>COLOR</legend>
 
-<lable>
+<lable className="color-options">
     <input type="radio"
      onChange={() => {dispatch({ type:"COLOR" , payload :"Black" })}}
      checked={state.color==="Black"}
             />
         BLACK
     </lable>
-    <lable>
+    <lable className="color-options">
         <input type="radio"
          onChange={()=>dispatch({type:"COLOR" , payload :"White"})}
      checked={state.color==="White"}
@@ -153,9 +154,9 @@ function Filter(){
 
 
 
-<fieldset>
+<fieldset className="discount-div">
         <legend>DISCOUNT</legend>
-          <lable>
+          <lable className="discount-options">
           
             
               <input
@@ -170,10 +171,10 @@ function Filter(){
 
 
 
-          <lable><input type="checkBox" onChange={()=>dispatch({type:"TWENTY"})}
+          <lable className="discount-options"><input type="checkBox" onChange={()=>dispatch({type:"TWENTY"})}
         
              ></input>above 20%</lable>
-             <lable>
+             <lable className="discount-options">
           
             
           <input
@@ -187,11 +188,11 @@ function Filter(){
         above 30%</lable>
 
 
-      <lable>
+      <lable className="discount-options">
         <input type="checkBox"
          onChange={()=>dispatch({type:"FOURTY"})}></input>above 40%</lable>
 
-<lable>
+<lable className="discount-options">
     <input type="checkBox"
  onChange={()=>dispatch({type:"FIFTY"})}
      
@@ -206,9 +207,9 @@ function Filter(){
 
 
 
-      <fieldset>
+      <fieldset className="ratings-div">
         <legend>RATINGS</legend>
-          <lable>
+          <lable className="ratings-options">
           
             
               <input
@@ -223,10 +224,10 @@ function Filter(){
 
 
 
-          <lable><input type="checkBox" onChange={()=>dispatch({type:"FOUR"})}
+          <lable className="ratings-options"><input type="checkBox" onChange={()=>dispatch({type:"FOUR"})}
         
              ></input>4★ & above</lable>
-             <lable>
+             <lable className="ratings-options">
           
             
           <input
@@ -240,11 +241,11 @@ function Filter(){
         3★ & above</lable>
 
 
-      <lable>
+      <lable className="ratings-options">
         <input type="checkBox"
          onChange={()=>dispatch({type:"TWO"})}></input>2★ & above</lable>
 
-<lable>
+<lable className="ratings-options">
     <input type="checkBox"
  onChange={()=>dispatch({type:"ONE"})}
      

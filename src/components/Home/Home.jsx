@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import "../Home/Home.css"
 import  leftbanner from "../images/leftbanner.webp";
 import  banner2  from "../images/banner2.png";
@@ -7,9 +8,7 @@ import  banner5 from "../images/banner5.webp";
 import  banner61  from "../images/banner61.jpg";
 import  banner4  from "../images/banner4.jpg";
 import  allshoppingbanner from "../images/allshoppingbanner.jpeg";
-// import  banner7  from "../images/banner7.jpg";
 import  banner8  from "../images/banner8.webp";
-// import  banner9 from "../images/banner9.jpg";
 import  mensbanner  from "../images/mensbanner.webp";
 import  womenbanner from "../images/womenbanner.webp";
 import {BsHeadset} from "react-icons/bs"
@@ -86,11 +85,13 @@ useEffect(()=>{
         </div>
             <div className="men-banner-div">
                  <img className="men-banner"  width={500} height={400} src={mensbanner} alt="" /> 
-                 <button className="men-shop-now-button"> Shop For Men</button>
+                 <Link to="./Men"><button className="men-shop-now-button"> Shop For Men</button> </Link>
+                 
             </div>
             <div className="women-banner-div">
                  <img  className="women-banner" width={500} height={400} src={womenbanner} alt="" /> 
-                 <button className="women-shop-now-button" > Shop For Women</button>
+                 <Link to="./Women"><button className="women-shop-now-button" > Shop For Women</button>
+ </Link>
             </div>
         
          </div>

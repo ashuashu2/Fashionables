@@ -1,0 +1,52 @@
+.single-product-div{
+    display: flex;
+    
+}
+.single-product-detail{
+    margin: auto;
+}
+
+.single-product-containts{
+    font-size: 1.5rem;
+    margin: 1.1rem;
+}
+.buttons-div{
+    display: flex;
+}
+.cards-button{
+    height: 8vh;
+    background-color: #F6C33C;
+    color: black;
+    border: 2px solid black;
+}
+.pricing-div{
+    display: flex;
+    margin-left:  7rem; 
+    
+}
+.orignal-price{
+    margin: 1rem;
+    text-decoration: line-through;
+}
+.discounts{
+    margin: 1rem;
+    font-size: 2em;
+    color: #F6C33C;
+}
+/* .ratings-div{
+    font-size: 2rem;
+    background-color: aliceblue;
+} */
+.name{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+.description{
+    font-size: 2rem;
+
+}
+.priceMain{
+    font-size: 3rem;
+    color: red;
+}
+

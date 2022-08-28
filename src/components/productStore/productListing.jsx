@@ -1,6 +1,7 @@
 import "../productStore/productListing.css"
 
 import { Filter } from "./filter"
+
 import { Store } from "./store"
 
 function ProductListing(){

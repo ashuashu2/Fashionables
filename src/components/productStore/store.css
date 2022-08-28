@@ -1,23 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400;1,500&family=Nunito+Sans:ital,wght@0,200;1,200&family=Oleo+Script+Swash+Caps:wght@700&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400;1,500&family=Nunito+Sans:ital,wght@0,200;1,200&family=Oleo+Script+Swash+Caps:wght@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400;1,500&family=Nanum+Gothic:wght@400;700&family=Nunito+Sans:ital,wght@0,200;1,200&family=Oleo+Script+Swash+Caps:wght@700&family=Quicksand:wght@300;400&display=swap');
 
 *{
 
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .products-div{
   /* margin-top: 5rem; */
     display: grid;
-  grid-template-columns:auto auto auto;
+  grid-template-columns:auto auto auto auto;
   /* border: 1px solid black; */
   gap: 1rem
 
 }
 .image{
   color: aliceblue;
+ 
 }
+.image-div{
+  position: relative;
+
+}
+.heart-div{
+  font-size: 2.2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 2%;
+  right:  13%;
+}
+.sort-div{
+ font-size: 1.4rem;
+margin-left: 60%;
+}
+.new-badge{
+  background-color: black;
+  color: aliceblue;
+  border-bottom-right-radius: 50%;
+  
+  font-size: 1.2rem;
+  width: 60px;
+  font-weight: bold;
+  position: absolute;
+  top: 5%;
+  left: 1%;
+}
+.rating-div{
+  position: absolute;
+  font-weight: bold;
+  width: 50px;
+  background-color: aliceblue;
+  color:black;
+  left: 9%;
+  bottom: 2%;
+}
+
+.name-heading{
+  font-weight: bolder;
+  margin-right: 50%;
+white-space: nowrap;
+
+  
+}
+.card-div{
+ box-shadow: 3px 3px 3px 3px;
+}
+.description{
+  /* margin-right: 30%; */
+white-space: nowrap;
+margin-top: -0.5rem;
+
+
+
+
+}
+.price-div{
+  display: flex;
+  margin-top: -1rem;
+}
+.price-content{
+  margin: 0.4rem;
+}
+.price1{
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+.price2{
+  text-decoration: line-through;
+
+}
+.discount{
+  color: #F6C33C;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+.card-button{
+  background-color: #F6C33C;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  width: 100%;
+}
+
+
+
+
+.button-div{
+  display: flex;
+  margin-left: 1rem;
+}
+
+
+
+
 
 datalist {
   display: flex;
