@@ -31,7 +31,7 @@ export function ProductCard(  {
         <div className="single-product-containts"> <img  height={500} width={500}  src={img} alt="" /> </div>
         <div className="single-product-detail">
           <h1 className="single-product-containts name">{name}</h1> 
-          <p className="single-product-containts description">{description}</p>
+          <p className="single-product-containts description1">{description}</p>
           <h1 className="single-product-containts priceMain">Rs.{price}</h1>
               <div className="single-product-containts">
                  <h2 className="orignal-price">Rs{originalPrice}</h2>
