@@ -45,7 +45,7 @@ function WishList(){
                     </div>
                     
            
-        <div>{cartState.cart.some((p)=>p.id === user.id)? ( <Link to="/Cart"><button className="card-button"> <IoMdCart/>Go to cart </button> </Link>  ) : (
+        <div className="button-divs">{cartState.cart.some((p)=>p.id === user.id)? ( <Link to="/Cart"><button className="card-button"> <IoMdCart/>Go to cart </button> </Link>  ) : (
             <button  className="card-button"  onClick={() =>cartDispatch({type: "ADD_TO_CART",payload: user,})}> <IoMdCart/>Add To Cart</button>
         )  }</div>
                   </div>

@@ -50,7 +50,7 @@ export function ProductCard(  {
             
               img,discount,
               rating,count
-            },})}> `<IoMdCart/>add to cart`</button>
+            },})}> <IoMdCart/>Add To Cart</button>
         )  }</div>
         </div>
 

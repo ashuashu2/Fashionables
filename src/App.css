@@ -18,3 +18,20 @@ button{
 input{
   cursor: pointer;
 }
+button:hover{
+  background-color: white;
+}
+.NavLink:hover{
+  color: #F6C33C;
+}
+select:hover{
+  cursor: pointer;
+}
+select{
+  color: #F6C33C;
+  background-color: black;
+  margin-left: 47%;
+}
+h1:hover{
+  color: #F6C33C;
+}

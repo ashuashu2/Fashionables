@@ -35,6 +35,12 @@
 }
 
 
+.clear-button{
+    color: black;
+    background-color: #F6C33C;
+    font-weight: bolder;
+}
+
 .discount-div{
     display: grid;
 }

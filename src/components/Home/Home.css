@@ -12,7 +12,7 @@
     border-radius: 50%;
     padding: 0.54rem;
     transition: ease-out 0.5s;
-    box-shadow: inset 0 0 10px #F6C33C,0 0 10px #F6C33C,0 0 40px #F6C33C,0 0 80px #F6C33C
+    /* box-shadow: inset 0 0 10px #F6C33C,0 0 10px #F6C33C,0 0 40px #F6C33C,0 0 80px #F6C33C */
 
 }
 .left-banner-button:hover{
