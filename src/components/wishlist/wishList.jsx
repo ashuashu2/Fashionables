@@ -37,7 +37,7 @@ function WishList(){
                         <div className="Price-container"  >
                       <div className="Price-content"> RS.{user.price } </div>
                      <div className="Price-content"> {user.originalPrice} </div>
-                     <div className="Price-content"> ({user.discount}) </div>
+                     <div className="Price-content"> ({user.discount}%) </div>
                      </div>
                      <Link to={`/ProductDetail/${user.id}`}> <button className="card-button" style={{margin:"2rem"}}> view detils</button> </Link>
                      
@@ -46,7 +46,7 @@ function WishList(){
                     
            
         <div>{cartState.cart.some((p)=>p.id === user.id)? ( <Link to="/Cart"><button className="card-button"> <IoMdCart/>Go to cart </button> </Link>  ) : (
-            <button  className="card-button"  onClick={() =>cartDispatch({type: "ADD_TO_CART",payload: user,})}> `<IoMdCart/>add to cart`</button>
+            <button  className="card-button"  onClick={() =>cartDispatch({type: "ADD_TO_CART",payload: user,})}> <IoMdCart/>Add To Cart</button>
         )  }</div>
                   </div>
 

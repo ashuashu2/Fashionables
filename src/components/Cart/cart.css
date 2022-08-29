@@ -47,3 +47,17 @@
 .deivery-date{
     font-size: 1.3rem;
 }
+
+.details-name{
+    display: flex;
+}
+
+.items-details{
+    background-color: black;
+    color: white;
+    height: 50vh;
+    margin: 3rem;
+}
+.span-div{
+    margin-left: auto;
+}

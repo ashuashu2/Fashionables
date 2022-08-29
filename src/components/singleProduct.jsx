@@ -33,9 +33,9 @@ export function ProductCard(  {
           <h1 className="single-product-containts name">{name}</h1> 
           <p className="single-product-containts description1">{description}</p>
           <h1 className="single-product-containts priceMain">Rs.{price}</h1>
-              <div className="single-product-containts">
+              <div className="single-product-containts col-36 " >
                  <h2 className="orignal-price">Rs{originalPrice}</h2>
-                <h3 className="discounts">{discount}</h3>
+                <h3 className="discounts">{discount}%</h3>
              </div>
              <div className="single-product-containts">{`${rating }★/${count}★`}</div>
              <div className="single-product-containts buttons-div">

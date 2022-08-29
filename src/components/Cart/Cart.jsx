@@ -9,7 +9,8 @@ function Cart (){
     const {cartDispatch} = useCart()
  
 
-    const {cartState: { cart }}  = useCart()
+    const {cartState: { cart,TotlePrice,Discount ,OrignalPrice}}  = useCart()
+    
     return (
         <div>
 
@@ -31,7 +32,7 @@ function Cart (){
                         <div className="prices-div" >
             <div className="price-content price1"> RS.{cart.price } </div>
             <div className="price-content price2 "> {cart.originalPrice} </div>
-            <div className="price-content discount"> ({cart.discount}) </div>
+            <div className="price-content discount"> ({cart.discount}%) </div>
         </div>
         <Link to={`/ProductDetail/${cart.id}`}> <button className="card-button" style={{margin:"2rem"}}> view detils</button> </Link>
 
@@ -66,7 +67,21 @@ function Cart (){
 
 
 
-                <div className="items-details">as</div>
+                <div className="items-details">
+                    
+
+                    <h1>Price Details</h1>
+                    <hr style={{backgroundColor:"white"}} />
+                    <h4 className="details-name">Orignal Price <span className="span-div">{OrignalPrice}</span> </h4>
+                    <h4 className="details-name">Discounts On Price  <span className="span-div">{Discount}</span></h4>
+                    <h4 className="details-name">Coupon Discount <span className="span-div">Applied </span> </h4>
+                    <h4 className="details-name">Delivery <span className="span-div"> Free </span></h4>
+                    <hr style={{backgroundColor:"white"}} />
+
+                    <h4 className="details-name">Final Price  <span className="span-div">{TotlePrice}</span> </h4>
+                    
+                    
+                    </div>
             </div>
 
 

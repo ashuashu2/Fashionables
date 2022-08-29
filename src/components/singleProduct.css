@@ -10,6 +10,10 @@
     font-size: 1.5rem;
     margin: 1.1rem;
 }
+.col-36{
+    display: flex;
+    margin-left: 30%;
+}
 .buttons-div{
     display: flex;
 }

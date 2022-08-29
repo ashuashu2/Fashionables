@@ -106,11 +106,11 @@ const filterDataBySortBy = filterBySort(storeData,state.sortBy)
             <div className="price-div">
             <div className="price-content price1"> RS.{user.price } </div>
             <div className="price-content price2"> {user.originalPrice} </div>
-            <div className="price-content discount"> ({user.discount}) </div>
+            <div className="price-content discount"> ({user.discount}%) </div>
     </div>
     <div className="button-div">
     <div>{cartState.cart.some((p)=>p.id === user.id)? ( <Link to="/Cart"><button className="card-button"> <IoMdCart/>Go to cart </button> </Link>  ) : (
-            <button  className="card-button"  onClick={() =>cartDispatch({type: "ADD_TO_CART",payload: user,})}> `<IoMdCart/>add to cart`</button>
+            <button  className="card-button"  onClick={() =>cartDispatch({type: "ADD_TO_CART",payload: user,})}> <IoMdCart/>Add To Cart</button>
         )  }</div>
             <Link to={`/ProductDetail/${user.id}`}> <button className="card-button"> view detils</button> </Link>
 
