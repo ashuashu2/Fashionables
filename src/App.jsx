@@ -22,7 +22,7 @@ import { useWishlist } from "./context/wishlistContext";
 function App() {
 
   const {cartState} = useCart()
-  const {WishListState} = useWishlist()
+  const {WishlistState} = useWishlist()
 
 
   return (
@@ -46,7 +46,7 @@ function App() {
         <Route  path="/Women" element={<WomenClothes />} />
         <Route  path="/Women" element={<WomenClothes />} />
         <Route  path="/*" element={<Eror404 />} />
-        <Route  path="/WishList" element={cartState.cart.length > 0 ? <WishList /> : <EmptyWishlist />} />
+        <Route  path="/WishList" element={WishlistState.Wishlist.length > 0 ? <WishList /> : <EmptyWishlist />} />
        
 
 
