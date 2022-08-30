@@ -28,8 +28,8 @@ select:hover{
   cursor: pointer;
 }
 select{
-  color: #F6C33C;
-  background-color: black;
+  color: black;
+  background-color: #F6C33C;
   margin-left: 47%;
 }
 h1:hover{

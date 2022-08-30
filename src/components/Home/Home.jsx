@@ -5,7 +5,7 @@ import  leftbanner from "../images/leftbanner.webp";
 import  banner2  from "../images/banner2.png";
 import  banner3  from "../images/banner3.webp";
 import  banner5 from "../images/banner5.webp";
-import  banner61  from "../images/banner61.jpg";
+import  banner9  from "../images/banner9.jpg";
 import  banner4  from "../images/banner4.jpg";
 import  allshoppingbanner from "../images/allshoppingbanner.jpeg";
 import  banner8  from "../images/banner8.webp";
@@ -22,7 +22,7 @@ import { Link} from "react-router-dom";
 function Home (){
     const [allImage,setAllImage]=useState(0)
 
-    const [image,setImage]=useState([banner2,banner4,banner3,banner61,banner5])
+    const [image,setImage]=useState([banner5,banner4,banner3,banner9])
 
 
 
@@ -32,7 +32,7 @@ function Home (){
 
 useEffect(()=>{
     setInterval(() => {
-        setAllImage((allImage=>allImage>3?0:allImage+1))
+        setAllImage((allImage=>allImage>2?0:allImage+1))
         
     }, 1500);
 },[])
@@ -46,15 +46,10 @@ useEffect(()=>{
         <div  >
           <div className="sliders-container"> 
 
-                <div className="banner-div">
-                    <img width={800} height={550} className="left-banner"   src={leftbanner} alt="" />
-                    <Link to="/ProductListing" ><button className="left-banner-button" >Explore Collection</button></Link>
-
-                    
-                </div>
+               
 
                 <div className="banner-div">
-                    <img width={500} height={550} src={image[allImage]} alt="" />
+                    <img width={1320} height={550} src={image[allImage]} alt="" />
                    
 
                 </div>

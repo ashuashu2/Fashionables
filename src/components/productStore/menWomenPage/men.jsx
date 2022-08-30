@@ -73,7 +73,7 @@ const filterDataByRatings = filterByRatings(filterDataByDiscount,state.Ratings.O
              { finalFilterData.map((user,{id}) =>
            <div key={id} className="card-div" >
     <div> 
-        <div  className="image-div" > <img className="image"   height={300} width={220} src={user.img} alt="" />
+        <div  className="image-div" > <img className="image"   height={300} width={270} src={user.img} alt="" />
 
         <div className="heart-div">
 
@@ -88,7 +88,7 @@ const filterDataByRatings = filterByRatings(filterDataByDiscount,state.Ratings.O
          </div>
         
         <div className="new-badge">{user.newArrival && <span>NEW</span>}</div>
-        <div className="rating-div">{`${user.rating }★/${user.count}★`}</div>
+        <div className="rating-div">{`★${user.rating }/${user.count}`}</div>
          </div>
         <div>
     </div>
