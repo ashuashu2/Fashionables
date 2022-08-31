@@ -1,0 +1,157 @@
+/* *************     login-page                  ***************** */
+
+
+
+
+.login-text{
+    margin-right: 70%;
+
+}
+
+.para{
+    margin-right: 22%;
+}
+.upper-button-div{
+    display: flex;
+    /* margin-right: 100%; */
+}
+
+.images-div{
+    width: 40%;
+    position: relative;
+    margin-right: 11%;
+   
+    height: 800;
+}
+.black-image{
+    border-radius: 20%;
+}
+.main-image{
+   
+border-radius: 10%;
+
+    position: absolute;
+
+
+top: 15%;
+left: 20%;
+}
+
+.gmail-button{
+    background-color: rgb(46, 14, 3);
+    font-weight: bolder;
+    padding: 0.5rem;
+    color: white;
+    margin: 1rem;
+
+}
+.facebook-button{
+    background-color: navy;
+    font-weight: bolder;
+    padding: 0.5rem;
+    color: white;
+    margin: 1rem;
+}
+
+
+.gmail-button:hover{
+    color: black;
+
+}
+.facebook-button:hover{
+    color: black;
+
+
+}
+
+
+
+.details-container{
+    margin: auto;
+    margin-top: 1rem;
+}
+.email-text{
+    margin-right: 100%;
+    font-weight: bolder;
+    
+}
+.password-text{
+    margin-right: 51%;
+    font-weight: bolder;
+    
+   
+}
+.email-input{
+    width: 70%;
+    margin-right: 10rem;
+    margin-bottom: 1rem;
+
+}
+.password-input{
+    width: 70%;
+    margin-right: 10rem;
+    margin-bottom: 1rem;
+}
+.login-button-div{
+    margin-top: 1rem;
+    display: flex;
+}
+.guest-button{
+    margin-left:1rem;
+    margin: "0.7rem";
+    color: white;
+    background-color: black;
+
+
+
+
+}
+
+.forgot{
+    font-weight: bolder;
+    margin-top: -1rem;
+    margin-left: 3rem;
+   
+}
+.guest-button:hover{
+    color: black;
+
+
+}.login-button:hover{
+    color: black;
+
+
+}
+.login-button{
+    margin: "0.7rem";
+    color: white;
+    background-color: black;
+    ;
+
+    height: 5vh;
+    width: 40%;
+    
+}
+.signup-text{
+    margin-top: 1.5rem;
+    margin-right: 40%;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+/* *************     signup-page                  ***************** */
+.para2{
+    font-size: x-large;
+    font-weight: bolder;
+    
+    margin: 2rem;
+    margin-right: 49%;
+    margin-bottom: -0.2rem;
+}

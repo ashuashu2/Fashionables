@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import { Cart } from "./components/Cart/Cart";
 import { EmptyCart } from "./components/Cart/emptyCart";
@@ -7,7 +7,11 @@ import { Footer } from "./components/footer/footer";
 import { Header } from "./components/headerText";
 import { Home} from "./components/Home/Home"
 import { Navbar } from "./components/Nav/Nav";
+import { PlainNav } from "./components/Nav/PlainNav";
 import { ProductDetail } from "./components/productDetail";
+import { Login } from "./components/productStore/auth/Login";
+import { RequiresAuth } from "./components/productStore/auth/RequireAuth";
+import { Signup } from "./components/productStore/auth/Sigup";
 import { Filter } from "./components/productStore/filter";
 import { MenClothes } from "./components/productStore/menWomenPage/men";
 import { WomenClothes } from "./components/productStore/menWomenPage/women";
@@ -21,6 +25,8 @@ import { useWishlist } from "./context/wishlistContext";
 
 function App() {
 
+  const { pathname } = useLocation()
+
   const {cartState} = useCart()
   const {WishlistState} = useWishlist()
 
@@ -28,8 +34,13 @@ function App() {
   return (
     <div className="App">
      <Header />
+     {pathname === "/Login" || pathname === "/Signup" ? (
+        <PlainNav />
+      ) : (
+        <Navbar />
+      )}
    
-      <Navbar />
+    
     
     
 
@@ -37,16 +48,21 @@ function App() {
       
      
       <Routes>
+
         <Route  path="/" element={<Home />} />
-        <Route  path="/Cart" element= {cartState.cart.length > 0 ? <Cart /> : <EmptyCart />}/>
+        <Route  path="/Cart" element= {  <RequiresAuth> {cartState.cart.length > 0 ? <Cart /> : <EmptyCart />} </RequiresAuth>} />
         <Route  path="/Store" element={<Store />} />
         <Route  path="/Filter" element={<Filter />} />
         <Route  path="/ProductListing" element={<ProductListing />} />
         <Route  path="/Men" element={<MenClothes />} />
         <Route  path="/Women" element={<WomenClothes />} />
-        <Route  path="/Women" element={<WomenClothes />} />
+        
         <Route  path="/*" element={<Eror404 />} />
-        <Route  path="/WishList" element={WishlistState.Wishlist.length > 0 ? <WishList /> : <EmptyWishlist />} />
+        <Route  path="/Login" element={<Login />} />
+        <Route  path="/Signup" element={<Signup />} />
+
+
+        <Route  path="/WishList" element={   <RequiresAuth>{ WishlistState.Wishlist.length > 0 ? <WishList /> : <EmptyWishlist />} </RequiresAuth> } />
        
 
 

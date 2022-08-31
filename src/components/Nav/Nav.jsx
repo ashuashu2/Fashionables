@@ -4,9 +4,10 @@ import "../Nav/Nav.css"
 import { IoMdCart } from "react-icons/io";
 import {AiFillHeart  } from "react-icons/ai";
 import {CgProfile } from "react-icons/cg";
-import { Link,NavLink} from "react-router-dom";
+import { Link,NavLink, useLocation, useNavigate} from "react-router-dom";
 import { useCart } from "../../context/cartContext";
 import { useWishlist } from "../../context/wishlistContext";
+import { useAuth } from "../../context/authContext";
 
 
 
@@ -20,6 +21,10 @@ import { useWishlist } from "../../context/wishlistContext";
  function Navbar (){
   const {cartState: { cart }}  = useCart()
   const {WishlistState: { Wishlist }}  = useWishlist()
+  const { isLoggedIn, setIsLoggedIn } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+
 
   const getActiveStyle = ({ isActive }) =>({
     
@@ -62,13 +67,20 @@ import { useWishlist } from "../../context/wishlistContext";
               
               
               <div>
-                <h4 className="Nav-right-side-content icon"> <CgProfile /> </h4>
-                <h4 className=" icon-text"> Profile </h4>
-              </div>
+                <h4 className="Nav-right-side-content icon"> Hi!User </h4>
+           
 
 
           
             </div>
+            <div > {isLoggedIn ? (<button className="card-button"
+        onClick={() => {
+          setIsLoggedIn((isLoggedIn) => !isLoggedIn);
+          navigate("/");}}>
+        
+        LogOut
+      </button>):( <button className="card-button">  <NavLink style={{color:"black"}}  to="./Login" state={{from:location}} >Login</NavLink> </button>) } </div>
+              </div>
 
 
            
