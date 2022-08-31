@@ -123,7 +123,6 @@ const filterDataBySortBy = filterBySort(storeData,state.sortBy)
 
 
 
-            {/* <div><button  onClick={() =>WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,})}>ADD_TO_WISHLIST </button></div> */}
             </div>
 
             )} </div>

@@ -40,6 +40,8 @@
     box-shadow: 10px 1px 10px 2px;
 }
 .men-women-container{
+    height: 600px;
+    width: 1320px;
     display:grid;
     grid-template-areas:
      "explore men "
@@ -62,15 +64,15 @@
 
        cursor: pointer;
        border: 4px solid black;
-       width: 28%;
+       width: 26%;
        font-size: 1rem;
-       padding: 1.2rem;
+       padding: 0.65rem;
        background-color: red;
        color: white;
       position: absolute;
-      bottom: 6.8em;
+      bottom: 5.1em;
 
-      right: 11%;
+      right: 14.3%;
      
 
 
@@ -126,7 +128,7 @@ background-color:#F6C33C;
        background-color: red;
        color: white;
       position: absolute;
-      bottom: 7.5em;
+      bottom: 5em;
 
       right: 6em;
  
@@ -143,12 +145,16 @@ background-color:#F6C33C;
 
 .explore-banner-div{
     grid-area: explore;
+   
  
     position: relative;
     top: 0;
     bottom: 0;
 }
 
+.explore-banner{
+     border-radius: 30%;
+}
 
 .explore-button{
 
@@ -161,7 +167,7 @@ background-color:#F6C33C;
        color: white;
       position: absolute;
      bottom: 8em;
-     right: 40%;
+     right: 33%;
  
 
   

@@ -59,7 +59,7 @@ useEffect(()=>{
 
       
 
-        <div>  <img className="banner8"  width={850} height={550} src={banner8} alt="" /> </div>
+        <div>  <img className="banner8"  width={550} height={350} src={banner8} alt="" /> </div>
 
         <div className="category-div">
             <h2 className="col59">PASSION FOR FASHION</h2>
@@ -75,18 +75,18 @@ useEffect(()=>{
 
 
         <div className="explore-banner-div"> 
-            <img className="explore-banner" width={800} height={800} src={allshoppingbanner} alt="" />
+            <img className="explore-banner"   width={600} height={500} src={allshoppingbanner} alt="" />
             <Link to="/ProductListing" ><button className="explore-button">Explore all collection</button></Link>
             
     
         </div>
             <div className="men-banner-div">
-                 <img className="men-banner"  width={500} height={400} src={mensbanner} alt="" /> 
+                 <img className="men-banner"  width={500} height={300} src={mensbanner} alt="" /> 
                  <Link to="./Men"><button className="men-shop-now-button"> Shop For Men</button> </Link>
                  
             </div>
             <div className="women-banner-div">
-                 <img  className="women-banner" width={500} height={400} src={womenbanner} alt="" /> 
+                 <img  className="women-banner" width={500} height={300} src={womenbanner} alt="" /> 
                  <Link to="./Women"><button className="women-shop-now-button" > Shop For Women</button>
  </Link>
             </div>
