@@ -99,8 +99,9 @@ left: 20%;
 .guest-button{
     margin-left:3.5rem;
     margin: "0.7rem";
-    color: white;
-    background-color: black;
+    font-weight: bolder;
+    color: black;
+    background-color: rgb(230, 212, 212);
 
 
 
