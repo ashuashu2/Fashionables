@@ -151,6 +151,9 @@ background-color:#F6C33C;
     top: 0;
     bottom: 0;
 }
+.sliders-images{
+    /* max-width: 100%; */
+}
 
 .explore-banner{
      border-radius: 30%;

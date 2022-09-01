@@ -48,7 +48,7 @@ useEffect(()=>{
 
                
                 <div className="banner-div">
-                    <img width={1300} height={550} src={image[allImage]} alt="" />
+                    <img className="slider-images" width={1300} height={550} src={image[allImage]} alt="" />
                     <Link to="/ProductListing" ><button className="left-banner-button" >Explore Collection</button></Link>
 
                    
