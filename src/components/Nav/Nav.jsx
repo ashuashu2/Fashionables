@@ -50,7 +50,10 @@ import { useAuth } from "../../context/authContext";
             <div className="Nav-right-side" >
             <NavLink className="NavLink" style={getActiveStyle} to="./Cart" >
             <div className="cart-icon-div">
-                <h4 className="Nav-right-side-content" ><IoMdCart size="3rem" /> <span className="cart-icon-counter">{cart.length}</span>  </h4>
+                <h4 className="Nav-right-side-content" ><IoMdCart size="3rem" /> <span className="cart-icon-counter">
+                {isLoggedIn?cart.length:cart.length==="0"}
+                  
+                  </span>  </h4>
                 <h4 className=" icon-text" >Cart</h4>
              
                
@@ -60,7 +63,9 @@ import { useAuth } from "../../context/authContext";
 
             <NavLink className="NavLink" style={getActiveStyle} to="./WishList" > 
             <div className="wishlist-icon-div">
-                <h4 className="Nav-right-side-content icon "> <AiFillHeart /><span className="wishlist-icon-counter"> {Wishlist.length}</span></h4>
+                <h4 className="Nav-right-side-content icon "> <AiFillHeart /><span className="wishlist-icon-counter">
+                  {isLoggedIn?Wishlist.length:Wishlist.length==="0"}
+                   </span></h4>
                 <h4 className=" icon-text"> Wishlist </h4>
               </div> </NavLink>
 
