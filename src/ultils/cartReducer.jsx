@@ -6,7 +6,9 @@ function cartReducer(cartState,action){
                   return { ...cartState, cart: [...cartState.cart, { ...action.payload }],
                   TotlePrice : cartState.TotlePrice + Number(action.payload.price),
                   OrignalPrice : cartState.OrignalPrice + Number(action.payload.originalPrice),
-                 Discount : cartState.Discount +Number(action.payload.discountPrice)};
+                 Discount : cartState.Discount +Number(action.payload.discountPrice)
+                };
+                 
             
             case "REMOVE_FROM_CART":
                 return {

@@ -1,4 +1,8 @@
 import { Link, Route, Routes, useLocation } from "react-router-dom";
+
+
+
+
 import "./App.css";
 import { Cart } from "./components/Cart/Cart";
 import { EmptyCart } from "./components/Cart/emptyCart";
@@ -21,6 +25,8 @@ import { EmptyWishlist } from "./components/wishlist/emptyWishList";
 import { WishList } from "./components/wishlist/wishList";
 import { useCart } from "./context/cartContext";
 import { useWishlist } from "./context/wishlistContext";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -40,6 +46,7 @@ function App() {
         <Navbar />
       )}
    
+  
     
     
     
@@ -78,7 +85,17 @@ function App() {
 
 
       </Routes>
+      
       <Footer />
+      <ToastContainer position="top-center"
+autoClose={3000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover />
   
     </div>
   );

@@ -2,6 +2,8 @@ import "../productStore/store.css"
 import { useStore } from "../../context/storeContext"
 import { useCart } from "../../context/cartContext"
 import { BsFillHeartFill } from "react-icons/bs";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { IoMdCart } from "react-icons/io";
 
@@ -21,6 +23,7 @@ import { filterByRatings } from "../../ultils/filterByRatings";
 import { filterBySort } from "../../ultils/sortBy";
 import { useWishlist } from "../../context/wishlistContext";
 import { Link} from "react-router-dom";
+import { useAuth } from "../../context/authContext";
 
 
 
@@ -31,6 +34,9 @@ function Store ( ){
     const {state,dispatch} = useFilter()
     const {cartDispatch,cartState} = useCart()
     const {WishlistDispatch,WishlistState} = useWishlist()
+  const { isLoggedIn, setIsLoggedIn } = useAuth();
+
+
 
 
 
@@ -59,6 +65,7 @@ const filterDataBySortBy = filterBySort(storeData,state.sortBy)
 
     return(
         <div >
+            
 
 
 <div className="sort-div"  >
@@ -86,7 +93,7 @@ const filterDataBySortBy = filterBySort(storeData,state.sortBy)
         <div className="heart-div">
 
 <div>{WishlistState.Wishlist.some((p)=>p.id === user.id)? ( <Link to="/Wishlist"><button className="card-button"> <BsFillHeartFill /></button> </Link>  ) : (
-                <div  onClick={() =>WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,})}> { <AiOutlineHeart />} </div>
+                <div  onClick={() =>{ WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,}); toast.success("Added To WishList!")  }}> { <AiOutlineHeart />} </div>
 
 )  }</div>
 
@@ -110,8 +117,15 @@ const filterDataBySortBy = filterBySort(storeData,state.sortBy)
     </div>
     <div className="button-div">
     <div>{cartState.cart.some((p)=>p.id === user.id)? ( <Link to="/Cart"><button className="card-button"> <IoMdCart/>Go to cart </button> </Link>  ) : (
-            <button  className="card-button"  onClick={() =>cartDispatch({type: "ADD_TO_CART",payload: user,})}> <IoMdCart/>Add To Cart</button>
-        )  }</div>
+        
+
+            <button  className="card-button"  onClick={() =>{
+                cartDispatch({type: "ADD_TO_CART",payload: user,});
+                toast.success(" Added To Cart !");
+              }}> <IoMdCart/>Add To Cart</button>
+        )  
+        
+        }</div>
             <Link to={`/ProductDetail/${user.id}`}> <button className="card-button"> view detils</button> </Link>
 
             </div>
@@ -123,10 +137,10 @@ const filterDataBySortBy = filterBySort(storeData,state.sortBy)
 
 
 
-            </div>
+             </div>
 
             )} </div>
-
+     
         </div>
     )
 

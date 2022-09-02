@@ -2,6 +2,8 @@ import React from "react";
 import { useCart } from "../../context/cartContext";
 import { TiDeleteOutline } from "react-icons/ti";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 import "../Cart/cart.css"
@@ -44,7 +46,9 @@ function Cart (){
                       <div className="deivery-date"> <small >Delivery by <span>{cart.Date}</span> |  Free <span className="free-delivery"> ₹40</span>  </small></div>
 
              </div>
-             <button  className="x-button" onClick={() =>cartDispatch({type: "REMOVE_FROM_CART",payload: cart,})}><TiDeleteOutline /></button>
+             <button  className="x-button" onClick={() =>{cartDispatch({type: "REMOVE_FROM_CART",payload: cart,})
+            toast.success(" Removed From Cart !");
+            }}><TiDeleteOutline /></button>
 
 
         </div>

@@ -5,6 +5,8 @@ import { IoMdCart } from "react-icons/io";
 import {AiFillHeart  } from "react-icons/ai";
 import {CgProfile } from "react-icons/cg";
 import { Link,NavLink, useLocation, useNavigate} from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useCart } from "../../context/cartContext";
 import { useWishlist } from "../../context/wishlistContext";
 import { useAuth } from "../../context/authContext";
@@ -81,7 +83,8 @@ import { useAuth } from "../../context/authContext";
             <div > {isLoggedIn ? (<button className="card-button"
         onClick={() => {
           setIsLoggedIn((isLoggedIn) => !isLoggedIn);
-          navigate("/");}}>
+          navigate("/");
+          toast.success("Logout Succesfully")}}>
         
         LogOut
       </button>):( <button className="card-button">  <NavLink style={{color:"black"}}  to="./Login" state={{from:location}} >Login</NavLink> </button>) } </div>

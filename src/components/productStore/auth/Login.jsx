@@ -1,6 +1,8 @@
 
 import { Link,  useLocation, useNavigate } from "react-router-dom";
 import LoginPage  from "../../images/LoginPage.jpg"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import blackimage  from "../../images/blackimage.jpg"
 
 import "../auth/Auth.css"
@@ -71,7 +73,9 @@ function Login (){
               <div className="forgot" >Forgot Password?</div>
               <div className="login-button-div" >
                 <button className="login-button">Login</button>
-                <button className="guest-button" onClick={() => {setIsLoggedIn((isLoggedIn) => !isLoggedIn);navigate(location.state.from.pathname);}}>Login As Guest</button>
+                <button className="guest-button" onClick={() => {setIsLoggedIn((isLoggedIn) => !isLoggedIn);
+                  toast.success("Login Succesfully");
+                  navigate(location.state.from.pathname);}}>Login As Guest</button>
               </div>
 
               <p className="signup-text"> Not a member ?  <Link to="/Signup">Signup </Link>  </p>
@@ -81,7 +85,9 @@ function Login (){
            
 
            </div>
+           
         </div>
+        
     )
 }
 export {Login}
