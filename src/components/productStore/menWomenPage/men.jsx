@@ -68,32 +68,40 @@ const filterDataByRatings = filterByRatings(filterDataByDiscount,state.Ratings.O
             </select>
         </div>
 
-            <div className="bigger-div">
-                <div className="filter-div"  style={{width: "17%"}}  ><MenWomenFilter /> </div>
+        <div className="bigger-div">
+                <div className="filter-div" style={{width: "17%"}}><MenWomenFilter/></div>
                 <div>
                 <div className="products-div" >
-             { finalFilterData.map((user,{id}) =>
+                { finalFilterData.map((user,{id}) =>
            <div key={id} className="card-div" >
     <div> 
-        <div  className="image-div" > <img className="image"   height={300} width={270} src={user.img} alt="" />
+
+
+        <div  className="image-div" >
+        <Link to={`/ProductDetail/${user.id}`}>  <img className="image"   height={250} Width="100%" src={user.img} alt="" /> </Link>
+
+
 
         <div className="heart-div">
 
-        <div>{WishlistState.Wishlist.some((p)=>p.id === user.id)? ( <Link to="/Wishlist"><button className="card-button"> <BsFillHeartFill /></button> </Link>  ) : (
-                        <div  onClick={() =>{ WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,}); toast.success("Added To WishList !")  }}> { <AiOutlineHeart />} </div>
+<div>{WishlistState.Wishlist.some((p)=>p.id === user.id)? ( <Link to="/Wishlist"><button className="card-button"> <BsFillHeartFill /></button> </Link>  ) : (
+                <div  onClick={() =>{ WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,}); toast.success("Added To WishList!")  }}> { <AiOutlineHeart />} </div>
 
-        )  }</div>
-
-
+)  }</div>
 
 
-         </div>
+
+
+ </div>        
+        
         
         <div className="new-badge">{user.newArrival && <span>NEW</span>}</div>
-        <div className="rating-div">{`★${user.rating }/${user.count}`}</div>
+        <div className="rating-div">{`${user.rating }★/${user.count}`}</div>
          </div>
-        <div>
+       
     </div>
+    <div className="details-div"> 
+    <div className="details2-div">
             <h4 className="name-heading"> {user.name} </h4>
             <h5 className="description"> {user.description1} </h5>
             <div className="price-div">
@@ -101,38 +109,37 @@ const filterDataByRatings = filterByRatings(filterDataByDiscount,state.Ratings.O
             <div className="price-content price2"> {user.originalPrice} </div>
             <div className="price-content discount"> ({user.discount}%) </div>
     </div>
+    <div> </div>
+
+
+    </div>
+   
+    
+    </div>
     <div className="button-div">
+    <div>{cartState.cart.some((p)=>p.id === user.id)? ( <Link to="/Cart"><button className="card2-button"> Go to cart </button> </Link>  ) : (
+        
 
-
-        <div>{cartState.cart.some((p)=>p.id === user.id)? ( <Link to="/Cart"><button className="card-button"> <IoMdCart/>Go to cart </button> </Link>  ) : (
-            <button  className="card-button"  onClick={() =>{
+            <button  className="card2-button"  onClick={() =>{
                 cartDispatch({type: "ADD_TO_CART",payload: user,});
                 toast.success(" Added To Cart !");
-              }}> <IoMdCart/>Add To cart</button>
-        )  }</div>
-
-
-
-
-
-
-
-       
-            <Link to={`/ProductDetail/${user.id}`}> <button className="card-button"> view detils</button> </Link>
+              }}> Add To Cart</button>
+        )  
+        
+        }</div>
 
             </div>
-    </div>
-            
-            
             
             
             
 
 
 
+             </div>
+
+            )}
+            
             </div>
-
-            )} </div>
                 </div>
             
           

@@ -58,7 +58,7 @@ return (
 
 
   <div className="Nav-right-side">
-    <NavLink className="NavLink" style={getActiveStyle} to="./Cart">
+    <NavLink className="NavLink icon-container " style={getActiveStyle} to="./Cart">
       <div className="cart-icon-div">
         <h4 className="Nav-right-side-content">
           <IoMdCart size="3rem" /> <span className="cart-icon-counter">
@@ -72,7 +72,7 @@ return (
       </div>
     </NavLink>
 
-    <NavLink className="NavLink" style={getActiveStyle} to="./WishList">
+    <NavLink className="NavLink icon-container " style={getActiveStyle} to="./WishList">
       <div className="wishlist-icon-div">
         <h4 className="Nav-right-side-content icon wishlist-icon ">
           <AiFillHeart /><span className="wishlist-icon-counter">
@@ -91,7 +91,7 @@ return (
 
 
     </div>
-    <div> {isLoggedIn ? (<button className="card-button" onClick={()=> {
+    <div className="login-button"  > {isLoggedIn ? (<button className="card-button" onClick={()=> {
         setIsLoggedIn((isLoggedIn) => !isLoggedIn);
         navigate("/");
         toast.success("Logout Succesfully")}}>

@@ -10,10 +10,12 @@
 }
 
 .products-div{
-  /* margin-top: 5rem; */
-    display: grid;
-  grid-template-columns:auto auto auto auto;
-  /* border: 1px solid black; */
+  margin: 1.2rem;
+ 
+  display: grid;
+  grid-template-columns:  repeat(4, 1fr);
+  grid-column-gap: 10px;
+
   gap: 2rem;
  height: 100%;
 
@@ -36,6 +38,7 @@
 .sort-div{
  font-size: 1.4rem;
 margin-left: 60%;
+margin-top: 0.3rem;
 }
 .new-badge{
   background-color: black;
@@ -47,33 +50,43 @@ margin-left: 60%;
   font-weight: bold;
   position: absolute;
   top: 5%;
-  left: 1%;
+  left: -3%;
 }
+.details-div{
+  display: flex;
+}
+.details2-div{
+  margin-right: auto;
+}
+
 .rating-div{
   position: absolute;
   font-weight: bold;
   width: 50px;
   background-color: aliceblue;
   color:black;
-  right: 1%;
+  left: 2%;
   bottom: 2%;
 }
 
 .name-heading{
   font-weight: bolder;
-  margin-right: 50%;
+  margin-right: 100%;
 white-space: nowrap;
+margin-top: 0.5rem;
 
   
 }
 .card-div{
- box-shadow: 1px 1px 1px 1px;
- padding-bottom: 1rem;
+ /* box-shadow: 1px 1px 1px 1px; */
+ /* border: 0.1px solid black; */
+
+ /* padding-bottom: 1rem; */
 }
 .description{
-  /* margin-right: 30%; */
 white-space: nowrap;
-margin-top: -0.5rem;
+margin-top: -0.3rem;
+
 
 
 
@@ -81,10 +94,11 @@ margin-top: -0.5rem;
 }
 .price-div{
   display: flex;
-  margin-top: -1rem;
+  margin-top: -0.8rem;
+  margin-right: 100%;
 }
 .price-content{
-  margin: 0.4rem;
+  margin: 0.3rem;
 }
 .price1{
   font-size: 1.3rem;
@@ -105,13 +119,11 @@ margin-top: -0.5rem;
   font-weight: bolder;
   width: 100%;
 }
-
-
-
-
-.button-div{
-  display: flex;
-  margin-left: 1rem;
+.card2-button{
+  background-color: #F6C33C;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  width: 90%;
 }
 
 

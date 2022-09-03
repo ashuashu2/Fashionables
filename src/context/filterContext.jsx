@@ -7,7 +7,7 @@ const FilterProvider = ({children})=>{
 
     
     const [state,dispatch]=useReducer(reducerFunction,{
-    sortBy:"RATING_LOW_TO_HIGH",
+    sortBy:"RATING_HIGH_TO_LOW",
     Price:100,
     Search:"",
     color:"",
