@@ -85,7 +85,7 @@ const filterDataBySortBy = filterBySort(storeData,state.sortBy)
              { finalFilterData.map((user,{id}) =>
            <div key={id} className="card-div" >
     <div> 
-        <div  className="image-div" > <img className="image"   height={300} width={270} src={user.img} alt="" />
+        <div  className="image-div" > <img className="image"   height={250} Width="100%" src={user.img} alt="" />
 
 
 
