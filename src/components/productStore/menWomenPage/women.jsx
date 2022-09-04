@@ -39,7 +39,7 @@ function WomenClothes(){
         }
         else
         {
-        toast.success(" pleease loogin !")
+        toast.success(" please login  first!")
         
         }
         
@@ -47,6 +47,23 @@ function WomenClothes(){
         
         
         }
+
+        function AddtoWishlistHandler(user){
+            if(isLoggedIn){
+                WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,}); 
+                toast.success("Added To WishList!")
+            
+            }
+            else
+            {
+            toast.success(" please login  first!")
+            
+            }
+            
+            
+            
+            
+            }
 
     function findWomen(storeData) {
         return storeData.filter((item)=>item.idealFor==="Women")
@@ -98,7 +115,7 @@ const filterDataByRatings = filterByRatings(filterDataByDiscount,state.Ratings.O
         <div className="heart-div">
 
 <div>{WishlistState.Wishlist.some((p)=>p.id === user.id)? ( <Link to="/Wishlist"><button className="card-button"> <BsFillHeartFill /></button> </Link>  ) : (
-                <div  onClick={() =>{ WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,}); toast.success("Added To WishList!")  }}> { <AiOutlineHeart />} </div>
+                <div  onClick={() =>{ AddtoWishlistHandler(user) }}> { <AiOutlineHeart />} </div>
 
 )  }</div>
 

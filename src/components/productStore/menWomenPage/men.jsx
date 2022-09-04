@@ -54,22 +54,35 @@ const finalFilterData = filterDataByRatings
 
 
 
+
 function AddtoCartHandler(user){
-if(isLoggedIn){
-cartDispatch({type: "ADD_TO_CART",payload: user,});
-toast.success(" Added To Cart !")
+    if(isLoggedIn){
+    cartDispatch({type: "ADD_TO_CART",payload: user,});
+    toast.success(" Added To Cart !")
+    
+    }
+    else
+    {
+    toast.success(" please login  first!")
+    
+    } }
 
-}
-else
-{
-toast.success(" pleease loogin !")
-
-}
-
-
-
-
-}
+    function AddtoWishlistHandler(user){
+        if(isLoggedIn){
+            WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,}); 
+            toast.success("Added To WishList!")
+        
+        }
+        else
+        {
+        toast.success(" please login  first!")
+        
+        }
+        
+        
+        
+        
+        }
 
 
 
@@ -114,8 +127,7 @@ return(
                                 <div>{WishlistState.Wishlist.some((p)=>p.id === user.id)? (
                                     <Link to="/Wishlist"><button className="card-button">
                                         <BsFillHeartFill /></button> </Link> ) : (
-                                    <div onClick={()=>{ WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,});
-                                        toast.success("Added To WishList!") }}> {
+                                    <div onClick={() =>{ AddtoWishlistHandler(user) }} > {
                                         <AiOutlineHeart />} </div>
 
                                     ) }</div>
