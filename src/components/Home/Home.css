@@ -1,20 +1,17 @@
-.left-banner{
-    position: relative;
+
+.banner8{
+    margin: 2rem;
 }
 .left-banner-button{
-    cursor: pointer;
-    position: absolute;
-    bottom: -2.4rem;;
-    left: 100px;
+ 
     font-size: 1.7rem;
     background-color: #F6C33C;
-    font-family: 'Oleo Script Swash Caps', cursive;
-    border-radius: 50%;
+ 
     padding: 0.54rem;
     transition: ease-out 0.5s;
-    /* box-shadow: inset 0 0 10px #F6C33C,0 0 10px #F6C33C,0 0 40px #F6C33C,0 0 80px #F6C33C */
 
 }
+
 .left-banner-button:hover{
     color: white;
   box-shadow: inset 300px 0 0 0 rgb(235, 7, 7);
@@ -36,13 +33,12 @@
 
 
 .sliders-container{
-    display: flex;
  
     box-shadow: 10px 1px 10px 2px;
 }
 .men-women-container{
-    height: 600px;
-    width: 1320px;
+    height: 100%;
+    width: 100%;
     display:grid;
     grid-template-areas:
      "explore men "
@@ -200,22 +196,22 @@ background-color:#F6C33C;
 
 
 .policy-div{
-    height: 250px;
+    height: 170px;
     border: 2px solid black;
     display: flex;
     
 }
 .policies{
-margin: 2rem;
+margin:1rem;
 display: flex;
 
 }
 
 .lines{
     border: 1px solid black;
-    height: 200px;
-    margin-top: 50px;
+    height: 120px;
+    margin-top: 25px;
 }
 .icons{
-    font-size: 5rem;
+    font-size: 3rem;
 }

@@ -48,7 +48,7 @@ useEffect(()=>{
 
                
                 <div className="banner-div">
-                    <img className="slider-images" Width="100%" height={550} src={image[allImage]} alt="" />
+                    <img className="slider-images" width="100%" height={550} src={image[allImage]} alt="" />
                     <Link to="/ProductListing" ><button className="left-banner-button" >Explore Collection</button></Link>
 
                    
@@ -82,12 +82,12 @@ useEffect(()=>{
         </div>
             <div className="men-banner-div">
                  <img className="men-banner"  width={500} height={300} src={mensbanner} alt="" /> 
-                 <Link to="./Men"><button className="men-shop-now-button"> Shop For Men</button> </Link>
+                 <Link to="/Men"><button className="men-shop-now-button"> Shop For Men</button> </Link>
                  
             </div>
             <div className="women-banner-div">
                  <img  className="women-banner" width={500} height={300} src={womenbanner} alt="" /> 
-                 <Link to="./Women"><button className="women-shop-now-button" > Shop For Women</button>
+                 <Link to="/Women"><button className="women-shop-now-button" > Shop For Women</button>
  </Link>
             </div>
         

@@ -37,9 +37,9 @@ export function ProductCard(  {
                  <h2 className="orignal-price">Rs{originalPrice}</h2>
                 <h3 className="discounts">{discount}%</h3>
              </div>
-             <div className="single-product-containts">{`${rating }★/${count}★`}</div>
+             <div className="single-product-containts">{`${rating }★/${count}`}</div>
              <div className="single-product-containts buttons-div">
-              <div> <div>{cartState.cart.some((p)=>p.id === id)? ( <Link to="/Cart"><button className="cards-button"> <IoMdCart/>Go to cart </button> </Link>  ) : (
+              <div> <div>{cartState.cart.some((p)=>p.id === id)? ( <Link to="/Cart"><button className="cards-button"> Go to cart </button> </Link>  ) : (
             <button  className="cards-button"  onClick={() =>cartDispatch({type: "ADD_TO_CART",payload: {
               id,
               name,
@@ -50,14 +50,14 @@ export function ProductCard(  {
             
               img,discount,
               rating,count
-            },})}> <IoMdCart/>Add To Cart</button>
+            },})}>Add To Cart</button>
         )  }</div>
         </div>
 
 
               <div className="single-product-containts">   
-              <div >{WishlistState.Wishlist.some((p)=>p.id === id)? ( <Link to="/Wishlist"><button className="cards-button"> <BsFillHeartFill /> GO_TO_WISHLIST </button> </Link>  ) : (
-                        <div  className="cards-button" style={{cursor:"pointer"}} onClick={() =>WishlistDispatch({type: "ADD_TO_WISHLIST",payload:{
+              <div >{WishlistState.Wishlist.some((p)=>p.id === id)? ( <Link to="/Wishlist"><button className="cards-button"> GO TO WISHLIST </button> </Link>  ) : (
+                        <div  className="cards-button" style={{cursor:"pointer"   }} onClick={() =>WishlistDispatch({type: "ADD_TO_WISHLIST",payload:{
                           id,
                           name,
                           price,
@@ -67,7 +67,7 @@ export function ProductCard(  {
                         
                           img,discount,
                           rating,count
-                        },})}> <AiOutlineHeart /> ADD_TO_WISHLIST   </div>
+                        },})}>  ADD TO WISHLIST   </div>
 
         )  }</div>  </div> 
               </div>

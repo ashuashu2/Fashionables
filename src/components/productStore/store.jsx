@@ -34,8 +34,27 @@ function Store ( ){
     const {state,dispatch} = useFilter()
     const {cartDispatch,cartState} = useCart()
     const {WishlistDispatch,WishlistState} = useWishlist()
-  const { isLoggedIn, setIsLoggedIn } = useAuth();
+  const { isLoggedIn } = useAuth();
 
+
+
+
+  function AddtoCartHandler(user){
+    if(isLoggedIn){
+    cartDispatch({type: "ADD_TO_CART",payload: user,});
+    toast.success(" Added To Cart !")
+    
+    }
+    else
+    {
+    toast.success(" pleease loogin !")
+    
+    }
+    
+    
+    
+    
+    }
 
 
 
@@ -130,10 +149,7 @@ const filterDataBySortBy = filterBySort(storeData,state.sortBy)
     <div>{cartState.cart.some((p)=>p.id === user.id)? ( <Link to="/Cart"><button className="card2-button"> Go to cart </button> </Link>  ) : (
         
 
-            <button  className="card2-button"  onClick={() =>{
-                cartDispatch({type: "ADD_TO_CART",payload: user,});
-                toast.success(" Added To Cart !");
-              }}> Add To Cart</button>
+            <button  className="card2-button"  onClick={()=>{AddtoCartHandler(user)}}> Add To Cart</button>
         )  
         
         }</div>

@@ -27,6 +27,20 @@ function WishList(){
                 
 
     }
+    function cartHandler(user){
+        cartDispatch({type: "ADD_TO_CART"  ,payload: user,});
+        WishlistDispatch({type: "REMOVE_FROM_WISHLIST",payload: user,});
+
+                toast.success(" Added To Cart !");
+                
+             
+    }
+
+   function MoveToCartHandler(user){
+    WishlistDispatch({type: "REMOVE_FROM_WISHLIST",payload: user,});
+
+
+   }
 
     return (
 
@@ -56,11 +70,11 @@ function WishList(){
                     </div>
                     
            
-        <div className="button-divs">{cartState.cart.some((p)=>p.id === user.id)? ( <Link to="/Cart"><button className="card-button"> <IoMdCart/>Go to cart </button> </Link>  ) : (
-            <button  className="card-button"  onClick={() =>{
-                cartDispatch({type: "ADD_TO_CART",payload: user,});
-                toast.success(" Added To Cart !");
-              }}> <IoMdCart/>Add To Cart</button>
+        <div className="button-divs">{cartState.cart.some((p)=>p.id === user.id)? (
+        
+        
+        <button onClick={()=>MoveToCartHandler(user) } className="card-button"> Move to cart </button>  ) : (
+            <button  className="card-button"  onClick={() =>cartHandler(user)}> Add To Cart</button>
         )  }</div>
                   </div>
 
@@ -68,10 +82,7 @@ function WishList(){
         </div>
                     </div>
                     
-                    {/* <div className="x-buttons"> <button onClick={() =>{WishlistDispatch({type: "REMOVE_FROM_WISHLIST",payload: user,});
-                    toast.success(" Removed From Wishlist !");
-                
-                }}><TiDeleteOutline /></button> </div> */}
+                  
                 <div>
                     {<div className="x-buttons"> <button onClick={()=>removerhandler(user)}><TiDeleteOutline /></button> </div> }
 

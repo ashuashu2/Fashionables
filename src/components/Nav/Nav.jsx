@@ -62,7 +62,7 @@ return (
       <div className="cart-icon-div">
         <h4 className="Nav-right-side-content">
           <IoMdCart size="3rem" /> <span className="cart-icon-counter">
-            {isLoggedIn?cart.length:cart.length==="0"}
+            {isLoggedIn?cart.length:cart.length===0}
 
           </span> </h4>
 
@@ -76,7 +76,7 @@ return (
       <div className="wishlist-icon-div">
         <h4 className="Nav-right-side-content icon wishlist-icon ">
           <AiFillHeart /><span className="wishlist-icon-counter">
-            {isLoggedIn?Wishlist.length:Wishlist.length==="0"}
+            {isLoggedIn?Wishlist.length:Wishlist.length===0}
           </span></h4>
 
       </div>

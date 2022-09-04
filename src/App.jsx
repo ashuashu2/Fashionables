@@ -31,74 +31,71 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
-  const { pathname } = useLocation()
+const { pathname } = useLocation()
 
-  const {cartState} = useCart()
-  const {WishlistState} = useWishlist()
-
-
-  return (
-    <div className="App">
-     <Header />
-     {pathname === "/Login" || pathname === "/Signup" ? (
-        <PlainNav />
-      ) : (
-        <Navbar />
-      )}
-   
-  
-    
-    
-    
+const {cartState} = useCart()
+const {WishlistState} = useWishlist()
 
 
-      
-     
-      <Routes>
-
-        <Route  path="/" element={<Home />} />
-        <Route  path="/Cart" element= {  <RequiresAuth> {cartState.cart.length > 0 ? <Cart /> : <EmptyCart />} </RequiresAuth>} />
-        <Route  path="/Store" element={<Store />} />
-        <Route  path="/Filter" element={<Filter />} />
-        <Route  path="/ProductListing" element={<ProductListing />} />
-        <Route  path="/Men" element={<MenClothes />} />
-        <Route  path="/Women" element={<WomenClothes />} />
-        
-        <Route  path="/*" element={<Eror404 />} />
-        <Route  path="/Login" element={<Login />} />
-        <Route  path="/Signup" element={<Signup />} />
-
-
-        <Route  path="/WishList" element={   <RequiresAuth>{ WishlistState.Wishlist.length > 0 ? <WishList /> : <EmptyWishlist />} </RequiresAuth> } />
-       
+return (
+<div className="App">
+  <Header />
+  {pathname === "/Login" || pathname === "/Signup" ? (
+  <PlainNav />
+  ) : (
+  <Navbar />
+  )}
 
 
 
 
 
-        
-        <Route  path="/ProductDetail/:productId" element={<ProductDetail />} />
 
 
 
-      
+
+  <Routes>
+
+    <Route path="/" element={<Home />} />
+    <Route path="/Cart" element={ <RequiresAuth> {cartState.cart.length > 0 ?
+      <Cart /> :
+      <EmptyCart />} </RequiresAuth>} />
+      <Route path="/Store" element={<Store />} />
+      <Route path="/Filter" element={<Filter />} />
+      <Route path="/ProductListing" element={<ProductListing />} />
+      <Route path="/Men" element={<MenClothes />} />
+      <Route path="/Women" element={<WomenClothes />} />
+
+      <Route path="/*" element={<Eror404 />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/Signup" element={<Signup />} />
 
 
-      </Routes>
-      
-      <Footer />
-      <ToastContainer position="top-center"
-autoClose={3000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover />
-  
-    </div>
-  );
+      <Route path="/WishList" element={ <RequiresAuth>{ WishlistState.Wishlist.length > 0 ?
+        <WishList /> :
+        <EmptyWishlist />} </RequiresAuth> } />
+
+
+
+
+
+
+
+        <Route path="/ProductDetail/:productId" element={<ProductDetail />} />
+
+
+
+
+
+
+  </Routes>
+
+  <Footer />
+  <ToastContainer position="top-center" autoClose={2500} hideProgressBar={false} newestOnTop={false} closeOnClick
+    rtl={false} pauseOnFocusLoss draggable pauseOnHover />
+
+</div>
+)
 }
 
 export default App;

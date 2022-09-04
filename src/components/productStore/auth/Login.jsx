@@ -15,6 +15,7 @@ function Login (){
     const navigate = useNavigate();
     const location = useLocation();
     const { isLoggedIn, setIsLoggedIn } = useAuth();
+    const from = location.state.from.pathname
 
     return(
         <div  style={{display:"flex"}}>
@@ -75,7 +76,7 @@ function Login (){
                 <button className="login-button">Login</button>
                 <button className="guest-button" onClick={() => {setIsLoggedIn((isLoggedIn) => !isLoggedIn);
                   toast.success("Login Succesfully");
-                  navigate(location.state.from.pathname);}}>Login As Guest</button>
+                  navigate(from,{replace:true});}}>Login As Guest</button>
               </div>
 
               <p className="signup-text"> Not a member ?  <Link to="/Signup">Signup </Link>  </p>

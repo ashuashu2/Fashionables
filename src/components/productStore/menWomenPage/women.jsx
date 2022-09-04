@@ -19,6 +19,7 @@ import { filterByRatings } from "../../../ultils/filterByRatings";
 import { filterBySort } from "../../../ultils/sortBy";
 import { useFilter } from "../../../context/filterContext";
 import {Link} from "react-router-dom"
+import { useAuth } from "../../../context/authContext";
 
  
 function WomenClothes(){
@@ -26,6 +27,26 @@ function WomenClothes(){
     const {cartDispatch,cartState} = useCart()
     const {WishlistDispatch,WishlistState} = useWishlist()
     const {state,dispatch} = useFilter()
+  const { isLoggedIn } = useAuth()
+
+
+
+    function AddtoCartHandler(user){
+        if(isLoggedIn){
+        cartDispatch({type: "ADD_TO_CART",payload: user,});
+        toast.success(" Added To Cart !")
+        
+        }
+        else
+        {
+        toast.success(" pleease loogin !")
+        
+        }
+        
+        
+        
+        
+        }
 
     function findWomen(storeData) {
         return storeData.filter((item)=>item.idealFor==="Women")
@@ -112,10 +133,7 @@ const filterDataByRatings = filterByRatings(filterDataByDiscount,state.Ratings.O
     <div>{cartState.cart.some((p)=>p.id === user.id)? ( <Link to="/Cart"><button className="card2-button"> Go to cart </button> </Link>  ) : (
         
 
-            <button  className="card2-button"  onClick={() =>{
-                cartDispatch({type: "ADD_TO_CART",payload: user,});
-                toast.success(" Added To Cart !");
-              }}> Add To Cart</button>
+            <button  className="card2-button"  onClick={()=>{AddtoCartHandler(user)}}> Add To Cart</button>
         )  
         
         }</div>
