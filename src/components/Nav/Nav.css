@@ -19,7 +19,7 @@
 }
 .cart-icon-counter{
     position: absolute;
-    top: -0.3rem;
+    top: -0.4rem;
     right:  1.2rem;
 
     
@@ -31,6 +31,8 @@
     border-radius: 100%;
     
     padding: 0.3rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
 
     color: #F6C33C;
 
@@ -54,6 +56,8 @@
     border-radius: 100%;
     
     padding: 0.3rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
 
     color: #F6C33C;
 
