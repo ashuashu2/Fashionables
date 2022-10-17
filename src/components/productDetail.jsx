@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom"
 import { useStore } from "../context/storeContext"
-// import { Store } from "./productStore/store"
 import {ProductCard} from "./singleProduct"
 
 function ProductDetail() {

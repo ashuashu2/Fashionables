@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { IoMdCart } from "react-icons/io";
 import "../../src/components/singleProduct.css"
 
 import { useCart } from "../context/cartContext";
 import { useWishlist } from "../context/wishlistContext";
-import { AiOutlineHeart } from "react-icons/ai";
-import { BsFillHeartFill } from "react-icons/bs";
+
 
 export function ProductCard(  {
   id,
