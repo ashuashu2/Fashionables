@@ -27,9 +27,12 @@ import { useCart } from "./context/cartContext";
 import { useWishlist } from "./context/wishlistContext";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useAuth } from "./context/authContext";
 
 
 function App() {
+const { isLoggedIn } = useAuth()
+
 
 const { pathname } = useLocation()
 
@@ -45,6 +48,7 @@ return (
   ) : (
   <Navbar />
   )}
+
 
 
 

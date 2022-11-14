@@ -48,7 +48,7 @@ function Store ( ){
     }
     else
     {
-    toast.success(" please login  first!")
+    toast.error(" please login  first!")
     
     }
     
@@ -65,7 +65,7 @@ function Store ( ){
         }
         else
         {
-        toast.success(" please login  first!")
+        toast.error(" please login  first!")
         
         }
         

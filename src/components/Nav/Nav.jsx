@@ -91,15 +91,16 @@ return (
 
 
     </div>
-    <div className="login-button"  > {isLoggedIn ? (<button className="card-button" onClick={()=> {
-        setIsLoggedIn((isLoggedIn) => !isLoggedIn);
-        navigate("/");
-        toast.success("Logout Succesfully")}}>
+    <div className="login-button"> {isLoggedIn ? (<button className="card-button" onClick={()=> {
+                setIsLoggedIn((isLoggedIn) => !isLoggedIn);
+                navigate("/");
+                toast.success("Logout Succesfully")}}>
 
-        Logout
-      </button>):( <button className="card-button">
-        <NavLink style={{color:"black"}} to="./Login" state={{from:location}}>Login</NavLink>
-      </button>) } </div>
+                Logout
+            </button>):( <button className="card-button">
+                <NavLink style={{color:"black"}} to="./Login"  state={{from:location}}>Login</NavLink>
+            </button>) }
+        </div>
   </div>
 
 

@@ -63,7 +63,7 @@ toast.success(" Added To Cart !")
 }
 else
 {
-toast.success(" please login first!")
+toast.error(" please login first!")
 
 } }
 
@@ -75,7 +75,7 @@ toast.success("Added To WishList!")
 }
 else
 {
-toast.success(" please login first!")
+toast.error(" please login first!")
 
 }
 

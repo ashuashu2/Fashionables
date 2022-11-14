@@ -15,7 +15,7 @@ function Login (){
     const navigate = useNavigate();
     const location = useLocation();
     const { isLoggedIn, setIsLoggedIn } = useAuth();
-    const from = location.state.from.pathname
+    const from = location?.state?.from.pathname
 
     return(
         <div  style={{display:"flex"}}>
