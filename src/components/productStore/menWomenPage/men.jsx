@@ -56,7 +56,7 @@ const finalFilterData = filterDataByRatings
 
 
 function AddtoCartHandler(user){
-if(isLoggedIn){
+if(isLoggedIn.login){
 cartDispatch({type: "ADD_TO_CART",payload: user,});
 toast.success(" Added To Cart !")
 
@@ -68,7 +68,7 @@ toast.error(" please login first!")
 } }
 
 function AddtoWishlistHandler(user){
-if(isLoggedIn){
+if(isLoggedIn.login){
 WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,});
 toast.success("Added To WishList!")
 

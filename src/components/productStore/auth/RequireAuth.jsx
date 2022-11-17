@@ -6,7 +6,7 @@ function RequiresAuth({children}){
     const location = useLocation();
   const { isLoggedIn } = useAuth()
 
-    return isLoggedIn ? (
+    return isLoggedIn.login ? (
         children
       ) : (
         <Navigate to="/Login" state={{ from: location }} replace />

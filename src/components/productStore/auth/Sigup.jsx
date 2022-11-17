@@ -1,7 +1,10 @@
-
-import { Link, Route, Routes } from "react-router-dom";
+import React from "react";
 import SignupPage  from "../../images/SignupPage.jpg"
 import blackimage  from "../../images/blackimage.jpg"
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios"
+import { toast } from "react-toastify";
 
 import "../auth/Auth.css"
 
@@ -10,6 +13,41 @@ import "../auth/Auth.css"
 
 
 function Signup(){
+  
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+const navigate  = useNavigate()
+
+
+
+const signupHandler =async()=>{
+  const data ={
+    firstName :firstName,
+    lastName:lastName,
+    email:email ,
+    password: password,
+
+
+  }
+  try {
+     const response = await axios.post("/api/auth/signup", data)
+  localStorage.setItem("token", response.data.encodedToken)
+  navigate("/Login")
+  toast.success("Signup Successfull You Can Login Now")
+    
+  } catch (error) {
+  toast.error("Signup Failed Please Try Again After Some Times  ")
+
+
+    
+  }
+ 
+}
+
+
+
     return (
         <div  style={{display:"flex"}}>
         <div className=" images-div">
@@ -64,14 +102,14 @@ function Signup(){
 
  
            <h4 className="password-text"> First Name</h4>
-           <input className="password-input" type="text" placeholder="Enter Your Name"  name="" id="" />
+           <input className="password-input" type="text"  onChange={(e) => setFirstName(e.target.value)} placeholder="Enter Your Name"  name="" id="" />
            <h4 className="password-text"> Last Name</h4>
-           <input className="password-input" type="text" placeholder="Enter Your Last Name"  name="" id="" />
+           <input  className="password-input" type="text" placeholder="Enter Your Last Name"   name="" id=""  onChange={(e) => setLastName(e.target.value)} />
            <h4 className="password-text"> Enter Your Email </h4>
-           <input className="password-input" type="text" placeholder="Enter Your Email"  name="" id="" />
+           <input className="password-input" type="text" placeholder="Enter Your Email"  name="" id=""   onChange={(e) => setEmail(e.target.value)}  />
            <h4 className="password-text"> Create Password</h4>
           
-           <input className="password-input" type="text" placeholder="Enter Your Password"  name="" id="" />
+           <input className="password-input" type="text" placeholder="Enter Your Password"  name="" id=""  onChange={(e) => setPassword(e.target.value)}  />
 
            <div style={{display:"flex"}}>
              <input  type="checkbox" name="" id="" />
@@ -81,7 +119,7 @@ function Signup(){
 
            
            <div className="login-button-div" >
-             <button className="login-button">Ragister</button>
+             <button className="login-button" onClick = {() => signupHandler()}>Ragister</button>
              
            </div>
 

@@ -91,8 +91,8 @@ return (
 
 
     </div>
-    <div className="login-button"> {isLoggedIn ? (<button className="card-button" onClick={()=> {
-                setIsLoggedIn((isLoggedIn) => !isLoggedIn);
+    <div className="login-button"> {isLoggedIn.login ? (<button className="card-button" onClick={()=> {
+                setIsLoggedIn((isLoggedIn) => ({login:false}));
                 navigate("/");
                 toast.success("Logout Succesfully")}}>
 

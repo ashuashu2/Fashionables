@@ -32,7 +32,7 @@ function WomenClothes(){
 
 
     function AddtoCartHandler(user){
-        if(isLoggedIn){
+        if(isLoggedIn.login){
         cartDispatch({type: "ADD_TO_CART",payload: user,});
         toast.success(" Added To Cart !")
         
@@ -49,7 +49,7 @@ function WomenClothes(){
         }
 
         function AddtoWishlistHandler(user){
-            if(isLoggedIn){
+            if(isLoggedIn.login){
                 WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,}); 
                 toast.success("Added To WishList!")
             
