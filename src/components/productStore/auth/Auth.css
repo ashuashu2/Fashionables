@@ -139,6 +139,11 @@ left: 20%;
     font-size: 1.5rem;
 }
 
+.ischecked-text{
+ color: red;  
+ margin-right: 6rem; 
+ font-weight: bolder;
+}
 
 
 

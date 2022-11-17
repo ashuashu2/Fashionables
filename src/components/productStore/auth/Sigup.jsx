@@ -18,8 +18,18 @@ function Signup(){
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
 const navigate  = useNavigate()
 
+
+
+const handleChange =(event)=>{
+  if (event.target.checked) {
+    setIsChecked(true);
+  } else {
+    setIsChecked(false);
+  } 
+}
 
 
 const signupHandler =async()=>{
@@ -31,18 +41,37 @@ const signupHandler =async()=>{
 
 
   }
-  try {
-     const response = await axios.post("/api/auth/signup", data)
-  localStorage.setItem("token", response.data.encodedToken)
-  navigate("/Login")
-  toast.success("Signup Successfull You Can Login Now")
-    
-  } catch (error) {
-  toast.error("Signup Failed Please Try Again After Some Times  ")
+  if(isChecked === true){
+     if( firstName.length >= 1 && lastName.length >= 1 && email.length >= 1 && password.length >= 1 ) {
+      
+      try {
+      const response = await axios.post("/api/auth/signup", data)
+   localStorage.setItem("token", response.data.encodedToken)
+   navigate("/Login")
+   toast.success("Signup Successfull You Can Login Now")
+     
+   } catch (error) {
+   toast.error("Signup Failed Please Try Again After Some Times  ")
+ 
+ 
+     
+   }
 
 
+
+     }else{
+    toast.error("please fill all the Credentials ")
+
+      
+     }
+
     
+
+  }else{
+    setIsChecked("👆 Please indicate that you accept the Terms and Conditions")
+
   }
+
  
 }
 
@@ -112,9 +141,11 @@ const signupHandler =async()=>{
            <input className="password-input" type="text" placeholder="Enter Your Password"  name="" id=""  onChange={(e) => setPassword(e.target.value)}  />
 
            <div style={{display:"flex"}}>
-             <input  type="checkbox" name="" id="" />
+             <input   value={isChecked}
+          onChange={handleChange} type="checkbox"  name="" id="" />
            <p>Yes, I agree to all the Terms, Privacy policy</p>
            </div>
+           <p className="ischecked-text"> {isChecked} </p>
           
 
            
