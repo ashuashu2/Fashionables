@@ -36,6 +36,7 @@ function Login (){
           if(response.data.encodedToken){
             setIsLoggedIn(()=>({
               token : response.data.encodedToken,
+              username: response.data.foundUser.firstName,
               login: true,
             }))
             toast.success("Login Succesfull")

@@ -1,136 +1,206 @@
 
-.banner8{
-    margin: 2rem;
+
+.banner-div {
+    margin: 0.4rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+
 }
-.left-banner-button{
- 
+.slider-images{
+    height: 90vh;
+    width: 100%;
+}
+.left-banner-button {
+
     font-size: 1.7rem;
     background-color: #F6C33C;
- 
+   
+
     padding: 0.54rem;
-    transition: ease-out 0.5s;
+    transition: ease-out 0.4s;
+    font-weight: bolder;
+    border-radius: 2rem;
+    box-shadow: inset 110px 0 0 0 darkorange;
+
+    position: absolute;
+    bottom: 2%;
+    right: 40%;
+    z-index: 1;
 
 }
 
-.left-banner-button:hover{
-    color: white;
-  box-shadow: inset 300px 0 0 0 rgb(235, 7, 7);
-}
-.left-banner-button:active{
-    box-shadow: inset 0 -1px 0 0 rgba(0, 0,0 ,0.2);
-    text-shadow: 0px 1px rgba(0, 0,0 ,0.2);
 
-}
-.banner-div{
-  margin: 0.6rem;
-  width: 100%;
-  /* border-color: 5px solid black; */
+
+.left-banner-button:hover {
     
+    color: white;
+    box-shadow: inset 300px 0 0 0 rgb(235, 7, 7);
+
+}
+
+.left-banner-button:active {
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+
 }
 
 
 
 
 
-.sliders-container{
- 
+
+
+.sliders-container {
+
     box-shadow: 10px 1px 10px 2px;
 }
-.men-women-container{
+
+
+.trending-items-div{
+    width: 100%;
+    margin-top: 5rem;
+        margin-bottom: -3rem;
+
+
+}
+.trending-items{
+    font-size: 3rem;
+    font-weight:bolder;
+   
+    width: 30%;
+    margin: auto;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+.homedivbanner-main-div{
+    display: flex;
+    height: 80vh;
+    width: 100%;
+
+}
+.homedivbanner-div{
+    height: 50%;
+    margin: 3rem;
+}
+.homedivbanner{
+
+    height: 90%;
+    width: 100%;
+}
+.homedivbanner-button{
+    font-size: 1.1rem;
+    background-color: black;
+    color: aqua;
+    padding: 0.3rem;
+    font-weight: bolder;
+    width: 90%;
+    margin-top: 1.5rem;
+}
+.homedivbanner-button:hover{
+    font-size: 1.4rem;
+    background-color: #F6C33C;
+    color: black;
+    
+}
+
+.homedivbanner-div2{
+    margin-top: 7%;
+}
+.homedivbanner-div3{
+    margin-top: 12%;
+}
+
+
+
+.men-women-container {
+    display: flex;
     height: 100%;
     width: 100%;
-    display:grid;
-    grid-template-areas:
-     "explore men "
-    "explore women";
-   
-    
+
+
+
 }
 
 .men-banner-div{
-    grid-area: men;
-    border-radius: 50%;
     position: relative;
-    top: 0;
-    bottom: 0;
-}
-
-
-
-.men-shop-now-button{
-
-       cursor: pointer;
-       border: 4px solid black;
-       width: 26%;
-       font-size: 1rem;
-       padding: 0.65rem;
-       background-color: red;
-       color: white;
-      position: absolute;
-      bottom: 5.1em;
-
-      right: 14.3%;
-     
-
-
   
+}
+
+.men-shop-now-button {
+
+    cursor: pointer;
+    /* border: 4px solid black; */
+    width: 23%;
+    font-size: 1rem;
+    padding: 0.20rem;
+    background-color:black;
+    color: white;
+    position: absolute;
+    bottom: 1.6em;
+    color: aqua;
+    font-weight: bolder;
+
+    right: 48%;
+    width: 30%;
+
+
+
+
+
+}
+.women-banner-div{
+    position: relative;
+ 
+}
+
+
+.women-shop-now-button {
+
+    cursor: pointer;
+    border: 4px solid black;
+
+
+    padding: 0.1rem;
+    background-color:black;
+    font-weight: bolder;
+    width: 28%;
+    color: aqua;
+    position: absolute;
+    bottom: 1.6em;
+    right: 25%;
+
+
+
 
 }
 
-.men-shop-now-button:hover{
+
+
+
+
+
+.men-shop-now-button:hover {
     color: black;
     font-weight: bolder;
     background-color: #F6C33C;
 
- 
-  
+
+
 
 
 
 
 }
-.women-shop-now-button:hover{
+
+.women-shop-now-button:hover {
     color: black;
     font-weight: bolder;
-background-color:#F6C33C;
-
- 
-  
-
-
-
-
-}
-
-
-
-.women-banner-div{
-    grid-area: women;
-
-
-    position: relative;
-    top: 0;
-    bottom: 0;
-}
-
-
-
-.women-shop-now-button{
-
-       cursor: pointer;
-       border: 4px solid black;
-
-  
-       padding: 0.3rem;
-       background-color: red;
-       color: white;
-      position: absolute;
-      bottom: 5em;
-
-      right: 6em;
- 
-
-  
+    background-color: #F6C33C;
 
 }
 
@@ -139,79 +209,132 @@ background-color:#F6C33C;
 
 
 
-
-.explore-banner-div{
-    grid-area: explore;
-   
- 
-    position: relative;
-    top: 0;
-    bottom: 0;
-}
-
-
-.explore-banner{
-     border-radius: 30%;
-}
-
-.explore-button{
-
-       cursor: pointer;
-       border: 4px solid black;
-
-  
-       padding: 1rem;
-       background-color: red;
-       color: white;
-      position: absolute;
-     bottom: 8em;
-     right: 33%;
- 
-
-  
-
-}
-.explore-button:hover{
-    color: black;
-    font-weight: bolder;
-background-color:#F6C33C;
-
-
- 
-  
-
-
-
-
-}
-
-.col60{
+.col60 {
     font-size: 4rem;
     color: #F6C33C;
 }
 
-.category-div{
+.categorys-div{
     font-family: sans-serif;
+    margin: 5rem;
+    margin-bottom: 0.5rem;
+   
 }
 
 
-.policy-div{
+.policy-div {
     height: 170px;
     border: 2px solid black;
     display: flex;
-    
-}
-.policies{
-margin:1rem;
-display: flex;
+    margin: 1rem;
 
 }
 
-.lines{
+.policies {
+    margin: 1rem;
+    display: flex;
+
+}
+
+.lines {
     border: 1px solid black;
     height: 120px;
     margin-top: 25px;
 }
-.icons{
+
+.icons {
     font-size: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***********************   responsive        ********************************* */
+
+
+@media screen and (max-width: 800px) {
+
+
+    .slider-images {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .left-banner-button {
+
+        font-size: 1.5em;
+        padding: 0.3rem;
+
+
+    }
+
+    .col60 {
+        font-size: 2rem;
+    }
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

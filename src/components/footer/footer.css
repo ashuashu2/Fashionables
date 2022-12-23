@@ -4,7 +4,8 @@
 }
 .text-div{
     font-size: 1.5rem;
-    margin: 1em
+    margin: 1em;
+    font-weight:bolder;
 }
 .contact-div{
     display: flex;
@@ -14,5 +15,35 @@
 .contact-link{
    margin: 1rem;
    font-size: 2rem;
-   color:black;
+   color: black;
+}
+
+
+@media screen and (max-width: 800px) { 
+
+    .footer-div{
+        display: unset;
+    
+    }
+    .text-div{
+        font-size: 1.2rem;
+        margin: 1em
+    }
+    .contact-div{
+        display: flex;
+        /* margin-left: auto;
+        align-items: center; */
+        /* margin-left: 3rem; */
+        margin-left: unset;
+        
+         justify-content: center;
+    }
+    .contact-link{
+       margin: 1rem;
+       font-size: 2rem;
+       color: black;
+      
+    }
+
+
 }

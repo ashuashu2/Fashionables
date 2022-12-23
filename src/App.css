@@ -4,6 +4,8 @@
 .App {
   text-align: center;
   font-family: 'Oleo Script Swash Caps', cursive;
+  overflow-x: hidden;
+  
   
 }
 
@@ -31,7 +33,4 @@ select{
   color: black;
   background-color: #F6C33C;
   margin-left: 47%;
-}
-h1:hover{
-  color: #F6C33C;
 }

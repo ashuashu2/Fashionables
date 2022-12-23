@@ -85,7 +85,7 @@ return (
 
 
     <div>
-      <h4 className="Nav-right-side-content icon"> Hi!User </h4>
+      <h4 className="Nav-right-side-content icon">Hy,{isLoggedIn.login ? isLoggedIn.username : "User"}</h4>
 
 
 
