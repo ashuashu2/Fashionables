@@ -130,6 +130,14 @@
     position: relative;
   
 }
+.men-banner{
+    height: 100%;
+    width: 100%;
+}
+.women-banner{
+    height: 100%;
+    width: 100%;
+}
 
 .men-shop-now-button {
 
@@ -279,15 +287,27 @@
 @media screen and (max-width: 800px) {
 
 
+
+
+
     .slider-images {
         width: 100%;
         height: 40vh;
     }
 
-    .left-banner-button {
 
-        font-size: 1.5em;
-        padding: 0.3rem;
+        .left-banner-button {
+
+            font-size: 1em;
+            padding: 0.2rem;
+            position: absolute;
+            bottom: 2%;
+            right: unset;
+            left: 5%;
+            z-index: 1;
+        
+        
+        
 
 
     }
@@ -295,6 +315,202 @@
     .col60 {
         font-size: 2rem;
     }
+
+    
+
+.men-women-container {
+    display: flex;
+    height: 50vh;
+    width: 100vw;
+
+
+
+}
+
+.men-banner-div{
+    position: relative;
+  
+}
+.men-banner{
+    height: 40vh;
+    width: 50vw;
+}
+.women-banner{
+    height: 40vh;
+    width: 50vw;
+}
+
+.men-shop-now-button {
+
+    cursor: pointer;
+    border: 4px solid black;
+
+
+    padding: 0.1rem;
+    background-color:black;
+    font-weight: bolder;
+    width: 70%;
+    color: aqua;
+    position: absolute;
+    bottom: 25%;
+    right: 25%;
+
+
+
+
+}
+.women-banner-div{
+    position: relative;
+ 
+}
+
+
+.women-shop-now-button {
+
+    cursor: pointer;
+    border: 4px solid black;
+
+
+    padding: 0.1rem;
+    background-color:black;
+    font-weight: bolder;
+    width: 80%;
+    color: aqua;
+    position: absolute;
+    bottom: 25%;
+    right: 10%;
+
+
+
+
+}
+
+
+
+
+
+
+    
+.trending-items-div{
+    width: 100%;
+    margin-top: 5rem;
+        margin-bottom: 2rem;
+
+
+}
+.trending-items{
+    font-size: 3rem;
+    font-weight:bolder;
+   
+    width: 30%;
+    margin: auto;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+.homedivbanner-main-div{
+    display: grid;
+    grid-template-columns: auto auto;
+
+    height: 100%;
+    width: 100%;
+    margin-bottom: -4.5rem;
+
+}
+.homedivbanner-div{
+    height: 50%;
+    margin: 1rem;
+}
+.homedivbanner{
+
+    height: 90%;
+    width: 100%;
+}
+.homedivbanner-button{
+    font-size: 1rem;
+    background-color: black;
+    color: aqua;
+    padding: 0.3rem;
+    font-weight: bolder;
+    width: 90%;
+    margin-top: 1.5rem;
+}
+.homedivbanner-button:hover{
+    font-size: 1em;
+    background-color: #F6C33C;
+    color: black;
+    
+}
+
+.homedivbanner-div2{
+    margin-top: none;
+}
+.homedivbanner-div3{
+    margin-top: none;
+}
+
+.homedivbanner-div5-image{
+    margin-left: 65%;
+}
+
+.homedivbanner-div5-button{
+    margin-left: 70%;
+}
+
+
+.trending-items-div{
+    width: 100%;
+    margin-top: 2rem;
+        margin-bottom: 0rem;
+
+
+}
+.trending-items{
+    font-size: 2rem;
+    font-weight:bolder;
+   
+    width: 50%;
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.policy-div {
+    height: 130px;
+   
+    margin: 0.5em;
+
+}
+
+.policies {
+    margin: 0.5em;
+
+}
+
+.lines {
+
+    height: 90px;
+    margin-top: 15px;
+}
+
+.icons {
+    font-size: 2em;
+}
+.policy-div-text{
+    font-size: 0.8em;
+    font-weight: bolder;
+}
 
 
    

@@ -107,9 +107,9 @@ return (
             <img className="homedivbanner" width={550} height={350} src={homedivbanner4} alt="" />
             <button className="homedivbanner-button"> Add To Cart </button>
         </div>
-        <div className="homedivbanner-div">
-            <img className="homedivbanner" width={550} height={350} src={homedivbanner2} alt="" />
-            <button className="homedivbanner-button"> Add To Cart </button>
+        <div className="homedivbanner-div homedivbanner-div5">
+            <img className="homedivbanner       homedivbanner-div5-image" width={550} height={350} src={homedivbanner2} alt="" />
+            <button className="homedivbanner-button homedivbanner-div5-button"> Add To Cart </button>
         </div>
 
 
@@ -133,8 +133,8 @@ return (
                 <MdLocalShipping />
             </div>
             <div>
-                <h1>Free Shipping</h1>
-                <h3>On All Order Over Rs.3000</h3>
+                <h1 className="policy-div-text">Free Shipping</h1>
+                <h3 className="policy-div-text">On All Order Over Rs.3000</h3>
             </div>
 
 
@@ -145,8 +145,8 @@ return (
                 <BsHeadset />
             </div>
             <div>
-                <h1> Dedicated Support</h1>
-                <h3>Quick Response 24/7</h3>
+                <h1 className="policy-div-text"> Dedicated Support</h1>
+                <h3 className="policy-div-text">Quick Response 24/7</h3>
             </div>
 
         </div>
@@ -157,8 +157,8 @@ return (
                 <FaMoneyCheckAlt />
             </div>
             <div>
-                <h1>Money-back Guarantee</h1>
-                <h3>Worry-free Shopping</h3>
+                <h1 className="policy-div-text">Money-back Guarantee</h1>
+                <h3 className="policy-div-text">Worry-free Shopping</h3>
             </div>
 
 
