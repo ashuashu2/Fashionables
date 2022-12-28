@@ -1,35 +1,36 @@
-.Nav-logo{
+.Nav-logo {
     height: 10vh;
     width: 80px;
     border-radius: 50%;
 }
-.f-text{
+
+.f-text {
     font-size: 3rem;
     color: #F6C33C;
 }
-.heading{
- margin-bottom: 50%;
-   
+
+.heading {
+    margin-bottom: 50%;
+
 }
-.cart-icon-div{
-    /* position: relative; */
-}
-.icon-container{
+
+.icon-container {
     position: relative;
 }
-.cart-icon-counter{
+
+.cart-icon-counter {
     position: absolute;
     top: -0.4rem;
-    right:  1.2rem;
+    right: 1.2rem;
 
-    
+
 
     font-size: 1.1rem;
     background-color: black;
     font-weight: bolder;
 
     border-radius: 100%;
-    
+
     padding: 0.3rem;
     padding-left: 0.4rem;
     padding-right: 0.4rem;
@@ -38,23 +39,24 @@
 
 }
 
-.wishlist-icon-div{
+.wishlist-icon-div {
     position: relative;
 }
-.wishlist-icon-counter{
-    
+
+.wishlist-icon-counter {
+
     position: absolute;
     top: -1.4rem;
-    right:  1.3rem;
+    right: 1.3rem;
 
-    
+
 
     font-size: 1.1rem;
     background-color: black;
     font-weight: bolder;
 
     border-radius: 100%;
-    
+
     padding: 0.3rem;
     padding-left: 0.4rem;
     padding-right: 0.4rem;
@@ -62,249 +64,295 @@
     color: #F6C33C;
 
 }
-.NavLink{
+
+.NavLink {
     text-decoration: none;
     color: rgb(15, 15, 15);
 
 }
-.heading-text{
+
+.heading-text {
     color: black;
     text-decoration: none;
 }
-#women-text{
+
+#women-text {
     /* margin: 2.4rem; */
     margin-top: 1.8rem;
 }
-#men-text{
+
+#men-text {
     /* margin: 2.4rem; */
     margin-top: 1.8rem;
 }
-.Nav-container{
+
+.Nav-container {
     display: flex;
     height: 15vh;
-  
-    box-shadow: 1px 1px 1px 1px;
-    border-bottom:black;
-}
-.Nav-left-side{
 
-  
-display: flex;
+    box-shadow: 1px 1px 1px 1px;
+    border-bottom: black;
 }
-.Nav-left-side-content{
+
+.Nav-left-side {
+
+
+    display: flex;
+}
+
+.Nav-left-side-content {
     margin: 1.5rem;
     margin-top: 1rem;
 }
 
 
-.Nav-right-side{
-    
- margin: 1rem;
-margin-left: auto;
-margin-bottom: -0.5rem;
-  
+.Nav-right-side {
+
+    margin: 1rem;
+    margin-left: auto;
+    margin-bottom: -0.5rem;
+
     display: flex;
-    }
-.Nav-right-side-content{
-        margin: 2.3rem;
-        margin-top: 1rem;
-    }
-  
-.icon-text{
-        margin-top: -2.5rem;
-    }
-.icon{
-        font-size: 2.1rem;
-    }
+}
 
+.Nav-right-side-content {
+    margin: 2.3rem;
+    margin-top: 1rem;
+}
 
+.icon-text {
+    margin-top: -2.5rem;
+}
 
-
-
-
-.login-button{
-    margin-top: 1.1rem;
+.icon {
+    font-size: 2.1rem;
 }
 
 
 
 
-    .text{
-      font-size: 1.3rem;
-      font-weight: 500;        
-      color: white;
-    }
-    .wishlist-icon{
+
+.nav-login-button2{
+    margin: "0.7rem";
+    color: white;
+    background-color: black;
+    ;
+
+    height: 5vh;
+    width: 40%;
+    margin-top: 1rem;
+    
+}
+
+.card-button3{
+    background-color: #F6C33C;
+    font-size: 1em;
+    font-weight: bolder;
+    width: 100%;
+  }
+
+
+
+
+.text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+}
+
+.wishlist-icon {
     font-size: 2.8rem;
+}
+.cart-icon{
+    font-size: 2.8rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+
+
+
+    .Nav-logo {
+
+        display: none;
     }
 
-    
+    .f-text {
+        font-size: 0.7em;
+    }
+
+    .heading {
+        margin-bottom: 10%;
+
+    }
+
+    .heading-text {
+        font-size: 0.3em;
+
+    }
+
+    #women-text {
+        /* margin: 2.4rem; */
+        margin-top: 0.25em;
+        font-weight: bolder;
+    }
+
+    #men-text {
+        /* margin: 2.4rem; */
+        margin-top: 0.25em;
+        font-weight: bolder;
+
+    }
+
+    .Nav-container {
+        height: 8vh;
 
 
+    }
+
+    .Nav-left-side-content {
+        margin: 0.2em;
+        margin-top: 0em;
+    }
+    .Nav-left-side{
+        margin-top: 0.6rem;
+    }
 
 
+    .Nav-right-side {
 
-
-
-
-    @media screen and (max-width: 800px) { 
-
-
-        .Nav-container{
-            display: grid;
-            height: 30vh;
-          
-            box-shadow: 1px 1px 1px 1px;
-            border-bottom:black;
-        }
-
-
-
-
-
-
-
-
-
-
-        .Nav-logo{
-            height: 10vh;
-            width: 80px;
-            border-radius: 50%;
-        }
-        .f-text{
-            font-size: 3rem;
-            color: #F6C33C;
-        }
-        .heading{
-         margin-bottom: 50%;
-           
-        }
-        .cart-icon-div{
-            /* position: relative; */
-        }
-        .icon-container{
-            position: relative;
-        }
-        .cart-icon-counter{
-            position: absolute;
-            top: -0.4rem;
-            right:  1.2rem;
-        
-            
-        
-            font-size: 1.1rem;
-            background-color: black;
-            font-weight: bolder;
-        
-            border-radius: 100%;
-            
-            padding: 0.3rem;
-            padding-left: 0.4rem;
-            padding-right: 0.4rem;
-        
-            color: #F6C33C;
-        
-        }
-        
-        .wishlist-icon-div{
-            position: relative;
-        }
-        .wishlist-icon-counter{
-            
-            position: absolute;
-            top: -1.4rem;
-            right:  1.3rem;
-        
-            
-        
-            font-size: 1.1rem;
-            background-color: black;
-            font-weight: bolder;
-        
-            border-radius: 100%;
-            
-            padding: 0.3rem;
-            padding-left: 0.4rem;
-            padding-right: 0.4rem;
-        
-            color: #F6C33C;
-        
-        }
-        .NavLink{
-            text-decoration: none;
-            color: rgb(15, 15, 15);
-        
-        }
-        .heading-text{
-            color: black;
-            text-decoration: none;
-        }
-        #women-text{
-            /* margin: 2.4rem; */
-            margin-top: 1.8rem;
-        }
-        #men-text{
-            /* margin: 2.4rem; */
-            margin-top: 1.8rem;
-        }
-    
-        .Nav-left-side{
-        
-          
-        display: flex;
-        }
-        .Nav-left-side-content{
-            margin: 1.5rem;
-            margin-top: 1rem;
-        }
-        
-        
-        .Nav-right-side{
-            
-         margin: 1rem;
+        margin: 0em;
         margin-left: auto;
-        margin-bottom: -0.5rem;
-          
-            display: flex;
-            }
-        .Nav-right-side-content{
-                margin: 2.3rem;
-                margin-top: 1rem;
-            }
-          
-        .icon-text{
-                margin-top: -2.5rem;
-            }
-        .icon{
-                font-size: 2.1rem;
-            }
-        
-        
-        
-        
-        
-        
-        .login-button{
-            margin-top: 1.1rem;
-        }
-        
-        
-        
-        
-            .text{
-              font-size: 1.3rem;
-              font-weight: 500;        
-              color: white;
-            }
-            .wishlist-icon{
-            font-size: 2.8rem;
-            }
-        
-        
+        margin-bottom: 0em;
+        margin-top: 0.6rem;
+        /* margin-right: 5rem; */
 
-
-
-    
-    
     }
+
+    .Nav-right-side-content {
+       
+        margin: 0.2em;
+        margin-top: 0.5em;
+    }
+
+    .hy-user-div {
+        display: none;
+    }
+
+
+
+   
+
+    .cart-icon-counter {
+        position: absolute;
+        top:0rem;
+        right: 0.4em;
+
+
+
+        font-size: 0.3em;
+   
+
+        padding: 0.5em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+
+
+    }
+
+   
+
+    .wishlist-icon-counter {
+        position: absolute;
+        top:-1rem;
+        right: 0.4em;
+
+
+
+        font-size: 0.3em;
+   
+
+        padding: 0.5em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+
+
+
+    }
+
+
+    .icon {
+        font-size: 0.2em;
+    }
+
+
+
+
+
+
+  
+    
+
+
+
+    .text {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: white;
+    }
+
+    .wishlist-icon {
+        font-size: 2em;
+    }
+    .cart-icon{
+        font-size: 2em;
+
+    }
+
+    .card-button3{
+        background-color: #F6C33C;
+        font-size: 1em;
+        font-weight: bolder;
+        /* width: 100%; */
+      }
+
+      
+.nav-login-button2{
+    margin: "0.7rem";
+    color: white;
+    background-color: black;
+    ;
+
+    height: 3vh;
+    width: 46%;
+    margin-top: 1rem;
+    
+}
+   
+
+
+
+
+
+
+
+}

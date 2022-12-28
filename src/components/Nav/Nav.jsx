@@ -60,8 +60,8 @@ return (
   <div className="Nav-right-side">
     <NavLink className="NavLink icon-container " style={getActiveStyle} to="./Cart">
       <div className="cart-icon-div">
-        <h4 className="Nav-right-side-content">
-          <IoMdCart size="3rem" /> <span className="cart-icon-counter">
+        <h4 className="Nav-right-side-content icon cart-icon ">
+          <IoMdCart  /> <span className="cart-icon-counter">
             {cart.length}
 
           </span> </h4>
@@ -84,20 +84,20 @@ return (
 
 
 
-    <div>
+    <div className="hy-user-div" >
       <h4 className="Nav-right-side-content icon">Hy,{isLoggedIn.login ? isLoggedIn.username : "User"}</h4>
 
 
 
 
     </div>
-    <div className="login-button"> {isLoggedIn.login ? (<button className="card-button" onClick={()=> {
+    <div className="nav-login-button2"> {isLoggedIn.login ? (<button className="card-button3 nav-login-button" onClick={()=> {
                 setIsLoggedIn((isLoggedIn) => ({login:false}));
                 navigate("/");
                 toast.success("Logout Succesfully")}}>
 
                 Logout
-            </button>):( <button className="card-button">
+            </button>):( <button className="card-button3 nav-login-button">
                 <NavLink style={{color:"black"}} to="./Login"  state={{from:location}}>Login</NavLink>
             </button>) }
         </div>

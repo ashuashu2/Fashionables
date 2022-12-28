@@ -118,7 +118,10 @@ function Login (){
               <div className="forgot" >Forgot Password?</div>
               <div className="login-button-div" >
                 <button className="login-button" onClick={ ()=>loginHandler()}>Login</button>
-                <button className="guest-button" onClick={() => {setIsLoggedIn((isLoggedIn) =>  ({login:true}));
+                <button className="guest-button" onClick={() => {setIsLoggedIn(()=>({
+              username: "Guest",
+              login: true,
+            }));
                   toast.success("Login Succesfully");
                   navigate(from,{replace:true});}}>Login As Guest</button>
               </div>
