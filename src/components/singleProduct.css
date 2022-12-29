@@ -156,6 +156,7 @@
     bottom: 00%;
     background-color: black;
     width: 100%;
+ 
 
 }
 
@@ -180,6 +181,22 @@
     transition: all 1.8s;
 
 
+
+}
+.single-product-detail{
+    width: 100%;
+    text-align: left;
+    margin-top: 2rem;
+
+}
+.name{
+    font-size: 2rem;
+}
+.description1{
+    font-size: 1em;
+    font-weight: bolder;
+    margin-top: 0rem;
+    
 
 }
 
