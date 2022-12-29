@@ -121,11 +121,11 @@ const filterDataBySortBy = filterBySort(storeData,state.sortBy)
            <div className="products-div" >
              { finalFilterData.map((user,{id}) =>
            <div key={id} className="card-div" >
-    <div> 
+    <div className="card-div2"> 
 
 
         <div  className="image-div" >
-        <Link to={`/ProductDetail/${user.id}`}>  <img className="image"   height={250} Width="100%" src={user.img} alt="" /> </Link>
+        <Link to={`/ProductDetail/${user.id}`}>  <img className="image"   src={user.img} alt="" /> </Link>
 
 
 

@@ -38,7 +38,7 @@
   top: 2%;
   right:  13%;
 }
-.sort-div{
+.sort-div2{
  font-size: 1.4rem;
 margin-left: 60%;
 margin-top: 0.3rem;
@@ -150,18 +150,22 @@ datalist {
 
 
 @media screen and (max-width: 800px) {
-  .sort-div{
+  .sort-div2{
   
       font-size: 1em;
-     margin-left: unset;
+     margin-left:0;
       margin-top: 0.3rem;
      margin: 0.5rem;
-     margin-left: -1em;
 
-     width: 10%;
+
+     width: 100%;
   
 
      
+  }
+  .selection-box2{
+    padding: 0.5rem;
+    width:50%;
   }
 
   .products-div{

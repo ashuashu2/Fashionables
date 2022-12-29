@@ -1,11 +1,9 @@
 import { useStore } from "../../../context/storeContext";
-import { IoMdCart } from "react-icons/io";
-
+import "../menWomenPage/menWomenPage.css"
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsFillHeartFill } from "react-icons/bs";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import { MenWomenFilter } from "./MenWomenFilter";
 import { useCart } from "../../../context/cartContext";
 import { useWishlist } from "../../../context/wishlistContext";
@@ -93,8 +91,8 @@ toast.error(" please login first!")
 
 return(
 <div>
-    <div className="sort-div">
-        <select name="PRICE" className="selection-box" onChange={(e)=> dispatch({type:"SORT_BY",payload:
+    <div className="sort-div2">
+        <select name="PRICE" className="selection-box2" onChange={(e)=> dispatch({type:"SORT_BY",payload:
             e.target.value})}>
             <option value="DEFAULT">Default</option>
             <option value="PRICE_HIGH_TO_LOW">Price: High To Low</option>
@@ -112,11 +110,11 @@ return(
             <div className="products-div">
                 { finalFilterData.map((user,{id}) =>
                 <div key={id} className="card-div">
-                    <div>
+                    <div className="card-div2">
 
 
                         <div className="image-div">
-                            <Link to={`/ProductDetail/${user.id}`}> <img className="image" height={250} Width="100%"
+                            <Link to={`/ProductDetail/${user.id}`}> <img className="image" 
                                 src={user.img} alt="" />
                             </Link>
 

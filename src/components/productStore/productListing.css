@@ -56,3 +56,16 @@
 .ratings-div{
     display: grid;
 }
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+
+    .filter-div{
+      display: none;
+    }
+
+}

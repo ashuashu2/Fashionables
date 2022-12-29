@@ -44,7 +44,7 @@ return (
   <div className="Nav-left-side">
     <img className="Nav-logo Nav-left-side-content" src={logo} alt="" />
     <h1 className="Nav-left-side-content heading">
-      <NavLink className="NavLink" style={getActiveStyle} to="./"> <span className="f-text">F</span><span
+      <NavLink className="NavLink fashionable-text" style={getActiveStyle} to="./"> <span className="f-text">F</span><span
           className="heading-text">ashionables.com</span> </NavLink>
     </h1>
     <h2 className="Nav-left-side-content " id="women-text">

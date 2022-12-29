@@ -312,9 +312,23 @@
 
 
     }
+    .categorys-div{
+        /* width: 100%; */
+        margin: auto;
+        margin-top: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
 
-    .col60 {
-        font-size: 2rem;
+    .col59{
+        width:100%;
+        font-size: 1.5em;
+    }
+    .col60{
+        width:100%;
+        font-size: 1.5em;
+    margin: auto;
+
+
     }
 
     

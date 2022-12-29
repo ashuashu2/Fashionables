@@ -4,9 +4,7 @@ import { useCart } from "../../../context/cartContext";
 import { BsFillHeartFill } from "react-icons/bs";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-import { IoMdCart } from "react-icons/io";
-
+import "../menWomenPage/menWomenPage.css"
 import { useWishlist } from "../../../context/wishlistContext";
 import { MenWomenFilter } from "./MenWomenFilter";
 import { filterBySearch } from "../../../ultils/searchFilter";
@@ -21,163 +19,175 @@ import { useFilter } from "../../../context/filterContext";
 import {Link} from "react-router-dom"
 import { useAuth } from "../../../context/authContext";
 
- 
+
 function WomenClothes(){
-    const {storeData} = useStore()
-    const {cartDispatch,cartState} = useCart()
-    const {WishlistDispatch,WishlistState} = useWishlist()
-    const {state,dispatch} = useFilter()
-  const { isLoggedIn } = useAuth()
+const {storeData} = useStore()
+const {cartDispatch,cartState} = useCart()
+const {WishlistDispatch,WishlistState} = useWishlist()
+const {state,dispatch} = useFilter()
+const { isLoggedIn } = useAuth()
 
 
 
-    function AddtoCartHandler(user){
-        if(isLoggedIn.login){
-        cartDispatch({type: "ADD_TO_CART",payload: user,});
-        toast.success(" Added To Cart !")
-        
-        }
-        else
-        {
-        toast.error(" please login  first!")
-        
-        }
-        
-        
-        
-        
-        }
+function AddtoCartHandler(user){
+if(isLoggedIn.login){
+cartDispatch({type: "ADD_TO_CART",payload: user,});
+toast.success(" Added To Cart !")
 
-        function AddtoWishlistHandler(user){
-            if(isLoggedIn.login){
-                WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,}); 
-                toast.success("Added To WishList!")
-            
-            }
-            else
-            {
-            toast.error(" please login  first!")
-            
-            }
-            
-            
-            
-            
-            }
+}
+else
+{
+toast.error(" please login first!")
 
-    function findWomen(storeData) {
-        return storeData.filter((item)=>item.idealFor==="Women")
+}
 
-        
-    }
-    const product = findWomen(storeData);
-    
 
-    const filterDataBySortBy = filterBySort(product,state.sortBy)
+
+
+}
+
+function AddtoWishlistHandler(user){
+if(isLoggedIn.login){
+WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,});
+toast.success("Added To WishList!")
+
+}
+else
+{
+toast.error(" please login first!")
+
+}
+
+
+
+
+}
+
+function findWomen(storeData) {
+return storeData.filter((item)=>item.idealFor==="Women")
+
+
+}
+const product = findWomen(storeData);
+
+
+const filterDataBySortBy = filterBySort(product,state.sortBy)
 const filterDataByColor= filterByColor(filterDataBySortBy,state.color)
 const filterDataBySearch = filterBySearch(filterDataByColor,state.Search)
 const filterDataByPrice = filterByPrice(filterDataBySearch,state.Price)
 const filterDataByCategory = filterByCategory(filterDataByPrice,state.Category)
 const filterDataByIdealFor = filterByIdealFor(filterDataByCategory,state.IdealFor.Men,state.IdealFor.Women)
-const filterDataByDiscount = filterByDiscounts(filterDataByIdealFor,state.Discounts.Ten,state.Discounts.Twenty,state.Discounts.Thirty,state.Discounts.Fourty,state.Discounts.Fifty);
-const filterDataByRatings = filterByRatings(filterDataByDiscount,state.Ratings.One,state.Ratings.Two,state.Ratings.Three,state.Ratings.Four,state.Ratings.Five);
+const filterDataByDiscount =
+filterByDiscounts(filterDataByIdealFor,state.Discounts.Ten,state.Discounts.Twenty,state.Discounts.Thirty,state.Discounts.Fourty,state.Discounts.Fifty);
+const filterDataByRatings =
+filterByRatings(filterDataByDiscount,state.Ratings.One,state.Ratings.Two,state.Ratings.Three,state.Ratings.Four,state.Ratings.Five);
 
- const finalFilterData = filterDataByRatings
+const finalFilterData = filterDataByRatings
 
 
 
-   
-    return(
+
+return(
+<div>
+    <div className="sort-div2">
+        <select name="PRICE" className="selection-box2" onChange={(e)=> dispatch({type:"SORT_BY",payload:
+            e.target.value})}>
+            <option value="DEFAULT">Default</option>
+            <option value="PRICE_HIGH_TO_LOW">Price: High To Low</option>
+            <option value="PRICE_LOW_TO_HIGH">Price:Low To High</option>
+            <option value="RATING_HIGH_TO_LOW">Rating: High To Low</option>
+            <option value="RATING_LOW_TO_HIGH">Rating:Low To High</option>
+        </select>
+    </div>
+    <div className="bigger-div">
+        <div className="filter-div" style={{width: "17%"}}>
+            <MenWomenFilter />
+        </div>
         <div>
-            <div className="sort-div"  >
-            <select name="PRICE"  className="selection-box" onChange = {(e)=> dispatch({type:"SORT_BY",payload: e.target.value})}>
-                <option  value="DEFAULT">Default</option>
-                <option value="PRICE_HIGH_TO_LOW">Price: High To Low</option>
-                <option value="PRICE_LOW_TO_HIGH">Price:Low To High</option>
-                <option value="RATING_HIGH_TO_LOW">Rating: High To Low</option>
-                <option value="RATING_LOW_TO_HIGH">Rating:Low To High</option>
-            </select>
-        </div>
-            <div className="bigger-div">
-                <div className="filter-div" style={{width: "17%"}}><MenWomenFilter/></div>
-                <div>
-                <div className="products-div" >
+            <div className="products-div">
                 { finalFilterData.map((user,{id}) =>
-           <div key={id} className="card-div" >
-    <div> 
+                <div key={id} className="card-div">
+                    <div className="card-div2">
 
 
-        <div  className="image-div" >
-        <Link to={`/ProductDetail/${user.id}`}>  <img className="image"   height={250} Width="100%" src={user.img} alt="" /> </Link>
-
-
-
-        <div className="heart-div">
-
-<div>{WishlistState.Wishlist.some((p)=>p.id === user.id)? ( <Link to="/Wishlist"><button className="card-button"> <BsFillHeartFill /></button> </Link>  ) : (
-                <div  onClick={() =>{ AddtoWishlistHandler(user) }}> { <AiOutlineHeart />} </div>
-
-)  }</div>
+                        <div className="image-div">
+                            <Link to={`/ProductDetail/${user.id}`}> <img className="image" height={250} Width="100%"
+                                src={user.img} alt="" />
+                            </Link>
 
 
 
+                            <div className="heart-div">
 
- </div>        
-        
-        
-        <div className="new-badge">{user.newArrival && <span>NEW</span>}</div>
-        <div className="rating-div">{`${user.rating }★/${user.count}`}</div>
-         </div>
-       
-    </div>
-    <div className="details-div"> 
-    <div className="details2-div">
-            <h4 className="name-heading"> {user.name} </h4>
-            <h5 className="description"> {user.description1} </h5>
-            <div className="price-div">
-            <div className="price-content price1"> RS.{user.price } </div>
-            <div className="price-content price2"> {user.originalPrice} </div>
-            <div className="price-content discount"> ({user.discount}%) </div>
-    </div>
-    <div> </div>
+                                <div>{WishlistState.Wishlist.some((p)=>p.id === user.id)? (
+                                    <Link to="/Wishlist"><button className="card-button">
+                                        <BsFillHeartFill /></button> </Link> ) : (
+                                    <div onClick={()=>{ AddtoWishlistHandler(user) }}> {
+                                        <AiOutlineHeart />} </div>
 
-
-    </div>
-   
-    
-    </div>
-    <div className="button-div">
-    <div>{cartState.cart.some((p)=>p.id === user.id)? ( <Link to="/Cart"><button className="card2-button"> Go to cart </button> </Link>  ) : (
-        
-
-            <button  className="card2-button"  onClick={()=>{AddtoCartHandler(user)}}> Add To Cart</button>
-        )  
-        
-        }</div>
-
-            </div>
-            
-            
-            
+                                    ) }</div>
 
 
 
-             </div>
 
-            )}
-            
-            
-            
-            
-            </div>
+                            </div>
+
+
+                            <div className="new-badge">{user.newArrival && <span>NEW</span>}</div>
+                            <div className="rating-div">{`${user.rating }★/${user.count}`}</div>
+                        </div>
+
+                    </div>
+                    <div className="details-div">
+                        <div className="details2-div">
+                            <h4 className="name-heading"> {user.name} </h4>
+                            <h5 className="description"> {user.description1} </h5>
+                            <div className="price-div">
+                                <div className="price-content price1"> RS.{user.price } </div>
+                                <div className="price-content price2"> {user.originalPrice} </div>
+                                <div className="price-content discount"> ({user.discount}%) </div>
+                            </div>
+                            <div> </div>
+
+
+                        </div>
+
+
+                    </div>
+                    <div className="button-div">
+                        <div>{cartState.cart.some((p)=>p.id === user.id)? (
+                            <Link to="/Cart"><button className="card2-button"> Go to cart </button> </Link> ) : (
+
+
+                            <button className="card2-button" onClick={()=>{AddtoCartHandler(user)}}> Add To
+                                Cart</button>
+                            )
+
+                            }</div>
+
+                    </div>
+
+
+
+
+
+
                 </div>
-            
-          
+
+                )}
+
+
+
+
             </div>
-         
-         
         </div>
-    )
+
+
+    </div>
+
+
+</div>
+)
 
 }
 export {WomenClothes}
