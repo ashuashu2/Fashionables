@@ -25,12 +25,12 @@ return (
 
     <div className="main-container">
         <div className="items-container">
-            <div>
+            <div className="cart-page-items">
 
                 {cart.map((cart)=>(
                 <div className="container">
                     <div className="cart-item-details">
-                        <div> <img className="image" height={150} width={130} src={cart.img} alt="" /> </div>
+                        <div> <img className="cart-image" src={cart.img} alt="" /> </div>
                         <div>
                             <h4> {cart.name} </h4>
                             <div>{cart.description1}</div>
@@ -41,7 +41,7 @@ return (
                                     <div className="price-content price2 "> {cart.originalPrice} </div>
                                     <div className="price-content discount"> ({cart.discount}%) </div>
                                 </div>
-                                <Link to={`/ProductDetail/${cart.id}`}> <button className="card-button"
+                                <Link to={`/ProductDetail/${cart.id}`} className="cart-page-button"> <button className=" card-button"
                                     style={{margin:"2rem"}}> view detils</button> </Link>
 
 
@@ -103,7 +103,7 @@ return (
             <h1>Price Details</h1>
             <hr style={{backgroundColor:"white"}} />
             <h4 className="details-name">Orignal Price <span className="span-div">{OrignalPrice}</span> </h4>
-            <h4 className="details-name">Discounts On Price <span className="span-div">{Discount}</span></h4>
+            <h4 className="details-name">Discounts On Price <span className="span-div"> {Discount}</span></h4>
             <h4 className="details-name">Coupon Discount <span className="span-div">Applied </span> </h4>
             <h4 className="details-name">Delivery <span className="span-div"> Free </span></h4>
             <hr style={{backgroundColor:"white"}} />

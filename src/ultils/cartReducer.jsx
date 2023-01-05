@@ -4,9 +4,9 @@ function cartReducer(cartState,action){
         
                  
                   return { ...cartState, cart: [...cartState.cart, { ...action.payload }],
-                  TotlePrice : cartState.TotlePrice + Number(action.payload.price),
-                  OrignalPrice : cartState.OrignalPrice + Number(action.payload.originalPrice),
-                  Discount : cartState.Discount + Number(action.payload.discountPrice)
+                  TotlePrice : Number(cartState.TotlePrice) + Number(action.payload.price),
+                  OrignalPrice : Number(cartState.OrignalPrice) + Number(action.payload.originalPrice),
+                  Discount : Number(cartState.Discount) + Number(action.payload.discountPrice)
                 };
                  
             
@@ -14,9 +14,9 @@ function cartReducer(cartState,action){
                 return {
                   ...cartState,
                   cart: cartState.cart.filter((c) => c.id !== action.payload.id),
-                  TotlePrice : cartState.TotlePrice - Number(action.payload.price),
-                  OrignalPrice : cartState.OrignalPrice - Number(action.payload.originalPrice),
-                  Discount : cartState.Discount - Number(action.payload.discountPrice)
+                  TotlePrice : Number(cartState.TotlePrice) - Number(action.payload.price),
+                  OrignalPrice : Number(cartState.OrignalPrice) - Number(action.payload.originalPrice),
+                  Discount : Number(cartState.Discount) - Number(action.payload.discountPrice)
                 };
         default:
             return cartState;

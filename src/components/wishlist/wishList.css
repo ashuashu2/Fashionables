@@ -1,3 +1,19 @@
+
+
+.big-container{
+    display: grid;
+    grid-template-columns: auto auto ;
+    width: 100%;
+
+   
+}
+.small-container{
+    border: 2px solid black;
+    margin-top: 2rem;
+    margin: 2rem;
+    position: relative;
+
+}
 .Price-container{
     display: inline;
 }
@@ -13,24 +29,12 @@ display: flex;
 margin: 2rem;
 }
 
-.small-container{
-    border: 2px solid black;
-    margin: auto;
-    margin-top: 2rem;
 
-    width: 30%;
-    gap: 30px;
-    position: relative;
-
-}
 .button-divs{
     margin-left: 1.9rem;
     width: 100%;
 }
-.big-container{
-    display: flex;
-    flex-wrap: wrap;
-}
+
 .x-buttons{
     position: absolute;
     top: 20px;
@@ -38,4 +42,37 @@ margin: 2rem;
     border: none;
     background-color: white;
     color: black;
+}
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+
+
+
+    .big-container{
+        display: grid;
+        grid-template-columns: auto;
+    
+       
+    }
+    .small-container{
+      
+        margin: 0.5rem;
+        margin-top: 2rem;
+
+    
+    }
+ 
+    .x-buttons{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+
+
 }

@@ -62,11 +62,11 @@ function Login (){
     };
 
     return(
-        <div  style={{display:"flex"}}>
+        <div className="login-page-main-container" >
            <div className=" images-div">
              <div className="one-div"> 
-                <img    className="black-image" height={450} width={400} src={blackimage}alt="" />
-            <img  className="main-image"  height={300} width={450} src={LoginPage}alt="" />
+                <img    className="black-image"  src={blackimage}alt="" />
+            <img  className="main-image" src={LoginPage}alt="" />
              </div>
             
 

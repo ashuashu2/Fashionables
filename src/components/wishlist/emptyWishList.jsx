@@ -7,7 +7,7 @@ function EmptyWishlist() {
     return(
         <div>
             <div>
-                <img  height={400} width={600} src={emptywishlist} alt="" />
+                <img src={emptywishlist} alt="" />
 
 
             </div>
