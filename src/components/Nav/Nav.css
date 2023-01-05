@@ -231,6 +231,7 @@
 
     .Nav-container {
         height: 9vh;
+        width: 100%;
 
 
     }
@@ -241,6 +242,7 @@
     }
     .Nav-left-side{
         margin-top: 0.5rem;
+        width: 100%;
     }
 
 
@@ -251,7 +253,7 @@
         margin-left: -0.1rem;
         margin-bottom: 0em;
         margin-top: 0.5rem;
-        /* margin-right: 5rem; */
+       
 
     }
 
