@@ -27,6 +27,7 @@
 }
 .buttons-div{
     display: flex;
+ 
 }
 .single-product-button{
     height: 8vh;
@@ -41,13 +42,13 @@
     height: 9vh;
     background-color: #F6C33C;;
     color: black;
-    margin: 1rem;
     transition: all 0.4s;
 
 
 }
 .buttons-div2{
-    width: 100%;
+    width: 30%;
+    margin: 1rem;
 }
 .pricing-div{
     display: flex;
@@ -160,9 +161,10 @@
     }
 .buttons-div{
     position: fixed;
-    bottom: 00%;
+    bottom: 0%;
     background-color: black;
     width: 100%;
+  
  
 
 }
@@ -205,6 +207,10 @@
     margin-top: 0rem;
     
 
+}
+.buttons-div2{
+    width: 100%;
+    margin: unset;
 }
 
 

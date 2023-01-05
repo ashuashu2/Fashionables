@@ -13,7 +13,7 @@ function Footer(){
 
 
     return(
-        <div>
+        <div className="footer-main-div">
            <hr />
            <div className="footer-div">
             <div className="text-div">Copyright © 2022 fashionables.com | Managed by Ashutosh Birthare.</div>
