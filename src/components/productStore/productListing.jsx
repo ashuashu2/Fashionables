@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import "../productStore/productListing.css"
 
 import { Filter } from "./filter"
@@ -5,6 +6,10 @@ import { Filter } from "./filter"
 import { Store } from "./store"
 
 function ProductListing(){
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+
     return(
         <div>
 

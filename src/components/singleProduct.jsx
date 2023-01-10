@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import "../../src/components/singleProduct.css"
@@ -25,6 +25,9 @@ const { cartState,cartDispatch} = useCart()
 const {WishlistDispatch,WishlistState} = useWishlist()
 const { isLoggedIn } = useAuth();
 
+useEffect(() => {
+  window.scrollTo(0, 0)
+}, [])
 
 
 function AddtoCartHandler2({id, name, price,originalPrice,description, img,discount,rating,count}){
@@ -96,7 +99,7 @@ return (
               src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" /></span>
         </div>
         <p className="offers-div-para">
-          Partner OfferSign up for Flipkart Pay Later and get Flipkart Gift Card worth up to ₹500* <span
+          Partner OfferSign up for Fashionables Pay Later and get Fashionables Gift Card worth up to ₹500* <span
             className=" know-more"> Know More </span> </p>
         <div className="offers-div2"> <span class="green-sale-emoji"><img
               src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" /></span>
@@ -108,7 +111,7 @@ return (
               src="https://rukminim1.flixcart.com/www/36/36/promos/06/09/2016/c22c9fc4-0555-4460-8401-bf5c28d7ba29.png?q=90" /></span>
         </div>
         <p className="offers-div-para">
-          Bank Offer5% Cashback on Flipkart Axis Bank Card <span className=" know-more"> Know More </span></p>
+          Bank Offer5% Cashback on Fashionables Axis Bank Card <span className=" know-more"> Know More </span></p>
 
       </div>
       <div className=" buttons-div">

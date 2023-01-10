@@ -41,18 +41,18 @@ return (
                                     <div className="price-content price2 "> {cart.originalPrice} </div>
                                     <div className="price-content discount"> ({cart.discount}%) </div>
                                 </div>
-                                <Link to={`/ProductDetail/${cart.id}`} className="cart-page-button"> <button className=" card-button"
-                                    style={{margin:"2rem"}}> view detils</button> </Link>
+                                <Link to={`/ProductDetail/${cart.id}`} > <button className=" cart-button"
+                                  > view details</button> </Link>
 
 
 
                             </div>
                             <div>{WishlistState.Wishlist.some((p)=>p.id === cart.id)? (
-                                <Link to="/Wishlist"><button className="card-button">
+                                <Link to="/Wishlist"><button className="cart-button">
                                     View In Wishlist</button> </Link> ) : (
                                 <div>
 
-                                    <button style={{marginLeft:"2rem"}} className="card-button" onClick={()=>{
+                                    <button  className="cart-button" onClick={()=>{
                                         WishlistDispatch({type: "ADD_TO_WISHLIST",payload: cart,});
                                         cartDispatch({type: "REMOVE_FROM_CART",payload: cart,})
                                         toast.success("Added To WishList!") }}>

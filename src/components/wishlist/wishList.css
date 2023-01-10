@@ -30,10 +30,17 @@ margin: 2rem;
 }
 
 
+
 .button-divs{
     margin-left: 1.9rem;
     width: 100%;
 }
+.wishlist-page-button{
+    background-color: #F6C33C;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    width: 100%;
+  }
 
 .x-buttons{
     position: absolute;

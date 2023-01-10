@@ -19,6 +19,7 @@ import { filterByRatings } from "../../../ultils/filterByRatings";
 import { filterBySort } from "../../../ultils/sortBy";
 import { useFilter } from "../../../context/filterContext";
 import { useAuth } from "../../../context/authContext";
+import { useEffect } from "react";
 
 
 
@@ -50,7 +51,9 @@ filterByRatings(filterDataByDiscount,state.Ratings.One,state.Ratings.Two,state.R
 
 const finalFilterData = filterDataByRatings
 
-
+useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
 
 function AddtoCartHandler(user){

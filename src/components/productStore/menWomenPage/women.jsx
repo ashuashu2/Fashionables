@@ -18,6 +18,7 @@ import { filterBySort } from "../../../ultils/sortBy";
 import { useFilter } from "../../../context/filterContext";
 import {Link} from "react-router-dom"
 import { useAuth } from "../../../context/authContext";
+import { useEffect } from "react";
 
 
 function WomenClothes(){
@@ -27,6 +28,10 @@ const {WishlistDispatch,WishlistState} = useWishlist()
 const {state,dispatch} = useFilter()
 const { isLoggedIn } = useAuth()
 
+
+useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
 
 function AddtoCartHandler(user){

@@ -24,6 +24,7 @@ import { filterBySort } from "../../ultils/sortBy";
 import { useWishlist } from "../../context/wishlistContext";
 import { Link} from "react-router-dom";
 import { useAuth } from "../../context/authContext";
+import { useEffect } from "react";
 
 
 
@@ -38,7 +39,9 @@ function Store ( ){
 
 
 
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
  
   function AddtoCartHandler(user){
     if(isLoggedIn.login){

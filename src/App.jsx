@@ -28,6 +28,7 @@ import { useWishlist } from "./context/wishlistContext";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useAuth } from "./context/authContext";
+import { useEffect } from "react";
 
 
 function App() {
@@ -38,7 +39,9 @@ const { pathname } = useLocation()
 
 const {cartState} = useCart()
 const {WishlistState} = useWishlist()
-
+useEffect(() => {
+  window.scrollTo(0, 0)
+}, [])
 
 return (
 <div className="App">

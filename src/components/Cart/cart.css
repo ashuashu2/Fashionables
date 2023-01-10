@@ -39,6 +39,13 @@ width: 100%;
     display: flex;
     margin-top: 0.5rem;
 }
+.cart-button{
+    background-color: #F6C33C;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    width: 100%;
+    margin: 1rem;
+  }
 
 
 

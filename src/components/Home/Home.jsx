@@ -6,6 +6,8 @@ import banner3 from "../images/banner3.webp";
 import banner5 from "../images/banner5.webp";
 import banner9 from "../images/banner9.jpg";
 import banner4 from "../images/banner4.jpg";
+import banner7 from "../images/banner7.jpg";
+
 import shopforbanner from "../images/shopforbanner.jpg";
 import shopforbanner2 from "../images/shopforbanner2.jpg";
 import homedivbanner1 from "../images/homedivbanner1.webp";
@@ -24,7 +26,7 @@ import { Link} from "react-router-dom";
 function Home (){
 const [allImage,setAllImage]=useState(0)
 
-const [image,setImage]=useState([banner5,banner4,banner3,banner9])
+const [image,setImage]=useState([banner5,banner7,banner3,banner4,banner9])
 
 
 
@@ -34,11 +36,13 @@ const [image,setImage]=useState([banner5,banner4,banner3,banner9])
 
 useEffect(()=>{
 setInterval(() => {
-setAllImage((allImage=>allImage>2?0:allImage+1))
+setAllImage((allImage=>allImage>3?0:allImage+1))
 
 }, 1500);
 },[])
-
+useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
 
 

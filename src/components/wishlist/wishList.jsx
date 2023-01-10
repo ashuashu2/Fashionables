@@ -64,7 +64,7 @@ function WishList(){
                      <div className="Price-content"> {user.originalPrice} </div>
                      <div className="Price-content"> ({user.discount}%) </div>
                      </div>
-                     <Link to={`/ProductDetail/${user.id}`}> <button className="card-button" style={{margin:"2rem"}}> view detils</button> </Link>
+                     <Link to={`/ProductDetail/${user.id}`}> <button className="wishlist-page-button" style={{margin:"2rem"}}> view detils</button> </Link>
                      
 
                     </div>
@@ -73,8 +73,8 @@ function WishList(){
         <div className="button-divs">{cartState.cart.some((p)=>p.id === user.id)? (
         
         
-        <button onClick={()=>MoveToCartHandler(user) } className="card-button"> Move to cart </button>  ) : (
-            <button  className="card-button"  onClick={() =>cartHandler(user)}> Add To Cart</button>
+        <button onClick={()=>MoveToCartHandler(user) } className="wishlist-page-button"> Move to cart </button>  ) : (
+            <button  className="wishlist-page-button"  onClick={() =>cartHandler(user)}> Add To Cart</button>
         )  }</div>
                   </div>
 
@@ -84,7 +84,7 @@ function WishList(){
                     
                   
                 <div>
-                    {<div className="x-buttons"> <button onClick={()=>removerhandler(user)}><TiDeleteOutline /></button> </div> }
+                    <div className="x-buttons"> <button onClick={()=>removerhandler(user)}><TiDeleteOutline /></button> </div> 
 
                 </div>
                     </div>
