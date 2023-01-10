@@ -164,15 +164,7 @@ left: 20%;
 
 
 
-.signup-text{
-    margin-top: 1.5rem;
-    font-size: 1.5rem;
-}
 
-.ischecked-text{
- color: red;  
- font-weight: bolder;
-}
 
 
 
@@ -187,11 +179,18 @@ left: 20%;
     font-weight: bolder;
     
     margin: 2rem;
-    margin-right: 49%;
     margin-bottom: -0.2rem;
 }
 
+.signup-text{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
 
+.ischecked-text{
+ color: red;  
+ font-weight: bolder;
+}
 
 
 

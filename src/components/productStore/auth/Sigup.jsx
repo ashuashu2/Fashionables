@@ -81,8 +81,8 @@ const signupHandler =async()=>{
         <div  style={{display:"flex"}}>
         <div className=" images-div">
           <div className="one-div"> 
-             <img    className="black-image" height={450} width={400} src={blackimage}alt="" />
-         <img  className="main-image"  height={300} width={450} src={SignupPage}alt="" />
+             <img    className="black-image" src={blackimage}alt="" />
+         <img  className="main-image"   src={SignupPage}alt="" />
           </div>
          
 
@@ -95,7 +95,7 @@ const signupHandler =async()=>{
         <div className="content-divs">
         <div className="login-text-div">
                 
-                <h1 className="login-text">Login.</h1>
+                <h1 className="login-text">Signup.</h1>
           <p className="para">Enter your Credentials to create your account</p>
            </div>
          <div>
