@@ -24,6 +24,15 @@ function Login (){
     const { isLoggedIn, setIsLoggedIn } = useAuth();
     const from = location?.state?.from.pathname
 
+    const GuestButtonHandler = () =>{
+      setIsLoggedIn(()=>({
+        username: "Guest",
+        login: true,
+                   }));
+       toast.success("Login Succesfully");
+       navigate(from,{replace:true});
+    }
+
 
     const loginHandler = async() =>{
       const data ={
@@ -118,12 +127,7 @@ function Login (){
               <div className="forgot" >Forgot Password?</div>
               <div className="login-button-div" >
                 <button className="login-button" onClick={ ()=>loginHandler()}>Login</button>
-                <button className="guest-button" onClick={() => {setIsLoggedIn(()=>({
-              username: "Guest",
-              login: true,
-            }));
-                  toast.success("Login Succesfully");
-                  navigate(from,{replace:true});}}>Login As Guest</button>
+                <button className="guest-button" onClick={GuestButtonHandler} >Login As Guest</button>
               </div>
 
               <p className="signup-text"> Not a member ?  <Link to="/Signup">Signup </Link>  </p>

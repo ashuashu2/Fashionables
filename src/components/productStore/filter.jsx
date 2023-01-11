@@ -18,7 +18,7 @@ return(
   <h1>Filters</h1>
   <fieldset>
 
-    <button className="clear-button" onClick={()=>dispatch({type:"CLEAR"})} > Clear All Filters </button>
+    <button className="clear-button"   onClick={()=>dispatch({type:"CLEAR"})} > Clear All Filters </button>
   </fieldset>
 
 

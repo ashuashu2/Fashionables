@@ -14,7 +14,16 @@ const {cartDispatch} = useCart()
 
 const {cartState: { cart,TotlePrice,Discount ,OrignalPrice}} = useCart()
 const {WishlistDispatch,WishlistState} = useWishlist()
-
+const AddToWishlistHandler3 = (cart)=>{
+    WishlistDispatch({type: "ADD_TO_WISHLIST",payload: cart,});
+    cartDispatch({type: "REMOVE_FROM_CART",payload: cart,})
+    toast.success("Added To WishList!") 
+}
+const RemoveFromCartHandler3 = (cart)=>{
+    cartDispatch({type: "REMOVE_FROM_CART",payload: cart,})
+                        toast.success(" Removed From Cart !");
+    
+}
 
 return (
 <div>
@@ -52,10 +61,7 @@ return (
                                     View In Wishlist</button> </Link> ) : (
                                 <div>
 
-                                    <button  className="cart-button" onClick={()=>{
-                                        WishlistDispatch({type: "ADD_TO_WISHLIST",payload: cart,});
-                                        cartDispatch({type: "REMOVE_FROM_CART",payload: cart,})
-                                        toast.success("Added To WishList!") }}>
+                                    <button  className="cart-button" onClick={()=>AddToWishlistHandler3(cart)} >
 
 
                                         Add To WishList
@@ -71,9 +77,7 @@ return (
                                     className="free-delivery"> ₹40</span> </small></div>
 
                     </div>
-                    <button className="x-button" onClick={()=>{cartDispatch({type: "REMOVE_FROM_CART",payload: cart,})
-                        toast.success(" Removed From Cart !");
-                        }}>
+                    <button className="x-button"  onClick={()=>RemoveFromCartHandler3(cart)}>
                         <TiDeleteOutline /></button>
 
 

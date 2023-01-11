@@ -26,6 +26,12 @@ const {WishlistState: { Wishlist }} = useWishlist()
 const { isLoggedIn, setIsLoggedIn } = useAuth();
 const navigate = useNavigate();
 const location = useLocation();
+const LogoutButtonHandler = ()=>{
+  setIsLoggedIn((isLoggedIn) => ({login:false}));
+                navigate("/");
+                toast.success("Logout Succesfully")
+
+}
 
 
 const getActiveStyle = ({ isActive }) =>({
@@ -91,10 +97,8 @@ return (
 
 
     </div>
-    <div className="nav-login-button2"> {isLoggedIn.login ? (<button className="card-button3 nav-login-button" onClick={()=> {
-                setIsLoggedIn((isLoggedIn) => ({login:false}));
-                navigate("/");
-                toast.success("Logout Succesfully")}}>
+    <div className="nav-login-button2"> {isLoggedIn.login ? (<button className="card-button3 nav-login-button" 
+    onClick={LogoutButtonHandler} >
 
                 Logout
             </button>):( <button className="card-button3 nav-login-button">
