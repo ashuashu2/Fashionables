@@ -116,7 +116,7 @@ return(
 
 
                         <div className="image-div">
-                            <Link to={`/ProductDetail/${user.id}`}> <img className="image" height={250} Width="100%"
+                            <Link to={`/ProductDetail/${user.id}`}> <img className="image" 
                                 src={user.img} alt="" />
                             </Link>
 
