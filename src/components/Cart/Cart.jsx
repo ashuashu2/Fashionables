@@ -39,7 +39,7 @@ return (
                 {cart.map((cart)=>(
                 <div className="container">
                     <div className="cart-item-details">
-                        <div> <img className="cart-image" src={cart.img} alt="" /> </div>
+                        <div className="cart-image-container"> <img className="cart-image" src={cart.img} alt="" /> </div>
                         <div>
                             <h4> {cart.name} </h4>
                             <div>{cart.description1}</div>
@@ -102,17 +102,20 @@ return (
 
 
         <div className="items-details">
+            <div className="items-details-div2" > 
 
 
-            <h1>Price Details</h1>
-            <hr style={{backgroundColor:"white"}} />
+            <h1 className="price-details">Price Details</h1>
+            <hr  />
             <h4 className="details-name">Orignal Price <span className="span-div">{OrignalPrice}</span> </h4>
-            <h4 className="details-name">Discounts On Price <span className="span-div"> {Discount}</span></h4>
+            <h4 className="details-name">Discounts On Price <span className="span-div"> -{Discount}</span></h4>
             <h4 className="details-name">Coupon Discount <span className="span-div">Applied </span> </h4>
             <h4 className="details-name">Delivery <span className="span-div"> Free </span></h4>
-            <hr style={{backgroundColor:"white"}} />
+            <hr style={{backgroundColor:"black"}} />
 
-            <h4 className="details-name">Final Price <span className="span-div">{TotlePrice}</span> </h4>
+            <h4 className="details-name final-price">Final Price <span className="span-div">{TotlePrice}</span> </h4>
+            <button className="checkout-button"> CheckOut </button>
+            </div>
 
 
         </div>
