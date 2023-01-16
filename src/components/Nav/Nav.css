@@ -175,7 +175,20 @@
 
 }
 
-
+.plain-nav-container{
+    display: flex;
+  
+}
+.plain-nav{
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 2.3rem;
+    margin-top: 1rem;
+}
+.plain-nav-f-text{
+    color: #F6C33C;
+    font-size: 3rem;
+}
 
 
 
@@ -335,7 +348,6 @@
         background-color: #F6C33C;
         font-size: 1em;
         font-weight: bolder;
-        /* width: 100%; */
       }
 
       
@@ -348,7 +360,20 @@
     margin-top: 1rem;
     
 }
-   
+.plain-nav-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.plain-nav{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.plain-nav-f-text{
+    color: #F6C33C;
+    font-size: 3rem;
+}
 
 
 

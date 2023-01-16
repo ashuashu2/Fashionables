@@ -98,30 +98,22 @@ const signupHandler =async()=>{
                 <h1 className="login-text">Signup.</h1>
           <p className="para">Enter your Credentials to create your account</p>
            </div>
-         <div>
-         <button className="gmail-button">
-             <span
-               style={{
-                 margin: "0.7rem",
-                 fontWeight: "bold",
-                 fontSize: "1.3rem",
-               }}
-             >
-               G+
-             </span>{" "}
-             Sign-up With Google
-           </button>
-           <button className="facebook-button"  > <span
-               style={{
-                 margin: "0.7rem",
-                 fontWeight: "bold",
-                 fontSize: "1.3rem",
-               }}
-             >
-               f
-             </span>{" "}  Sign-up With Facebook </button>
+           <div className="upper-button-div">
+            <button className="gmail-button">
+                <span className="upper-button-span"
+                
+                >
+                  G+
+                </span>{" "}
+                Signup With Google
+              </button>
+              <button className="facebook-button"  > <span className="upper-button-span"
+               
+                >
+                  f
+                </span>{" "}  Signup With Facebook </button>
 
-         </div>
+            </div>
          
          
            <hr />

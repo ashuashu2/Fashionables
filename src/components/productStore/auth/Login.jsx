@@ -93,23 +93,15 @@ function Login (){
             </div>
             <div className="upper-button-div">
             <button className="gmail-button">
-                <span
-                  style={{
-                    margin: "0.7rem",
-                    fontWeight: "bold",
-                    fontSize: "1.3rem",
-                  }}
+                <span className="upper-button-span"
+                
                 >
                   G+
                 </span>{" "}
                 Login With Google
               </button>
-              <button className="facebook-button"  > <span
-                  style={{
-                    margin: "0.7rem",
-                    fontWeight: "bold",
-                    fontSize: "1.3rem",
-                  }}
+              <button className="facebook-button"  > <span className="upper-button-span"
+               
                 >
                   f
                 </span>{" "}  Login With Facebook </button>

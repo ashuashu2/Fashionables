@@ -45,6 +45,11 @@ left: 20%;
     text-align: left;
     margin-bottom: 2rem;
 }
+.upper-button-span{
+    margin: 0.7rem;
+    font-Weight: bold;
+    font-size: 1.3rem;
+}
 
 
 
@@ -195,8 +200,79 @@ left: 20%;
 
 
 @media screen and (max-width: 800px) {
+    .login-page-main-container{
+        display: unset;
+    }
+
+
+
+    .images-div{
+        display: none;
+      
+    }
+
+
+    .login-text-div{
+        text-align: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        
 
     
+    }
+    .para{
+        font-size: 0.8em;
+    }
+   
+    .content-div{
+        text-align: left;
+       
+    }
+    .upper-button-span{
+        margin: 0.7rem;
+        font-Weight: bold;
+        font-size: 1.3rem;
+    }
+    
+    
+    .upper-button-div{
+      
+        margin: 2rem;
+
+    }
+    
+    
+    
+    .gmail-button{
+        
+        padding: 0.5em;
+        font-size: 0.8em;
+        font-weight: bolder;
+        
+    
+    }
+    .facebook-button{
+       
+        padding: 0.5em;
+        font-size: 0.8em;
+        font-weight: bolder;
+        margin-left: 0.5rem;
+        
+    
+    }
+    
+
+    
+    
+    
+    .details-container{
+        margin: 2rem;
+       
+    }
+
+
+    
+
 
 
 
