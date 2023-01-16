@@ -1,3 +1,12 @@
+.Nav-container {
+    display: flex;
+
+    height: 15vh;
+
+    max-width: 100%;
+    box-shadow: 1px 1px 1px 1px;
+    border-bottom: black;
+}
 .Nav-logo {
     height: 10vh;
     width: 80px;
@@ -8,9 +17,7 @@
     font-size: 3rem;
     color: #F6C33C;
 }
-.NavLink{
-    /* font-weight: bolder; */
-}
+
 
 .heading {
     margin-bottom: 50%;
@@ -89,13 +96,7 @@
     margin-top: 1.8rem;
 }
 
-.Nav-container {
-    display: flex;
-    height: 15vh;
 
-    box-shadow: 1px 1px 1px 1px;
-    border-bottom: black;
-}
 
 .Nav-left-side {
 
@@ -112,10 +113,11 @@
 .Nav-right-side {
 
     margin: 1rem;
-    margin-left: auto;
+  
     margin-bottom: -0.5rem;
 
     display: flex;
+    margin-left: auto;
 }
 
 .Nav-right-side-content {
@@ -142,7 +144,7 @@
     ;
 
     height: 5vh;
-    width: 40%;
+    /* width: 40%; */
     margin-top: 1rem;
     
 }
@@ -151,7 +153,7 @@
     background-color: #F6C33C;
     font-size: 1em;
     font-weight: bolder;
-    width: 100%;
+    /* width: 100%; */
   }
 
 
