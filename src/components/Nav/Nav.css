@@ -267,7 +267,7 @@
 
         margin: 0em;
         margin-left: auto;
-        margin-left: -0.1rem;
+        margin-left: -0.2rem;
         margin-bottom: 0em;
         margin-top: 0.5rem;
        
@@ -352,13 +352,14 @@
 
       
 .nav-login-button2{
-    margin: 0.7rem;
+    margin: 0.1rem;
     color: white;
     background-color: black;
-    height: 3vh;
+    height: 2vh;
     width: 100%;
-    margin-top: 1rem;
-    margin-left: -0.2rem;
+    margin-top: 1.2rem;
+    font-size: 0.8em;
+    /* margin-left: -0.2rem; */
     
 }
 .plain-nav-container{
