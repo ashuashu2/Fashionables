@@ -8,7 +8,7 @@ function EmptyCart() {
     return(
         <div className="emprt-cart-main-div">
             <div className="empty-caty-div3"><img className="empty-cart-image"  src={emptycart} alt="" /></div>
-            <Link to="/ProductListing" className="empty-caty-button" ><button style={{width: 200}} className="card-button">Explore all collection</button></Link>
+            <Link to="/ProductListing" className="empty-caty-button" ><button  className="empty-cart-button1">Explore all collection</button></Link>
             
 
         </div>

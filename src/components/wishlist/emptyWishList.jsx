@@ -1,5 +1,6 @@
 import  emptywishlist from "../images/emptywishlist.png";
 import { Link} from "react-router-dom";
+import "../wishlist/wishList.css"
 
 
 
@@ -11,7 +12,7 @@ function EmptyWishlist() {
 
 
             </div>
-            <Link to="/ProductListing" ><button style={{width: 200}} className="card-button">Explore all collection</button></Link>
+            <Link to="/ProductListing" ><button  className="empty-wishlist-button">Explore all collection</button></Link>
 
 
 

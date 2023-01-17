@@ -113,7 +113,16 @@ width: 100%;
 .empty-cart-image{
     margin-top: 5rem;
 }
-
+.empty-cart-button1{
+    background-color: #F6C33C;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+.empty-cart-button1:hover{
+    background-color:whitesmoke;
+    color: black;
+ 
+}
 
 
 

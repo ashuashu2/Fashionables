@@ -52,6 +52,17 @@ margin: 2rem;
 }
 
 
+.empty-wishlist-button{
+    background-color: #F6C33C;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+.empty-wishlist-button:hover{
+    background-color:whitesmoke;
+    color: black;
+ 
+}
+
 
 
 
