@@ -6,7 +6,8 @@ function cartReducer(cartState,action){
                   return { ...cartState, cart: [...cartState.cart, { ...action.payload }],
                   TotlePrice : Number(cartState.TotlePrice) + Number(action.payload.price),
                   OrignalPrice : Number(cartState.OrignalPrice) + Number(action.payload.originalPrice),
-                  Discount : Number(cartState.Discount) + Number(action.payload.discountPrice)
+                  Discount : Number(cartState.Discount) + Number(action.payload.discountPrice),
+                  Quantity : Number(cartState.Quantity) + Number(action.payload.qty)
                 };
                  
             
@@ -16,7 +17,41 @@ function cartReducer(cartState,action){
                   cart: cartState.cart.filter((c) => c.id !== action.payload.id),
                   TotlePrice : Number(cartState.TotlePrice) - Number(action.payload.price),
                   OrignalPrice : Number(cartState.OrignalPrice) - Number(action.payload.originalPrice),
-                  Discount : Number(cartState.Discount) - Number(action.payload.discountPrice)
+                  Discount : Number(cartState.Discount) - Number(action.payload.discountPrice),
+                  Quantity : Number(cartState.Quantity) - Number(action.payload.qty)
+
+                };
+
+
+            case "INCREASE_QUANTITY":
+                return {
+                  ...cartState,
+                  
+                  TotlePrice : Number(cartState.TotlePrice) + Number(action.payload.price),
+                  OrignalPrice : Number(cartState.OrignalPrice) + Number(action.payload.originalPrice),
+                  Discount : Number(cartState.Discount) + Number(action.payload.discountPrice),
+                  Quantity : Number(cartState.Quantity) + 1,
+
+                  cart: cartState.cart.map((item) =>
+                    item._id === action.payload._id
+                      ? { ...item, qty: item.qty + 1 }
+                      : item
+                  ),
+                  
+                };
+                case "DECREASE_QUANTITY":
+                return {
+                  ...cartState,
+                  
+                  TotlePrice : Number(cartState.TotlePrice) - Number(action.payload.price),
+                  OrignalPrice : Number(cartState.OrignalPrice) - Number(action.payload.originalPrice),
+                  Discount : Number(cartState.Discount) - Number(action.payload.discountPrice),
+                  Quantity : Number(cartState.Quantity) - 1,
+                  cart: cartState.cart.map((item) =>
+                    item._id === action.payload._id
+                      ? { ...item, qty: item.qty - 1 }
+                      : item
+                  ),
                 };
         default:
             return cartState;

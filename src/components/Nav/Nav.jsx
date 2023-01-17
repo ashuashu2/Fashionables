@@ -21,9 +21,11 @@ import { useAuth } from "../../context/authContext";
 
 
 function Navbar (){
-const {cartState: { cart }} = useCart()
+const {cartState: { Quantity }} = useCart()
 const {WishlistState: { Wishlist }} = useWishlist()
 const { isLoggedIn, setIsLoggedIn } = useAuth();
+
+
 const navigate = useNavigate();
 const location = useLocation();
 const LogoutButtonHandler = ()=>{
@@ -68,7 +70,7 @@ return (
       <div className="cart-icon-div">
         <h4 className="Nav-right-side-content icon cart-icon ">
           <IoMdCart  /> <span className="cart-icon-counter">
-            {cart.length}
+            {Quantity}
 
           </span> </h4>
 

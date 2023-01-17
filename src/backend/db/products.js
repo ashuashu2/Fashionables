@@ -19,7 +19,7 @@ export const products = [
     newArrival :true,
     description:"Men Slim Fit Striped Spread Collar Casual Shirt",
     price: "4099",
-    qty: "1",
+    qty: 1,
 
     count: "5",
     discountPrice:"1900",
@@ -46,7 +46,7 @@ export const products = [
     description1:"Black silk plane  Shirt",
 
       price: "5394",
-      qty: "1",
+      qty: 1,
 
       count: "5",
 
@@ -77,7 +77,7 @@ export const products = [
     newArrival :true,
     description:"Men Regular Fit Printed Spread Collar Casual Shirt",
     price: "2299",
-    qty: "1",
+    qty: 1,
 
     count: "5",
 
@@ -104,7 +104,7 @@ export const products = [
     newArrival:true,
     description:"Men Regular Fit Printed Spread Collar Casual Shirt",
     price: "2474",
-    qty: "1",
+    qty: 1,
 
     count: "5",
 
@@ -131,7 +131,7 @@ export const products = [
 
     description:"Men Regular Fit Self Design Casual Shirt",
     price: "4901",
-    qty: "1",
+    qty: 1,
 
     count: "5",
 
@@ -162,7 +162,7 @@ export const products = [
 
   description:"Printed Men Round Neck Black T-Shirt",
   price: "2621",
-  qty: "1",
+  qty: 1,
 
   count: "5",
 
@@ -196,7 +196,7 @@ export const products = [
   description1:"Black Printed cotton T-Shirt",
 
     price: "4099",
-    qty: "1",
+    qty: 1,
 
     count: "5",
 
@@ -227,7 +227,7 @@ export const products = [
     price: "5865",
   description1:"Black Printed cotton T-Shirt",
 
-    qty: "1",
+    qty: 1,
 
     count: "5",
 
@@ -258,7 +258,7 @@ export const products = [
   description1:"White Plane cotton T-Shirt",
 
     price: "2299",
-    qty: "1",
+    qty: 1,
 
     count: "5",
 
@@ -293,7 +293,7 @@ export const products = [
   description1:"White Printed cotton T-Shirt",
 
     price: "4901",
-    qty: "1",
+    qty: 1,
     newArrival :true,
 
     count: "5",
@@ -324,7 +324,7 @@ export const products = [
   description1:"Black casual  cotton Top",
 
     price: "4901",
-    qty: "1",
+    qty: 1,
 
     count: "5",
 
@@ -354,7 +354,7 @@ export const products = [
   description1:"Black slit sleeves Top",
 
     price: "2299",
-    qty: "1",
+    qty: 1,
 
     newArrival :true,
     count: "5",
@@ -387,7 +387,7 @@ export const products = [
 
 
     price: "5394",
-    qty: "1",
+    qty: 1,
 
     count: "5",
 
@@ -419,7 +419,7 @@ export const products = [
   description1:"Print Women White Top",
 
     price: "4099",
-    qty: "1",
+    qty: 1,
 
     count: "5",
 
@@ -455,7 +455,7 @@ export const products = [
     description:"Casual Sleeveless Striped Women White Top",
     
     price: "4901",
-    qty: "1",
+    qty: 1,
 
     count: "5",
 
@@ -486,7 +486,7 @@ export const products = [
   description1:"Women Maxi Black Dress",
 
     price: "2299",
-    qty: "1",
+    qty: 1,
 
     count: "5",
 
@@ -516,7 +516,7 @@ export const products = [
     description1:"Women A-line Black Dress",
 
     price: "2621",
-    qty: "1",
+    qty: 1,
 
     count: "5",
 
@@ -549,7 +549,7 @@ export const products = [
 
     description:"Women Maxi Black, White Dress",
     price: "2345",
-    qty: "1",
+    qty: 1,
 
     count: "5",
 
@@ -579,7 +579,7 @@ export const products = [
     description1:"Women Maxi White Dress",
 
     price: "4099",
-    qty: "1",
+    qty: 1,
 
     count: "5",
 
@@ -616,7 +616,7 @@ export const products = [
     description1:"Women Fit Flare  Dress",
 
     price: "5394",
-    qty: "1",
+    qty: 1,
 
     count: "5",
 

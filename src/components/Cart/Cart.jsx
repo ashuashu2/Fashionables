@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useCart } from "../../context/cartContext";
 import { TiDeleteOutline } from "react-icons/ti";
 import { Link } from "react-router-dom";
@@ -14,6 +14,8 @@ const {cartDispatch} = useCart()
 
 const {cartState: { cart,TotlePrice,Discount ,OrignalPrice}} = useCart()
 const {WishlistDispatch,WishlistState} = useWishlist()
+
+
 const AddToWishlistHandler3 = (cart)=>{
     WishlistDispatch({type: "ADD_TO_WISHLIST",payload: cart,});
     cartDispatch({type: "REMOVE_FROM_CART",payload: cart,})
@@ -21,8 +23,23 @@ const AddToWishlistHandler3 = (cart)=>{
 }
 const RemoveFromCartHandler3 = (cart)=>{
     cartDispatch({type: "REMOVE_FROM_CART",payload: cart,})
-                        toast.success(" Removed From Cart !");
+    toast.success(" Removed From Cart !");
     
+}
+const IncreaseQuantityHandler=(cart)=>{
+    cartDispatch({type: "INCREASE_QUANTITY",payload: cart,})
+  
+    
+
+}
+const DecreaseQuantityHandler=(cart)=>{
+    cartDispatch({type: "DECREASE_QUANTITY",payload: cart,})
+   
+
+    
+
+
+
 }
 
 return (
@@ -50,6 +67,15 @@ return (
                                     <div className="price-content price2 "> {cart.originalPrice} </div>
                                     <div className="price-content discount"> ({cart.discount}%) </div>
                                 </div>
+                                <button  className="quantity-button"  disabled={cart.qty === 1} onClick={()=>DecreaseQuantityHandler(cart)} > - </button>
+                                <span style={{fontWeight : "bolder"}}> {cart.qty} </span>
+
+                                <button  className="quantity-button" onClick={()=>IncreaseQuantityHandler(cart)} > + </button>
+                                
+
+
+
+
                                 <Link to={`/ProductDetail/${cart.id}`} > <button className=" cart-button"
                                   > view details</button> </Link>
 

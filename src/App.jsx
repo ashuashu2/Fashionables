@@ -64,7 +64,7 @@ return (
   <Routes>
 
     <Route path="/" element={<Home />} />
-    <Route path="/Cart" element={ <RequiresAuth> {cartState.cart.length > 0 ?
+    <Route path="/Cart" element={ <RequiresAuth> {cartState.Quantity > 0 ?
       <Cart /> :
       <EmptyCart />} </RequiresAuth>} />
       <Route path="/Store" element={<Store />} />

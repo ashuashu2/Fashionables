@@ -502,7 +502,7 @@ margin-top: 0.4rem;
 
 
 .policy-div {
-    height: 130px;
+    height: 155px;
    
     margin: 0.5em;
 
@@ -510,12 +510,13 @@ margin-top: 0.4rem;
 
 .policies {
     margin: 0.5em;
+    display: grid;
 
 }
 
 .lines {
 
-    height: 90px;
+    height: 120px;
     margin-top: 15px;
 }
 

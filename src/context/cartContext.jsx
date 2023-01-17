@@ -24,14 +24,21 @@ function getOrignalPrice (){
     return OrignalPrice ? OrignalPrice : 0
 }
     
+function getQuantity (){
+
+    const Quantity = localStorage.getItem("Quantity")
+    return Quantity ? Quantity : 0
+}
     
-    const [cartState,cartDispatch] = useReducer(cartReducer,{cart:(getDataFromLocalStorage1()),TotlePrice:(getTotlePrice()),Discount:(getDiscount()),OrignalPrice:(getOrignalPrice())})
+    const [cartState,cartDispatch] = useReducer(cartReducer,{cart:(getDataFromLocalStorage1()),TotlePrice:(getTotlePrice()),Discount:(getDiscount()),OrignalPrice:(getOrignalPrice()),Quantity:(getQuantity())})
 
     useEffect(() => {
         localStorage.setItem("Cart",JSON.stringify(cartState.cart))
         localStorage.setItem("TotlePrice",cartState.TotlePrice)
         localStorage.setItem("Discount",cartState.Discount)
         localStorage.setItem("OrignalPrice",cartState.OrignalPrice)
+        localStorage.setItem("Quantity",cartState.Quantity)
+
 
 
 

@@ -7,7 +7,7 @@ function PlainNav (){
 return (
     <div className="plain-nav-container" >
         <img  className="Nav-logo Nav-left-side-content  " src={logo} alt="" />
-                <h1 style={{ fontWeight:"bolder" }} className="plain-nav"> <NavLink className="NavLink" to="./" > <span className="plain-nav-f-text" >F</span><span >ashionables.com</span> </NavLink>  </h1>
+                <h1 style={{ fontWeight:"bolder" }} className="plain-nav"> <NavLink className="plain-nav-NavLink" to="./" > <span className="plain-nav-f-text" >F</span><span >ashionables.com</span> </NavLink>  </h1>
     </div>
 )
 }
