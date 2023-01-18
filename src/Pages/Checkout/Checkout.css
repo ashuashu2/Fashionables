@@ -26,12 +26,33 @@
     margin-right: 2rem;
 }
 
+
 .order-detail{
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-weight: bolder;
 }
+.order-detail-name-div{
+    display: flex;
+    margin-bottom: 2rem;
+   
+}
+.order-detail-name{
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.order-detail-quantity{
+    font-size: large;
+    margin-left: auto;
+    font-weight: bolder;
+    text-decoration: underline;
+
+
+
+}
+
 .order-detail-item-name{
     list-style: none;
 }
@@ -107,4 +128,37 @@
     
    
     
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) { 
+
+    .checkout-page-small-div{
+      
+        width: 95%;
+        padding-left: 1rem;
+        padding-right: 0.2rem;
+
+    
+        
+    }
+
+
+
+
+
 }

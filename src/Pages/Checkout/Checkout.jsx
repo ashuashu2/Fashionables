@@ -12,6 +12,10 @@ const Checkout = () => {
                 
                 <h2 className="order-detail">Order Details</h2>
                 <hr />
+                <div className="order-detail-name-div">
+                    <h2 className="order-detail-name">Name Of Products</h2>
+                    <h2 className="order-detail-quantity"> Quantity </h2>
+                </div>
                 <div className="order-detail-items-div" > { cart.map((item)=>(
                     <div className="order-detail-items-div2"> 
                         <li className="order-detail-item-name"> { ` ${item.name}${item.description1} ` } </li>
