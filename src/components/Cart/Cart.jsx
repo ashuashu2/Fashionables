@@ -140,7 +140,8 @@ return (
             <hr style={{backgroundColor:"black"}} />
 
             <h4 className="details-name final-price">Final Price <span className="span-div">{TotlePrice}</span> </h4>
-            <button className="checkout-button"> CheckOut </button>
+            <Link to="/Checkout"><button className="checkout-button"> CheckOut </button> </Link>
+            
             </div>
 
 

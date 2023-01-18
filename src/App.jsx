@@ -29,6 +29,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useAuth } from "./context/authContext";
 import { useEffect } from "react";
+import { Checkout } from "./Pages/Checkout/Checkout";
 
 
 function App() {
@@ -52,16 +53,7 @@ return (
   <Navbar />
   )}
 
-
-
-
-
-
-
-
-
-
-  <Routes>
+ <Routes>
 
     <Route path="/" element={<Home />} />
     <Route path="/Cart" element={ <RequiresAuth> {cartState.Quantity > 0 ?
@@ -72,32 +64,27 @@ return (
       <Route path="/ProductListing" element={<ProductListing />} />
       <Route path="/Men" element={<MenClothes />} />
       <Route path="/Women" element={<WomenClothes />} />
-
       <Route path="/*" element={<Eror404 />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Signup" element={<Signup />} />
+      <Route path="/Checkout" element={<Checkout />} />
 
+      <Route path="/WishList" element={
+        <RequiresAuth>{ WishlistState.Wishlist.length > 0 ?
+                <WishList /> :
+                     <EmptyWishlist />} 
+        </RequiresAuth> }
+         />
+      <Route path="/ProductDetail/:productId" element={<ProductDetail />} />
 
-      <Route path="/WishList" element={ <RequiresAuth>{ WishlistState.Wishlist.length > 0 ?
-        <WishList /> :
-        <EmptyWishlist />} </RequiresAuth> } />
-
-
-
-
-
-
-
-        <Route path="/ProductDetail/:productId" element={<ProductDetail />} />
-
-
-
-
-
-
-  </Routes>
+ </Routes>
 
   <Footer />
+
+
+
+
+
   <ToastContainer position="top-center" autoClose={2500} hideProgressBar={false} newestOnTop={false} closeOnClick
     rtl={false} pauseOnFocusLoss draggable pauseOnHover />
 

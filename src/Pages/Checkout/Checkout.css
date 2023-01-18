@@ -1,0 +1,110 @@
+.checkout-page-container{
+    width: 100%;
+    height: 100%;
+    
+}
+.checkout-page-small-div{
+    background-color: white;
+    border: 0.5px solid black;
+   
+    box-shadow: 0px 5px 5px 5px rgb(201, 179, 179);
+    width: 42%;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: left;
+    font-weight: 600;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    
+}
+.order-detail-items-div2{
+    display: flex;
+}
+.order-detail-item-qty{
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.order-detail{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bolder;
+}
+.order-detail-item-name{
+    list-style: none;
+}
+.order-detail-item-qty{
+    list-style: none;
+
+}
+.checkout-page-price-div{
+    font-weight: bolder;
+}
+.checkout-page-price-detail{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: larger;
+
+    margin-bottom: 1rem;
+    font-weight: bolder;
+
+}
+.checkout-prices{
+    display: flex;
+    font-weight: 600;
+    font-size: large;
+
+}
+
+.checkout-span-discount{
+    text-decoration: line-through;
+}
+.checkout-page-final-price{
+    color: red;
+    font-size: larger;
+}
+.checkout-page-span-text{
+    margin-left: auto;
+
+}
+
+.adresses-content{
+    font-weight: bolder;
+    font-size: large;
+}
+
+
+.checkout-page-deliver-address{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: larger;
+    font-weight: 700;
+}
+.checkout-page-pay-button-div{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: larger;
+}
+
+
+.checkout-page-pay-button{
+    background-color: rgb(59, 28, 28);
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    
+   
+    
+}
+.checkout-page-pay-button:hover{
+   background-color: #F6C33C;
+    color: black;
+    font-size: 1.3rem;
+    transition: all ease-in-out 0.3s;
+   
+    
+   
+    
+}
