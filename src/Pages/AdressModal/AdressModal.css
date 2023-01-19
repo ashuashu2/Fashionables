@@ -1,0 +1,61 @@
+.address-page-main-div{
+    border: 1px solid black;
+    box-shadow: 2px 2px 20px 3px black;
+}
+
+.address-page-heading{
+    margin: 1rem;
+    font-weight: bolder;
+
+}
+.address-page-input{
+    width: 70%;
+    margin: 0.4rem;
+    border: 0;
+    border-bottom: 1.50px solid black;
+    background-color: transparent;
+    outline: 0;
+    font-weight: 700;
+    text-align: center;
+
+}
+.address-page-input::placeholder{
+    color: black;
+    font-weight: 500;
+   
+   text-align: center;
+ 
+
+}
+.address-page-input:hover{
+    width: 85%;
+    transition: all .5s;
+  
+
+}
+.address-page-button{
+    background: black;
+    color: white;
+    font-weight: 600;
+    margin: 1.5rem;
+    font-size: larger;
+    cursor: pointer;
+
+}
+.address-page-button:hover{
+    background: #F6C33C ;
+    color: black;
+    font-weight: 600;
+  
+
+}
+
+
+
+@media screen and (max-width: 800px) { 
+
+
+
+
+
+}

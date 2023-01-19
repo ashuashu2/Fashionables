@@ -52,21 +52,10 @@ const signupHandler =async()=>{
      
    } catch (error) {
    toast.error("Signup Failed Please Try Again After Some Times  ")
- 
- 
-     
    }
-
-
-
-     }else{
+  }else{
     toast.error("please fill all the Credentials ")
-
-      
-     }
-
-    
-
+   }
   }else{
     setIsChecked("👆 Please indicate that you accept the Terms and Conditions")
 

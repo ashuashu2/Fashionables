@@ -1,12 +1,34 @@
+import { useState } from "react"
 import { EmptyCart } from "../../components/Cart/emptyCart"
 import { useCart } from "../../context/cartContext"
+import { AddressModal } from "../AdressModal/AdressModal"
 import "../Checkout/Checkout.css"
+import { BiEditAlt } from 'react-icons/bi';
 
 const Checkout = () => {
     const {cartState: { cart,TotlePrice,Discount ,OrignalPrice}} = useCart()
+    const [ showModal , setShowModal ] = useState (false)
+    const [newAdd, setNewAdd] = useState({
+        FirstName: "Ashutosh",
+        LastName: "Birthare",
+        Address: "Jaat Moholla ",
+        City: "Guna",
+        Pincode : 473001,
+        MobileNumber: 9179910419,
+      });
+
+
+
+
+    const EditClickHandler = () =>{
+        setShowModal(true)
+    }
+    
 
     return (
       <div className="checkout-page-container"> 
+      <div className="address-modal-div"> { showModal ? <AddressModal setShowModal={setShowModal} setNewAdd={setNewAdd} /> : "" } </div>
+
         {cart.length < 1 ? ( <EmptyCart/> ) : (
             <div className="checkout-page-small-div">
                 
@@ -41,10 +63,11 @@ const Checkout = () => {
                 <div className="checkout-page-address-div">
                 <h2 className="checkout-page-deliver-address"> Delivery Address </h2>
                 <hr />
-                <h5 className=" adresses-content ">Ashutosh Birthare</h5>
-                <h5 className=" adresses-content ">Jaat Moholla  </h5>
-                <h5 className=" adresses-content ">Guna 473001</h5>
-                <h5 className=" adresses-content ">9179910419</h5>
+                <div className=" edit-icon-div"> <h5 className=" adresses-content address-name"> {`${newAdd.FirstName}   ${newAdd.LastName}`}</h5> <span  onClick={EditClickHandler} className=" edit-icon-button"> {<BiEditAlt />}</span> </div>
+               
+                <h5 className=" adresses-content ">{newAdd.Address}  </h5>
+                <h5 className=" adresses-content ">{`${newAdd.City}    ${newAdd.Pincode}`} </h5>
+                <h5 className=" adresses-content ">{newAdd.MobileNumber} </h5>
 
 
                 
