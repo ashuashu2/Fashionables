@@ -63,11 +63,11 @@ const Checkout = () => {
                 <div className="checkout-page-address-div">
                 <h2 className="checkout-page-deliver-address"> Delivery Address </h2>
                 <hr />
-                <div className=" edit-icon-div"> <h5 className=" adresses-content address-name"> {`${newAdd.FirstName}   ${newAdd.LastName}`}</h5> <span  onClick={EditClickHandler} className=" edit-icon-button"> {<BiEditAlt />}</span> </div>
+                <div className=" edit-icon-div"> <h5 className=" addresses-content address-name"> {`${newAdd.FirstName}   ${newAdd.LastName}`}</h5> <span  onClick={EditClickHandler} className=" edit-icon-button"> {<BiEditAlt />}</span> </div>
                
-                <h5 className=" adresses-content ">{newAdd.Address}  </h5>
-                <h5 className=" adresses-content ">{`${newAdd.City}    ${newAdd.Pincode}`} </h5>
-                <h5 className=" adresses-content ">{newAdd.MobileNumber} </h5>
+                <h5 className=" addresses-content ">{newAdd.Address}  </h5>
+                <h5 className=" addresses-content ">{`${newAdd.City}    ${newAdd.Pincode}`} </h5>
+                <h5 className=" addresses-content ">{newAdd.MobileNumber} </h5>
 
 
                 
