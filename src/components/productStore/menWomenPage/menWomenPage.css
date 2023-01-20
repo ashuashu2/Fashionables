@@ -164,6 +164,7 @@ datalist {
 @media screen and (max-width: 800px) {
   .men-women-filter-div{
     width: 100%;
+    
     transition: width 1s ease;
 
   }
@@ -209,7 +210,7 @@ datalist {
     margin: 0rem;
    
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
      gap: 0.4rem;
      margin-top: -2rem;
     background-color: white;
@@ -224,7 +225,7 @@ datalist {
     background-color: white;
    
     display: grid;
-    grid-template-columns: auto  ;
+    grid-template-columns: auto auto;
      gap: 0.4rem;
      margin-top: -2rem;
      z-index: 1;
