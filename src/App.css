@@ -32,5 +32,5 @@ select:hover{
 select{
   color: black;
   background-color: #F6C33C;
-  margin-left: 47%;
+  cursor: pointer;
 }

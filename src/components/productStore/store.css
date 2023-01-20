@@ -40,8 +40,9 @@
 }
 .sort-div{
  font-size: 1.4rem;
-margin-left: 60%;
+text-align: right;
 margin-top: 0.3rem;
+margin-right: 1.5%;
 }
 .new-badge{
   background-color: black;
@@ -153,12 +154,11 @@ datalist {
   .sort-div{
   
       font-size: 1em;
-     margin-left: unset;
       margin-top: 0.3rem;
      margin: 0.5rem;
-     margin-left: -1em;
+     text-align: left;
+    
 
-     width: 10%;
   
 
      
