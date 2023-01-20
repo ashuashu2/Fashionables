@@ -163,7 +163,10 @@ datalist {
 
      
   }
-
+  .selection-box{
+    margin-left: -0.4rem;
+  }
+  
   .products-div{
     margin: 0rem;
    

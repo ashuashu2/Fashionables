@@ -104,6 +104,7 @@ return(
             <option value="RATING_LOW_TO_HIGH">Rating:Low To High</option>
         </select>
     </div>
+   
 
     <div className="bigger-div">
         <div className="filter-div" style={{width: "17%"}}>
