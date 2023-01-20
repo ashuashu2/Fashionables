@@ -8,6 +8,8 @@ import { MenWomenFilter } from "./MenWomenFilter";
 import { useCart } from "../../../context/cartContext";
 import { useWishlist } from "../../../context/wishlistContext";
 import {Link} from "react-router-dom"
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { ImCross } from "react-icons/im";
 
 import { filterBySearch } from "../../../ultils/searchFilter";
 import { filterByColor } from "../../../ultils/filterByColor";
@@ -19,7 +21,7 @@ import { filterByRatings } from "../../../ultils/filterByRatings";
 import { filterBySort } from "../../../ultils/sortBy";
 import { useFilter } from "../../../context/filterContext";
 import { useAuth } from "../../../context/authContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 
@@ -29,6 +31,8 @@ const { cartState,cartDispatch} = useCart()
 const {state,dispatch} = useFilter()
 const {isLoggedIn} = useAuth()
 const {WishlistDispatch,WishlistState} = useWishlist()
+const [ isMobile ,setIsMobile ] = useState(false)
+
 
 function findMen(storeData) {
 return storeData.filter((item)=>item.idealFor==="Men")
@@ -68,6 +72,8 @@ toast.error(" please login first!")
 
 } }
 
+
+
 function AddtoWishlistHandler(user){
 if(isLoggedIn.login){
 WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,});
@@ -79,11 +85,13 @@ else
 toast.error(" please login first!")
 
 }
-
-
-
-
 }
+
+
+
+const hamburgerHandler=()=>{
+    setIsMobile(!isMobile)
+     }
 
 
 
@@ -103,15 +111,25 @@ return(
             <option value="RATING_HIGH_TO_LOW">Rating: High To Low</option>
             <option value="RATING_LOW_TO_HIGH">Rating:Low To High</option>
         </select>
+        <div className="hamburger2">
+                    {  isMobile ?
+                     <div onClick={hamburgerHandler} >
+                         <h1 className="cross-icon"> <ImCross /> </h1>
+                    </div> :
+                    <div onClick={hamburgerHandler} >
+                        <h1><GiHamburgerMenu />
+                        </h1>
+                    </div> }
+     </div>
     </div>
    
 
-    <div className="bigger-div">
-        <div className="filter-div" style={{width: "17%"}}>
+    <div className= {isMobile ?  "bigger-div2" : "bigger-div"}>
+        <div  className=  {isMobile ?  "men-women-filter-div2" : "men-women-filter-div"}>
             <MenWomenFilter />
         </div>
         <div>
-            <div className="products-div">
+            <div className={isMobile ?  "products-div2" : "products-div"}>
                 { finalFilterData.map((user,{id}) =>
                 <div key={id} className="card-div">
                     <div className="card-div2">

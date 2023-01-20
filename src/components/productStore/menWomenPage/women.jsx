@@ -105,7 +105,7 @@ return(
         </select>
     </div>
     <div className="bigger-div">
-        <div className="filter-div" style={{width: "17%"}}>
+        <div className="men-women-filter-div" >
             <MenWomenFilter />
         </div>
         <div>

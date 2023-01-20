@@ -10,6 +10,7 @@
 
 }
 
+
 .products-div{
   margin: 1.2rem;
  
@@ -142,8 +143,17 @@ datalist {
  
   height: auto;
 }
+.hamburger2{
+  display: none;
+}
 
+.men-women-filter-div{
+  width: 20%;
 
+  margin-right: 1rem;
+
+  
+}
 
 
 
@@ -152,6 +162,31 @@ datalist {
 
 
 @media screen and (max-width: 800px) {
+  .men-women-filter-div{
+    width: 100%;
+    transition: width 1s ease;
+
+  }
+
+  .men-women-filter-div2{
+    width: 0%;
+    transition: width 1s ease;
+   
+
+
+
+  }
+
+  .bigger-div{
+
+    display: flex;
+}
+.bigger-div2{
+
+  display: flex;
+}
+
+  
   .sort-div2{
   
     font-size: 1em;
@@ -159,11 +194,10 @@ datalist {
    margin: 0.5rem;
    text-align: left;
    margin-bottom: 1.5rem;
-  
-
-
-
+   display: flex;
+     height: 3vh;
    
+    
 }
 .selection-box2{
   margin-left: -0.4rem;
@@ -178,6 +212,23 @@ datalist {
     grid-template-columns: auto auto;
      gap: 0.4rem;
      margin-top: -2rem;
+    background-color: white;
+
+     z-index: 1;
+   
+    
+  
+  }
+  .products-div2{
+    margin: 0rem;
+    background-color: white;
+   
+    display: grid;
+    grid-template-columns: auto  ;
+     gap: 0.4rem;
+     margin-top: -2rem;
+     z-index: 1;
+
    
     
   
@@ -266,7 +317,13 @@ margin-top: 1rem;
   }
 
 
-
+  .hamburger2{
+    display: unset;
+    color: black;
+    font-weight: bolder;
+    margin-left: auto;
+    cursor: pointer;
+  }
 
 
 }

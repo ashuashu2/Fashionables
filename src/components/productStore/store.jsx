@@ -4,15 +4,11 @@ import { useCart } from "../../context/cartContext"
 import { BsFillHeartFill } from "react-icons/bs";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-import { IoMdCart } from "react-icons/io";
-
-
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { ImCross } from "react-icons/im";
 
 import { AiOutlineHeart } from "react-icons/ai";
-
 import { useFilter } from "../../context/filterContext";
-
 import { filterBySearch } from "../../ultils/searchFilter";
 import { filterByColor } from "../../ultils/filterByColor";
 import { filterByPrice } from "../../ultils/filterByPrice";
@@ -24,18 +20,20 @@ import { filterBySort } from "../../ultils/sortBy";
 import { useWishlist } from "../../context/wishlistContext";
 import { Link} from "react-router-dom";
 import { useAuth } from "../../context/authContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 
 
 
-function Store ( ){
+const Store =( )=>{
 const {storeData}=useStore()
 const {state,dispatch} = useFilter()
 const {cartDispatch,cartState} = useCart()
 const {WishlistDispatch,WishlistState} = useWishlist()
 const { isLoggedIn } = useAuth();
+const [ isMobile ,setIsMobile ] = useState(false)
+
 
 
 
@@ -43,7 +41,7 @@ useEffect(() => {
 window.scrollTo(0, 0)
 }, [])
 
-function AddtoCartHandler(user){
+const AddtoCartHandler=(user)=>{
 if(isLoggedIn.login){
 cartDispatch({type: "ADD_TO_CART",payload: user,});
 toast.success(" Added To Cart !")
@@ -60,7 +58,7 @@ toast.error(" please login first!")
 
 }
 
-function AddtoWishlistHandler(user){
+const AddtoWishlistHandler = (user)=>{
 if(isLoggedIn.login){
 WishlistDispatch({type: "ADD_TO_WISHLIST",payload: user,});
 toast.success("Added To WishList!")
@@ -79,7 +77,9 @@ toast.error(" please login first!")
 
 
 
-
+const hamburgerHandler=()=>{
+  setIsMobile(!isMobile)
+   }
 
 
 
@@ -118,6 +118,18 @@ return(
       <option value="RATING_HIGH_TO_LOW">Rating: High To Low</option>
       <option value="RATING_LOW_TO_HIGH">Rating:Low To High</option>
     </select>
+    <div className="hamburger">
+                    {  isMobile ?
+                     <div onClick={hamburgerHandler} >
+                         <h1 className="cross-icon"> <ImCross /> </h1>
+                    </div> :
+                    <div onClick={hamburgerHandler} >
+                        <h1><GiHamburgerMenu />
+                        </h1>
+                    </div> }
+     </div>
+
+
   </div>
 
 

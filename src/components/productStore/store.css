@@ -141,6 +141,9 @@ datalist {
  
   height: auto;
 }
+.hamburger{
+  display: none;
+}
 
 
 
@@ -157,7 +160,11 @@ datalist {
       margin-top: 0.3rem;
      margin: 0.5rem;
      text-align: left;
-    
+     display: flex;
+     height: 3vh;
+     margin-bottom: 1rem;
+   
+     
 
   
 
@@ -260,7 +267,15 @@ margin-top: 1rem;
     font-size: 0.9em;
     width: 95%;
   }
+  .hamburger{
+    display: unset;
+    color: black;
+    font-weight: bolder;
+    margin-left: auto;
+    cursor: pointer;
+  }
 
+  
 
 
 
