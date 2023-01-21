@@ -162,6 +162,9 @@ datalist {
 
 
 @media screen and (max-width: 800px) {
+  .men-page-main-container{
+    overflow-x: hidden;
+  }
   .men-women-filter-div{
     width: 100%;
     
@@ -170,6 +173,7 @@ datalist {
   }
 
   .men-women-filter-div2{
+   
     width: 0%;
     transition: width 1s ease;
    
@@ -181,11 +185,9 @@ datalist {
   .bigger-div{
 
     display: flex;
+    overflow-x: hidden;
 }
-.bigger-div2{
 
-  display: flex;
-}
 
   
   .sort-div2{
@@ -197,11 +199,13 @@ datalist {
    margin-bottom: 1.5rem;
    display: flex;
      height: 3vh;
+     z-index: 4;
    
     
 }
 .selection-box2{
   margin-left: -0.4rem;
+  z-index: 5;
 }
 
 
@@ -210,30 +214,18 @@ datalist {
     margin: 0rem;
    
     display: grid;
-    grid-template-columns: auto;
-     gap: 0.4rem;
-     margin-top: -2rem;
-    background-color: white;
-
-     z-index: 1;
-   
-    
-  
-  }
-  .products-div2{
-    margin: 0rem;
-    background-color: white;
-   
-    display: grid;
     grid-template-columns: auto auto;
      gap: 0.4rem;
      margin-top: -2rem;
-     z-index: 1;
+    background-color: white;
+    position: absolute;
+
 
    
     
   
   }
+
   .image{
     height: 100%;
     width: 100%;
@@ -324,6 +316,8 @@ margin-top: 1rem;
     font-weight: bolder;
     margin-left: auto;
     cursor: pointer;
+    z-index: 4;
+
   }
 
 

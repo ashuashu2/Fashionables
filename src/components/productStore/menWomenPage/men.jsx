@@ -101,7 +101,7 @@ const hamburgerHandler=()=>{
 
 
 return(
-<div>
+<div className="men-page-main-container">
     <div className="sort-div2">
         <select name="PRICE" className="selection-box2" onChange={(e)=> dispatch({type:"SORT_BY",payload:
             e.target.value})}>
@@ -124,12 +124,12 @@ return(
     </div>
    
 
-    <div className= {isMobile ?  "bigger-div2" : "bigger-div"}>
+    <div className= "bigger-div">
         <div  className=  {isMobile ?  "men-women-filter-div2" : "men-women-filter-div"}>
             <MenWomenFilter />
         </div>
         <div>
-            <div className={isMobile ?  "products-div2" : "products-div"}>
+            <div className= "products-div">
                 { finalFilterData.map((user,{id}) =>
                 <div key={id} className="card-div">
                     <div className="card-div2">
