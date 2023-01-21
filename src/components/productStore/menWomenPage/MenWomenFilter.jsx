@@ -49,7 +49,7 @@ function MenWomenFilter(){
 
     <div className="Price-div">
       <h1>Price</h1>
-      <datalist>
+      <datalist className="filter-data-list" >
         <option value="1000" label="1k"></option>
         <option value="2000" label="2k"></option>
         <option value="3000" label="3k"></option>

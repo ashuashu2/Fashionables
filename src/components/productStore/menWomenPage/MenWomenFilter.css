@@ -9,6 +9,10 @@
     text-align: center;
     margin-bottom: 2rem;
 }
+.filter-data-list{
+    padding-right: 2rem;
+}
+
 .category-div2{
     display: grid;
 }
@@ -52,6 +56,7 @@
 
 .discount-div{
     display: grid;
+    
 }
 
 
@@ -66,10 +71,36 @@
 
 
 @media screen and (max-width: 800px) {
+    .filter-main-div{
+        text-align: left;
+        background-color: antiquewhite;
+        box-shadow: 2px 2px 10px 2px black;
+        
+    }
 
 
     .filter-small-div{
-        margin-left: 0.5rem;
+        margin-left: 2rem;
+       
+
     }
+    .category-options{
+        font-size: 1.3rem;
+        display: flex;
+        margin-left: 0rem;
+    }
+    .idealFor-div{
+      
+       text-align: left;
+    
+    }
+    .idealFor-options{
+    
+        margin-left: 0rem;
+        
+    }
+  
+    
+   
 }
 

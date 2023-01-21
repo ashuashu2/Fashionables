@@ -18,15 +18,25 @@ import { filterBySort } from "../../../ultils/sortBy";
 import { useFilter } from "../../../context/filterContext";
 import {Link} from "react-router-dom"
 import { useAuth } from "../../../context/authContext";
-import { useEffect } from "react";
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { ImCross } from "react-icons/im";
+
+
+import { useEffect,useState } from "react";
 
 
 function WomenClothes(){
+const [ isOpen ,setIsOpen ] = useState(false)
+
 const {storeData} = useStore()
 const {cartDispatch,cartState} = useCart()
 const {WishlistDispatch,WishlistState} = useWishlist()
 const {state,dispatch} = useFilter()
 const { isLoggedIn } = useAuth()
+
+const hamburgerHandler2=()=>{
+    setIsOpen(!isOpen)
+     }
 
 
 useEffect(() => {
@@ -103,12 +113,22 @@ return(
             <option value="RATING_HIGH_TO_LOW">Rating: High To Low</option>
             <option value="RATING_LOW_TO_HIGH">Rating:Low To High</option>
         </select>
+        <div className="hamburger2">
+                    {  isOpen ?
+                     <div onClick={hamburgerHandler2} >
+                         <h1 className="cross-icon"> <ImCross /> </h1>
+                    </div> :
+                    <div onClick={hamburgerHandler2} >
+                        <h1><GiHamburgerMenu />
+                        </h1>
+                    </div> }
+     </div>
     </div>
     <div className="bigger-div">
-        <div className="men-women-filter-div" >
+        <div className={isOpen ?  "men-women-filter-div2" : "men-women-filter-div"} >
             <MenWomenFilter />
         </div>
-        <div>
+        <div className= "products-main-div">
             <div className="products-div">
                 { finalFilterData.map((user,{id}) =>
                 <div key={id} className="card-div">
