@@ -12,10 +12,12 @@ const { state,dispatch} = useFilter()
 
 
 return(
-<div>
+<div className="filter-main-div" >
+        <div className="filter-small-div">
+  
 
 
-  <h1>Filters</h1>
+  <h1 className="filters-text">Filters</h1>
   <fieldset>
 
     <button className="clear-button"   onClick={()=>dispatch({type:"CLEAR"})} > Clear All Filters </button>
@@ -66,7 +68,7 @@ return(
   <hr />
 
 
-  <fieldset className="category-div">
+  <fieldset className="category-div2">
     <legend>CATEGORY</legend>
 
     <lable className="category-options">
@@ -224,6 +226,7 @@ return(
 
   <hr />
 
+  </div>
 
 </div>
 )

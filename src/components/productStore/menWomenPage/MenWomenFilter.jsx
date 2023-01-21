@@ -1,5 +1,6 @@
 import React from "react";
 import { useFilter } from "../../../context/filterContext";
+import "../menWomenPage/MenWomenFilter.css"
 
 
 
@@ -11,11 +12,12 @@ function MenWomenFilter(){
 
 
     return(
-      <div >
+      <div className="filter-main-div" >
+        <div className="filter-small-div">
 
 
-          <h1>Filters</h1>
-          <fieldset>
+          <h1 className="filters-text"> Filters</h1>
+          <fieldset className="clear-button-feildset" >
       
        <button className="clear-button" onClick={()=>dispatch({type:"CLEAR"})} > Clear All Filters </button>
       </fieldset>
@@ -71,7 +73,7 @@ function MenWomenFilter(){
 <hr />
 
 
-<fieldset className="category-div">
+<fieldset className="category-div2">
   <legend>CATEGORY</legend>
 
   <lable className="category-options">
@@ -257,7 +259,7 @@ onChange={()=>dispatch({type:"ONE"})}
 
     <hr />
 
-
+    </div>
       </div>
   )
 }

@@ -128,7 +128,7 @@ return(
         <div  className=  {isMobile ?  "men-women-filter-div2" : "men-women-filter-div"}>
             <MenWomenFilter />
         </div>
-        <div>
+        <div className= "products-main-div">
             <div className= "products-div">
                 { finalFilterData.map((user,{id}) =>
                 <div key={id} className="card-div">
