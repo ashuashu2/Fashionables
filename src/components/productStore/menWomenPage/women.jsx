@@ -124,7 +124,7 @@ return(
                     </div> }
      </div>
     </div>
-    <div className="bigger-div">
+    <div className="bigger-div2">
         <div className={isOpen ?  "men-women-filter-div2" : "men-women-filter-div"} >
             <MenWomenFilter />
         </div>

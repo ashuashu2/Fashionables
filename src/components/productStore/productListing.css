@@ -1,7 +1,8 @@
-.bigger-div{
+.store-page-small-div{
 
     display: flex;
-}
+   }
+
 .filter-div{
     width: 15%;
   
@@ -78,15 +79,58 @@
     display: grid;
 }
 
+.store-page-hamburger{
+    display: none;
+  }
+  
 
 
 
 
 
 @media screen and (max-width: 800px) {
+    .store-page-small-div{
+        margin-top: 0.5rem;
+    }
 
     .filter-div{
-      display: none;
+        z-index: 0;
+        transition:  1s ease;
+        background-color: white;
+        margin-right: 1rem;
+    margin-top: 2.5rem;
     }
+    .filter-div2{
+        width: 95%;
+    
+        transition: width 1s ease;
+        z-index: 6;
+        background-color: white;
+        margin-right: 1rem;
+        margin-top: 2.5rem;
+
+    }
+    .bigger-div{
+        position: relative;
+    }
+    .store-div {
+       
+      
+        z-index: 1;
+        background-color: white;
+        position: absolute;
+    }
+    .store-page-hamburger{
+        display: unset;
+        color: black;
+        font-weight: bolder;
+        margin-left: auto;
+        z-index: 50;
+        cursor: pointer;
+        position: absolute;
+        top: 0.1%;
+        right: 2%;
+      }
+    
 
 }

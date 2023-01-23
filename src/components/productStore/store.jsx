@@ -2,11 +2,8 @@ import "../productStore/store.css"
 import { useStore } from "../../context/storeContext"
 import { useCart } from "../../context/cartContext"
 import { BsFillHeartFill } from "react-icons/bs";
-import { ToastContainer, toast } from 'react-toastify';
+import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { ImCross } from "react-icons/im";
-
 import { AiOutlineHeart } from "react-icons/ai";
 import { useFilter } from "../../context/filterContext";
 import { filterBySearch } from "../../ultils/searchFilter";
@@ -32,7 +29,6 @@ const {state,dispatch} = useFilter()
 const {cartDispatch,cartState} = useCart()
 const {WishlistDispatch,WishlistState} = useWishlist()
 const { isLoggedIn } = useAuth();
-const [ isMobile ,setIsMobile ] = useState(false)
 
 
 
@@ -51,12 +47,7 @@ else
 {
 toast.error(" please login first!")
 
-}
-
-
-
-
-}
+}}
 
 const AddtoWishlistHandler = (user)=>{
 if(isLoggedIn.login){
@@ -68,18 +59,11 @@ else
 {
 toast.error(" please login first!")
 
-}
+}}
 
 
 
 
-}
-
-
-
-const hamburgerHandler=()=>{
-  setIsMobile(!isMobile)
-   }
 
 
 
@@ -118,16 +102,7 @@ return(
       <option value="RATING_HIGH_TO_LOW">Rating: High To Low</option>
       <option value="RATING_LOW_TO_HIGH">Rating:Low To High</option>
     </select>
-    <div className="hamburger">
-                    {  isMobile ?
-                     <div onClick={hamburgerHandler} >
-                         <h1 className="cross-icon"> <ImCross /> </h1>
-                    </div> :
-                    <div onClick={hamburgerHandler} >
-                        <h1><GiHamburgerMenu />
-                        </h1>
-                    </div> }
-     </div>
+   
 
 
   </div>

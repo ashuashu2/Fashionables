@@ -89,7 +89,7 @@ toast.error(" please login first!")
 
 
 
-const hamburgerHandler=()=>{
+const hamburgerHandler3=()=>{
     setIsMobile(!isMobile)
      }
 
@@ -113,10 +113,10 @@ return(
         </select>
         <div className="hamburger2">
                     {  isMobile ?
-                     <div onClick={hamburgerHandler} >
+                     <div onClick={hamburgerHandler3} >
                          <h1 className="cross-icon"> <ImCross /> </h1>
                     </div> :
-                    <div onClick={hamburgerHandler} >
+                    <div onClick={hamburgerHandler3} >
                         <h1><GiHamburgerMenu />
                         </h1>
                     </div> }
@@ -124,7 +124,7 @@ return(
     </div>
    
 
-    <div className= "bigger-div">
+    <div className= "bigger-div2">
         <div  className=  {isMobile ?  "men-women-filter-div2" : "men-women-filter-div"}>
             <MenWomenFilter />
         </div>

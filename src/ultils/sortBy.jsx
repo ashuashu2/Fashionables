@@ -10,7 +10,7 @@ const filterBySort = (products,sortBy) => {
            return products.sort((a,b) => a.rating-b.rating)  
  
         case "DEFAULT":
-            return products
+            return products.sort((a,b) => b.rating-a.rating)  
         default:
          return products
     }

@@ -9,6 +9,10 @@
   font-family: 'Quicksand', sans-serif;
 
 }
+.bigger-div2{
+  display: flex;
+
+}
 
 
 .products-div{
@@ -143,6 +147,7 @@ datalist {
  
   height: auto;
 }
+
 .hamburger2{
   display: none;
 }
@@ -189,7 +194,7 @@ datalist {
   }
 
 
-  .bigger-div{
+  .bigger-div2{
 
     display: flex;
     position: relative;
@@ -228,7 +233,6 @@ datalist {
      margin-top: -2rem;
     background-color: white;
     display: flex;
-    display: none;
    
 
 

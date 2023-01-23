@@ -141,9 +141,7 @@ datalist {
  
   height: auto;
 }
-.hamburger{
-  display: none;
-}
+
 
 
 
@@ -266,13 +264,6 @@ margin-top: 1rem;
   .card2-button{
     font-size: 0.9em;
     width: 95%;
-  }
-  .hamburger{
-    display: unset;
-    color: black;
-    font-weight: bolder;
-    margin-left: auto;
-    cursor: pointer;
   }
 
   
