@@ -20,7 +20,7 @@ const  AddressModal = ({setShowModal,setNewAdd}) => {
             Address: newAddress.Address,
             City: newAddress.City,
             Pincode: newAddress.Pincode,
-            MobiletNumber: newAddress.MobileNumber,
+            MobileNumber: newAddress.MobileNumber,
           }));
         setShowModal(false)
         
