@@ -24,10 +24,10 @@ export const filterByDiscounts = (Data,Ten,Twenty,Thirty,Fourty,Fifty) => {
         let newList =   Data.filter((items)=>items.discount >= "40")
          newData.push(...newList)
          }
-         if (Fifty){ 
-            let newList =   Data.filter((items)=>items.discount >= "50")
-             newData.push(...newList)
-             }
+   if (Fifty){ 
+     let newList =   Data.filter((items)=>items.discount >= "50")
+      newData.push(...newList)
+      }
         
 
     return newData.length===0 ?Data :newData

@@ -3,7 +3,8 @@ function cartReducer(cartState,action){
         case "ADD_TO_CART":
         
                  
-                  return { ...cartState, cart: [...cartState.cart, { ...action.payload }],
+                  return { ...cartState, 
+                    cart: [...cartState.cart, { ...action.payload }],
                   TotlePrice : Number(cartState.TotlePrice) + Number(action.payload.price) ,
                   OrignalPrice : Number(cartState.OrignalPrice) + Number(action.payload.originalPrice),
                   Discount : Number(cartState.Discount) + Number(action.payload.discountPrice),
