@@ -4,7 +4,7 @@ Live link
 
 [Fashionables.com](https://fashionable-nine.vercel.app/)
 
-* React![Screen Capture 002 - FASHIONABLES COM - fashionable-nine vercel app](https://github.com/ashuashu2/Fashionables/assets/86846323/1b235ff6-b812-4a70-8fa7-49b2785df8ac)
+* ![Home Page](https://github.com/ashuashu2/Fashionables/assets/86846323/1b235ff6-b812-4a70-8fa7-49b2785df8ac)
 
 
 # Pages Till Now
