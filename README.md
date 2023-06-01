@@ -58,9 +58,15 @@ Error 404 Page
 
 # Technology
 
-* React
-* CSS
-* JavaScript
+* React![Screen Capture 002 - FASHIONABLES COM - fashionable-nine vercel app](https://github.com/ashuashu2/Fashionables/assets/86846323/1b235ff6-b812-4a70-8fa7-49b2785df8ac)
+
+* CSS![Screen Capture 005 - FASHIONABLES COM - fashionable-nine vercel app](https://github.com/ashuashu2/Fashionables/assets/86846323/7f61ce1b-7004-42b8-998a-019b4652fab3)
+![Screen Capture 012 - FASHIONABLES COM - fashionable-nine vercel app](https://github.com/ashuashu2/Fashionables/assets/86846323/a8141c65-2d14-474f-9114-12866794c064)
+
+* JavaScript![Screen Capture 006 - FASHIONABLES COM - fashionable-nine vercel app](https://github.com/ashuashu2/Fashionables/assets/86846323/631cab14-4bc0-41e4-b766-f12023d39405)
+
+![Screen Capture 008 - FASHIONABLES COM - fashionable-nine vercel app](https://github.com/ashuashu2/Fashionables/assets/86846323/0cd00b3b-8784-4fb9-ac2c-02ca78379068)
+![Screen Capture 014 - FASHIONABLES COM - fashionable-nine vercel app](https://github.com/ashuashu2/Fashionables/assets/86846323/3612a20c-e0ad-4b3d-9a8b-415b631992fc)
 
 # Images
 
