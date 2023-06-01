@@ -24,6 +24,7 @@ Landing Page
 * Products grid, displaying product categories in grid.
 * Footer,footer features and footer main.
 
+
 Products Page
 * Filters: User can filter items by category,material,price,gender,fast delivery,include out of stocks,best seller & can clear filter.
 * Sort: User can sort item by price & ratings.
@@ -91,6 +92,13 @@ Error 404 Page
 
 
 
+
+
+# Author 
+[Ashutosh Birthare](https://github.com/ashuashu2)
+
+# 👨‍💻 Connect with me
+[Linkedin](https://www.linkedin.com/in/ashutosh-birthare/)
 
 
 
